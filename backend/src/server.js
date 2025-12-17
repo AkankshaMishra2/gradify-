@@ -22,6 +22,20 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Global error handling to prevent crashes
+process.on('uncaughtException', (err) => {
+  console.error('UNCAUGHT EXCEPTION! 💥 Shutting down...');
+  console.error(err.name, err.message, err.stack);
+  // Keep the process alive for a moment to log, but usually we should exit. 
+  // On Render, exiting will restart the service.
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (err) => {
+  console.error('UNHANDLED REJECTION! 💥');
+  console.error(err.name, err.message);
+});
+
 const app = express();
 
 app.use(helmet({
@@ -87,9 +101,10 @@ app.get('*', (req, res) => {
 
 // Centralized error handler so Multer and other middleware surface clean responses
 app.use((err, req, res, next) => {
+    console.error('ERROR MIDDLEWARE CAUGHT:', err);
 	if (!err) return next();
 	if (err instanceof multer.MulterError) {
-		return res.status(400).json({ error: err.message });
+		return res.status(400).json({ error: `Upload Error: ${err.message}` });
 	}
 	if (err.message) {
 		return res.status(400).json({ error: err.message });
