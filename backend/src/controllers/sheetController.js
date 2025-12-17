@@ -29,12 +29,16 @@ const collectUploadedFiles = (req) => {
 };
 
 export const uploadSheet = async (req, res) => {
+  console.log('[Upload] Received upload request');
   try {
     const files = collectUploadedFiles(req);
+    console.log(`[Upload] Processing ${files.length} files`);
     if (!files.length) return res.status(400).json({ error: 'No files uploaded' });
 
     const pageSummaries = await mapWithConcurrency(files, 3, async (f, idx) => {
+      console.log(`[Upload] Extracting text from file ${idx + 1}: ${f.originalname}`);
       const extracted = await extractTextFromFile(f.path);
+      console.log(`[Upload] Extraction complete for file ${idx + 1}`);
       const raw = (extracted || '').trim();
       return {
         index: idx + 1,
