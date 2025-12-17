@@ -32,27 +32,15 @@ app.use(helmet({
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "blob:"],
-      connectSrc: ["'self'", "https://gradify-2.onrender.com", "http://localhost:5000"],
+      connectSrc: ["'self'", "https://gradify-2.onrender.com", "http://localhost:5000", "https://gradify-d7dt.vercel.app"],
     },
   },
+  crossOriginResourcePolicy: { policy: "cross-origin" },
 }));
 const allowedOrigins = (process.env.CORS_ORIGIN || '').split(',').map(s => s.trim()).filter(Boolean);
-// Explicitly add Vercel frontend to allowed origins for split deployment
-if (!allowedOrigins.includes('https://gradify-d7dt.vercel.app')) {
-    allowedOrigins.push('https://gradify-d7dt.vercel.app');
-}
 
 app.use(cors({
-	origin: (origin, callback) => {
-        console.log('Incoming origin:', origin);
-		if (!origin) return callback(null, true);
-		if (allowedOrigins.includes(origin)) return callback(null, true);
-        // Allow Vercel app even if there's a mismatch (e.g. trailing slash)
-        if (origin.includes('gradify-d7dt.vercel.app')) return callback(null, true);
-        
-        console.error('Blocked by CORS:', origin);
-		return callback(new Error('Not allowed by CORS'));
-	},
+	origin: true, // Allow all origins temporarily for debugging
 	credentials: true,
 }));
 app.options('*', cors()); // Enable pre-flight for all routes
