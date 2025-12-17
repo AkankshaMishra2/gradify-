@@ -1,6 +1,7 @@
 // Gradify API client wired to backend endpoints
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+// In production (unified deployment), use relative paths. In dev, use localhost.
+const BASE_URL = import.meta.env.PROD ? '' : (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000');
 
 let authToken: string | null = null;
 export const setAuthToken = (token: string | null) => { authToken = token; };
