@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import multer from 'multer';
 import path from 'path';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { connectDB } from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
@@ -54,12 +55,26 @@ app.use('/api', useLimiter ? rateLimiter : (req, res, next) => next(), exportRou
 app.get('/health', (req, res) => res.json({ ok: true }));
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../../dist')));
+const distPath = path.join(process.cwd(), 'dist');
+console.log('Static files path:', distPath);
+if (fs.existsSync(distPath)) {
+    console.log('Dist directory exists');
+} else {
+    console.error('Dist directory MISSING at', distPath);
+}
+
+app.use(express.static(distPath));
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../dist/index.html'));
+  const indexPath = path.join(distPath, 'index.html');
+  if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath);
+  } else {
+      console.error('Index.html missing at', indexPath);
+      res.status(404).send('Application not found (index.html missing)');
+  }
 });
 
 // Centralized error handler so Multer and other middleware surface clean responses
