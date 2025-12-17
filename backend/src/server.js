@@ -37,6 +37,11 @@ app.use(helmet({
   },
 }));
 const allowedOrigins = (process.env.CORS_ORIGIN || '').split(',').map(s => s.trim()).filter(Boolean);
+// Explicitly add Vercel frontend to allowed origins for split deployment
+if (!allowedOrigins.includes('https://gradify-d7dt.vercel.app')) {
+    allowedOrigins.push('https://gradify-d7dt.vercel.app');
+}
+
 app.use(cors({
 	origin: (origin, callback) => {
 		if (!origin) return callback(null, true);

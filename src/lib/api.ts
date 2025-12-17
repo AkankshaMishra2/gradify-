@@ -1,7 +1,8 @@
 // Gradify API client wired to backend endpoints
 
-// In production (unified deployment), use relative paths. In dev, use localhost.
-const BASE_URL = import.meta.env.PROD ? '' : (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000');
+// In production, point to the Render backend.
+// If VITE_API_BASE_URL is set, use it. Otherwise, default to the known Render URL.
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? 'https://gradify-2.onrender.com' : 'http://localhost:5000');
 
 let authToken: string | null = null;
 export const setAuthToken = (token: string | null) => { authToken = token; };
