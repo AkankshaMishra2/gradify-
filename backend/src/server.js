@@ -44,13 +44,19 @@ if (!allowedOrigins.includes('https://gradify-d7dt.vercel.app')) {
 
 app.use(cors({
 	origin: (origin, callback) => {
+        console.log('Incoming origin:', origin);
 		if (!origin) return callback(null, true);
-		if (allowedOrigins.length === 0) return callback(null, true);
 		if (allowedOrigins.includes(origin)) return callback(null, true);
+        // Allow Vercel app even if there's a mismatch (e.g. trailing slash)
+        if (origin.includes('gradify-d7dt.vercel.app')) return callback(null, true);
+        
+        console.error('Blocked by CORS:', origin);
 		return callback(new Error('Not allowed by CORS'));
 	},
 	credentials: true,
 }));
+app.options('*', cors()); // Enable pre-flight for all routes
+
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(compression());
