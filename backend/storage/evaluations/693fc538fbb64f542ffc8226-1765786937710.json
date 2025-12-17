@@ -1,0 +1,1811 @@
+{
+  "studentId": "693fc538fbb64f542ffc8226",
+  "recordId": "693fc539fbb64f542ffc829c",
+  "totalScore": 1.5,
+  "details": [
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "1st Loop worst case: Run = n 2nd Loop worst case: Run = n 3rd Loop worst case: Run = 10 So, Time Complexity -> n * n * 10 -> 10n² O(n²) is worst time complexity.",
+      "maxMarks": 5,
+      "score": 1,
+      "percentage": 20,
+      "conceptMatch": "Low. The student provided time complexity analysis instead of an algorithm explanation.",
+      "missingPoints": "Detailed explanation of the Bubble Sort algorithm, including its steps, how elements are compared and swapped, and the iterative process of sorting.",
+      "reason": "The student correctly identified the worst-case time complexity of Bubble Sort as O(n²), which is a relevant characteristic. However, the question explicitly asked for a detailed explanation of the *algorithm* itself, which involves describing the comparison and swapping process, passes, and how elements 'bubble up'. This core explanation is entirely missing from the student's answer. Only a small portion of the expected content was provided.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.30000000000000004
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "1st Loop worst case: Run = 2n 2nd Loop worst case: Run = i = 2n / 3 3rd Loop worst case: Run = (2n / 3)² = 4n² / 9 So, Time Complexity -> 2n * (2n / 3) * 4n² / 9 O(n⁴) is worst time complexity",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer discusses time complexity analysis, which is unrelated to the definition of a Stack and its basic operations.",
+      "missingPoints": "The definition of a Stack and its basic operations (e.g., push, pop, peek, isEmpty) is entirely missing.",
+      "reason": "The student's answer is completely off-topic. It provides an analysis of time complexity for loops, which does not address the question asking for the definition of a Stack and its operations.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "1st loop worst case: Run = n (i.e. i=0)",
+      "maxMarks": 5,
+      "score": 0.5,
+      "percentage": 10,
+      "conceptMatch": "Very low. The student provides a single, specific detail about loop execution but does not explain the Bubble Sort algorithm in detail as requested.",
+      "missingPoints": "A detailed explanation of how Bubble Sort works (comparison, swapping, passes), its overall structure, time/space complexity, or any example.",
+      "reason": "The student provided a single correct observation about the worst-case run of the first loop, which is a minor detail. It does not constitute a detailed explanation of the Bubble Sort algorithm, hence only minimal partial credit is awarded.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.25
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "2nd loop worst case: Run = n (i.e. i=0)",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The student provides a single, specific statement about loop complexity, not a detailed explanation of the Bubble Sort algorithm.",
+      "missingPoints": "The student failed to explain the Bubble Sort algorithm's steps, passes, comparisons, swaps, or overall logic. The provided statement is a minor detail about complexity, not an algorithm explanation.",
+      "reason": "The answer does not explain the Bubble Sort algorithm in detail as requested. It provides a single, isolated statement about loop complexity which does not constitute an explanation of the algorithm's process or steps.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "3rd loop worst case: Run = n",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The student's answer does not explain the Bubble Sort algorithm.",
+      "missingPoints": "Detailed explanation of Bubble Sort algorithm, including its steps, comparisons, swaps, passes, and how it sorts elements. The answer provided is a fragmented statement, possibly related to complexity, but does not describe the algorithm itself.",
+      "reason": "The student's answer '3rd loop worst case: Run = n' is irrelevant to the question asking for a detailed explanation of the Bubble Sort algorithm. It does not describe any part of the algorithm's process or steps.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "So, Time complexity → n + n + n",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The student did not explain the algorithm.",
+      "missingPoints": "A detailed explanation of the Bubble Sort algorithm, including its steps, comparison logic, and passes. The provided time complexity statement is also incorrect and insufficient.",
+      "reason": "The student was asked to explain the Bubble Sort algorithm in detail but only provided an incorrect and incomplete statement about its time complexity. This does not address the core question.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "O(n³) is worst time complexity.",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The answer provides an incorrect statement about time complexity and completely misses the detailed explanation of the algorithm.",
+      "missingPoints": "Detailed explanation of Bubble Sort algorithm, including its steps, comparison and swapping logic, passes, and correct time complexity analysis.",
+      "reason": "The student's answer provides an incorrect worst-case time complexity for Bubble Sort (O(n³) instead of O(n²)) and does not explain the algorithm in detail as requested. No conceptual understanding of Bubble Sort's mechanism is demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "Q1:(b) Algorithm :-",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No content provided to match.",
+      "missingPoints": "The entire explanation of the Bubble Sort algorithm, including its steps, logic, and detailed description, is missing.",
+      "reason": "The student only wrote 'Q1:(b) Algorithm :-' without providing any actual explanation or steps of the Bubble Sort algorithm. No conceptual understanding or details were demonstrated.",
+      "mappingConfidence": 0.47500000000000003,
+      "confidence": 0.6125
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "① Min = arr[0] , Count = 0",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer describes initialization for a different algorithm, not Bubble Sort.",
+      "missingPoints": "The entire explanation of Bubble Sort algorithm, including its steps, comparisons, swaps, and passes, is missing.",
+      "reason": "The student's answer 'Min = arr[0] , Count = 0' does not describe the Bubble Sort algorithm. It is irrelevant to the question asked.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "② For (i = 1; i < N; i++) {",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The student provided only a generic loop header, which does not explain the Bubble Sort algorithm.",
+      "missingPoints": "A detailed explanation of the Bubble Sort algorithm, including the comparison of adjacent elements, the swapping mechanism, the nested loop structure, and the overall iterative process to sort the list.",
+      "reason": "The student's answer consists of only the beginning of a 'for' loop. This fragment does not explain the Bubble Sort algorithm in detail, nor does it demonstrate any understanding of its core principles or steps. It is an incomplete and irrelevant piece of code in response to a request for an explanation.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "if (arr[i] > Min) {",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "A detailed explanation of the Bubble Sort algorithm, including its steps, comparison of adjacent elements, swapping logic, and passes through the array.",
+      "reason": "The student provided a single line of code that is irrelevant to explaining the Bubble Sort algorithm. No conceptual understanding or explanation of Bubble Sort was demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "Min = arr[i];",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer is irrelevant to Bubble Sort.",
+      "missingPoints": "The entire explanation of Bubble Sort algorithm, including its steps, comparisons, and swaps.",
+      "reason": "The student's answer 'Min = arr[i];' does not explain the Bubble Sort algorithm. It appears to be a line of code unrelated to the requested topic.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "cout << \"Wait = \" << ++Count <<endl;",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The answer provided is a C++ code snippet, not an explanation of Bubble Sort.",
+      "missingPoints": "All points related to explaining the Bubble Sort algorithm are missing, including its steps, comparisons, swaps, time complexity, and example.",
+      "reason": "The student's answer is completely irrelevant to the question asked. It provides a C++ output statement instead of an explanation of the Bubble Sort algorithm.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "}",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "None",
+      "missingPoints": "The entire explanation of the Bubble Sort algorithm, including its steps, comparison logic, swapping mechanism, and efficiency considerations.",
+      "reason": "The student's answer is a single symbol '}' and contains no relevant information or explanation regarding the Bubble Sort algorithm. Therefore, no marks can be awarded.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "count++;",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Detailed explanation of the Bubble Sort algorithm, including its steps, comparison logic, swapping mechanism, and passes.",
+      "reason": "The student's answer 'count++;' is a single line of code and does not explain the Bubble Sort algorithm in any detail. It is completely irrelevant to the question asked.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "}",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "None",
+      "missingPoints": "A detailed explanation of the Bubble Sort algorithm, including its steps, comparison logic, and how elements are swapped to sort the array.",
+      "reason": "The student's answer is empty/malformed and contains no relevant information or explanation regarding the Bubble Sort algorithm. No conceptual understanding is demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "}",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "None",
+      "missingPoints": "A detailed explanation of the Bubble Sort algorithm, including its steps, comparison logic, and how elements are swapped to sort the array.",
+      "reason": "The student's answer is empty/malformed and contains no relevant information or explanation regarding the Bubble Sort algorithm. No conceptual understanding is demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "1: 60",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer is completely irrelevant to the question.",
+      "missingPoints": "Definition of a Stack, definition of basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer '1: 60' does not define a Stack or its basic operations. It is completely irrelevant to the question asked, hence 0 marks awarded.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "2: 20",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of Stack, basic operations of Stack.",
+      "reason": "The student's answer '2: 20' is completely irrelevant to the question asking for the definition of a Stack and its basic operations. No conceptual understanding or relevant information is provided.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "3: 2",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of Stack, basic operations of Stack.",
+      "reason": "The student's answer '3: 2' is completely irrelevant and does not address the question of defining a Stack and its basic operations.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "4: 1",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The answer provided is irrelevant to the question.",
+      "missingPoints": "The definition of a Stack and its basic operations are entirely missing.",
+      "reason": "The student's answer '4: 1' does not define a Stack or its basic operations, nor does it contain any relevant information for the question. It appears to be an identifier rather than an answer.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "5: 15",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack, explanation of basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer '5: 15' is completely irrelevant and does not address the question asking for the definition of a Stack and its basic operations.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "6: 5",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of Stack, basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer '6: 5' is completely irrelevant to the question asking for the definition of a Stack and its basic operations. No conceptual content was provided.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "7: *",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of Stack, basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer '7: *' is completely irrelevant to the question 'Define a Stack and its basic operations'. No conceptual understanding or relevant information is provided.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "8: -",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack and its basic operations.",
+      "reason": "The student's answer '8: -' is completely irrelevant to the question asked. It does not define a Stack or its basic operations, thus earning 0 marks.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "9: 100",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of Stack, basic operations (Push, Pop, Peek, IsEmpty, IsFull)",
+      "reason": "The student's answer '9: 100' is completely irrelevant and does not address the question asking for the definition of a Stack and its basic operations.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "10: +",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of Stack, basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer '10: +' is completely irrelevant to the question asking for the definition of a Stack and its basic operations. No conceptual understanding is demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "For main [] = {20, 15, 25, 18, 9, 30},",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No conceptual match. The student provided an array of numbers but no explanation or demonstration of push and pop operations.",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both operations.",
+      "reason": "The student's answer only provides an array of numbers and does not explain or demonstrate push and pop operations as required by the question. No relevant concepts were addressed.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "① Min = 20; Count = 0.",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Explanation of push and pop operations, and an example.",
+      "reason": "The student's answer 'Min = 20; Count = 0' is completely irrelevant to the question, which asks for an explanation of push and pop operations with an example. No conceptual alignment with the correct answer.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "② If (15 > 20) x Count = 1",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer is completely unrelated to stack operations (push/pop).",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both.",
+      "reason": "The student's answer provides a conditional statement which is entirely irrelevant to the question asking for an explanation and example of push and pop operations.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "If (25 > 20) → Min = 25 , Wait = 2 ①",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer is completely irrelevant to the question about push and pop operations.",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both.",
+      "reason": "The student's answer discusses a conditional statement and variable assignment, which is entirely unrelated to the concepts of push and pop operations in data structures (stacks). No relevant concepts were addressed.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "count = -1",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The student provided a single line of code, not an explanation of push and pop operations with an example.",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and a complete example demonstrating both operations.",
+      "reason": "The student's answer 'count = -1' is a single line of code that does not explain push and pop operations or provide an example, which was explicitly requested by the question. It is largely irrelevant to the core of the question.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "count = 0",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both.",
+      "reason": "The student's answer 'count = 0' is completely irrelevant to the question asking for an explanation and example of push and pop operations. No conceptual understanding of stacks or their operations is demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "③ If (18 > 25) x Count = 1",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "None",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both.",
+      "reason": "The student's answer is completely irrelevant to the question asked. It discusses an 'if' condition and variable assignment, which bears no relation to 'push and pop operations' in data structures.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "If (9 > 25) x",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and a relevant example.",
+      "reason": "The student's answer 'If (9 > 25) x' is completely irrelevant to the question 'Explain push and pop operations with an example'. It does not address any part of the required explanation or example.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "If (30 > 25) → Min = 30 , Wait = 3",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "None",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both.",
+      "reason": "The student's answer is completely irrelevant to the question asked. It discusses a conditional statement (If (30 > 25) → Min = 30 , Wait = 3) which has no conceptual relation to 'push and pop operations' in data structures.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "count = -1",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The student provided a single line of code, not an explanation of push and pop operations with an example.",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and a complete example demonstrating both operations.",
+      "reason": "The student's answer 'count = -1' is a single line of code that does not explain push and pop operations or provide an example, which was explicitly requested by the question. It is largely irrelevant to the core of the question.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "count = 0",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Explanation of push and pop operations, and an example.",
+      "reason": "The student's answer 'count = 0' is completely irrelevant to the question, which asks for an explanation and example of push and pop operations. No conceptual understanding is demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "So, for following array worst wait time is 3 days.",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Irrelevant",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both.",
+      "reason": "The student's answer is completely irrelevant to the question asked. It discusses 'worst wait time' and 'array' instead of 'push and pop operations' with an example.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "A Stack 60 60 20 60, 20 2 60, 20, 2 / 60, 20, 2 + 60, 10 15 60, 10, 15 5 60, 10, 15 * 60, 10, 15 - 70, 75 100 70, 75, 100 + 70, 25 Expr = 95 70 + 25",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack, basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer is completely irrelevant to the question asked. It does not define a Stack or its basic operations, instead providing a sequence of numbers and arithmetic operations.",
+      "mappingConfidence": 0.4631578947368421,
+      "confidence": 0.6065789473684211
+    },
+    {
+      "number": "2b",
+      "question": "Q2b",
+      "correctAnswer": "Explain push and pop operations with an example. |",
+      "studentAnswer": "(i) After 1st iteration, Q1 = [5, 3, 6, 4, 3]",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No conceptual match. The student's answer describes a queue state, not push/pop operations.",
+      "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both.",
+      "reason": "The student's answer is completely irrelevant to the question. It describes a state of a queue (Q1) after an iteration, whereas the question asks for an explanation and example of push and pop operations (typically stack operations). No marks can be awarded.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [ ] Rear1 = 0 , Front1 = 1 Rear2 = -1 , Front2 = -1 After 2nd iter, Q1 = [3, 6, 4, 3]",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match.",
+      "missingPoints": "The definition of a Stack and its basic operations.",
+      "reason": "The student's answer discusses queue-related concepts (Rear, Front, Q1) and array manipulation, which is completely irrelevant to defining a Stack and its basic operations as requested by the question.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [5] Rear1 = 0 , Front1 = 2 Rear2 = 0 , Front2 = 0 After 3rd iter, Q1 = [4, 3]",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer is completely irrelevant to the question about Stacks.",
+      "missingPoints": "Definition of a Stack and its basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer discusses 'Rear1, Front1, Rear2, Front2, Q1, iter' which is entirely unrelated to the definition of a Stack and its basic operations. No conceptual understanding of Stacks is demonstrated.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [5, 3] Rear1 = 1 , Front1 = 4 Rear2 = 1 , Front2 = 0 After 4th iter, Q1 = [3, 5]",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer is completely irrelevant to the question asked.",
+      "missingPoints": "The definition of a Stack and its basic operations are entirely missing.",
+      "reason": "The student's answer provides information about queues/data structure manipulation, which is completely unrelated to the question asking for the definition of a Stack and its basic operations. No relevant concepts were addressed.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [5, 3] Rear1 = 2 , Front1 = 2 Rear2 = 1 , Front2 = 1 After 5th iter, Q1 = [5, 3]",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack and its basic operations (e.g., Push, Pop, Peek, IsEmpty).",
+      "reason": "The student's answer is completely irrelevant to the question asked. It appears to be an answer related to queues or array manipulation, not the definition of a Stack or its operations.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [5, 3] Rear1 = 3 , Front1 = 2 Rear2 = 2 , Front2 = 2 (ii) After 1st iteration: Q1 = [3, 75, 3, 6, 7]",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The answer provided is completely irrelevant to the question asked.",
+      "missingPoints": "The definition of a Stack data structure and its fundamental operations (e.g., Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer discusses queue-like variables (Rear1, Front1, Q1) and numerical data, which bears no relation to defining a Stack and its basic operations. No conceptual understanding of the question is demonstrated.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [ ] Rear1 = -3 : Front1 = 1 Rear2 = -1 : Front2 = -1 After 2nd iter: Q1 = [3, 2, 5]",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "None",
+      "missingPoints": "Definition of a Stack and its basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer is completely irrelevant to the question 'Define a Stack and its basic operations'. It appears to describe queue-like operations or array indexing, showing no understanding of the requested concept.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [3] After 3rd: Q1 = [3]",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack and its basic operations.",
+      "reason": "The student's answer ' = [3] After 3rd: Q1 = [3]' is completely irrelevant to the question 'Define a Stack and its basic operations'. No conceptual information about stacks or their operations is provided.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [3, 3] After 4th: Q1 = empty",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack, definition of basic operations (e.g., Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer is completely irrelevant to the question 'Define a Stack and its basic operations'. It appears to be an answer to a different question.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "= [3, 3, 3] Rear1 = -1 Front1 = 3, Rear2 = 0",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack, explanation of basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer provides array/pointer values which are irrelevant to the definition of a Stack and its basic operations. No conceptual understanding of a Stack is demonstrated.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "Loop",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The answer only provides a single generic term related to programming, not an explanation of Bubble Sort.",
+      "missingPoints": "Detailed explanation of Bubble Sort, including comparison of adjacent elements, swapping logic, multiple passes, and how the array gets sorted.",
+      "reason": "The student's answer 'Loop' is a generic term and does not explain the Bubble Sort algorithm in detail as requested. It lacks any specific steps, comparisons, or logic inherent to Bubble Sort.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "Loop The",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack and its basic operations.",
+      "reason": "The student's answer 'Loop The' is completely irrelevant and does not address the question asking for the definition of a Stack and its basic operations.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "Differentiate between Queue and Stack. |",
+      "studentAnswer": "We da while",
+      "maxMarks": 4,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "All points of differentiation between Queue and Stack are missing.",
+      "reason": "The student's answer 'We da while' is completely irrelevant to the question asking for the differentiation between Queue and Stack. No conceptual understanding or attempt to answer the question was demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "Differentiate between Queue and Stack. |",
+      "studentAnswer": "(b)a) Node * head 3; Node * ptr3 = head 3; Node * ptr 1 = head 1; Node * ptr 2 = head 2; Loop: while (ptr 1 != null && ptr 2 -> next != null) { if (ptr 1->value > ptr 2: value) { int ptr 3 = new nn; nn->value = ptr 1; nn -> next = ptr 2.value; nn -> next -> next = null; } else { nn -> value = ptr 2.value; nn -> next = ptr 1; nn -> next.value = ptr 1.value; nn -> next -> next = null; } }",
+      "maxMarks": 4,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The answer provided is a code snippet unrelated to the question about Queue and Stack differentiation.",
+      "missingPoints": "All points related to differentiating Queue and Stack are missing. The answer discusses an entirely different topic (linked list manipulation).",
+      "reason": "The student's answer is a code snippet for linked list operations, which is completely irrelevant to the question asking for a differentiation between Queue and Stack. No conceptual understanding of the requested topic is demonstrated.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "We compare value of ptr 1 & ptr 2. Then insert inside new linked list 3 through ptr 3.",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Very low. The student's explanation describes an operation more akin to merging or building a new list, not Bubble Sort. The core mechanism of adjacent comparison and swapping in place is entirely missed.",
+      "missingPoints": "All key steps of Bubble Sort are missing: adjacent element comparison, swapping elements, multiple passes, in-place sorting, and the concept of elements 'bubbling up' to their correct positions.",
+      "reason": "The student's answer fundamentally misunderstands Bubble Sort. It mentions 'compare' but then describes inserting into a new linked list, which is incorrect for Bubble Sort, an in-place sorting algorithm that relies on swapping adjacent elements. No credit can be awarded for a completely incorrect explanation.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "Loop run until ptr 1 -> next or ptr 2 -> next null. Then we add remaining values of other directly to LL3.",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of a Stack, explanation of basic operations (Push, Pop, Peek, IsEmpty, IsFull).",
+      "reason": "The student's answer describes operations related to linked lists (pointers, merging into LL3), which is completely irrelevant to the question asking for the definition and basic operations of a Stack. No conceptual understanding of Stacks is demonstrated.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "Differentiate between Queue and Stack. |",
+      "studentAnswer": "We are giving ptr 3 -> next = null each time. So that it is while (ptr 3 -> next != null & ptr 3 -> next) {",
+      "maxMarks": 4,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No conceptual match. The answer is completely irrelevant to the question asked.",
+      "missingPoints": "The entire differentiation between Queue and Stack is missing. The answer discusses unrelated pointer operations.",
+      "reason": "The student's answer discusses pointer manipulation in a linked list context, which is entirely unrelated to the question asking for a differentiation between Queue and Stack. No relevant concepts were addressed.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "First we find position by Binary Search. ① Start = 0, end = n-1, mid = start + end / 2 ② BinSrch (int arr[], int x) { while (start < end) { if (arr[mid] <= x) { if (arr[mid+1] >= x) { return mid; } } else if (mid > key) { end = mid - 1; } else { start = mid + 1; } } } We got position, the value should be placed after arr[mid]. Now we make space by shifting values after mid. ③ for (i = n; i > mid; i--) { arr[i] = arr[i-1]; } ④ Now, give value arr[mid+1] = x; Time complexity O(log n) for binary search (worst case).",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "Definition of Stack, Push operation, Pop operation, Peek/Top operation, IsEmpty operation, IsFull operation.",
+      "reason": "The student's answer describes an algorithm for inserting an element into a sorted array using binary search, which is completely unrelated to the definition of a Stack and its basic operations. No credit can be awarded.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "Explain Bubble Sort algorithm in detail. |",
+        "studentAnswer": "We compare value of ptr 1 & ptr 2. Then insert inside new linked list 3 through ptr 3.",
+        "maxMarks": 5,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Very low. The student's explanation describes an operation more akin to merging or building a new list, not Bubble Sort. The core mechanism of adjacent comparison and swapping in place is entirely missed.",
+        "missingPoints": "All key steps of Bubble Sort are missing: adjacent element comparison, swapping elements, multiple passes, in-place sorting, and the concept of elements 'bubbling up' to their correct positions.",
+        "reason": "The student's answer fundamentally misunderstands Bubble Sort. It mentions 'compare' but then describes inserting into a new linked list, which is incorrect for Bubble Sort, an in-place sorting algorithm that relies on swapping adjacent elements. No credit can be awarded for a completely incorrect explanation.",
+        "mappingConfidence": 0.4
+      },
+      "Q2a": {
+        "question": "Q2a",
+        "expectedAnswer": "Define a Stack and its basic operations. |",
+        "studentAnswer": "First we find position by Binary Search. ① Start = 0, end = n-1, mid = start + end / 2 ② BinSrch (int arr[], int x) { while (start < end) { if (arr[mid] <= x) { if (arr[mid+1] >= x) { return mid; } } else if (mid > key) { end = mid - 1; } else { start = mid + 1; } } } We got position, the value should be placed after arr[mid]. Now we make space by shifting values after mid. ③ for (i = n; i > mid; i--) { arr[i] = arr[i-1]; } ④ Now, give value arr[mid+1] = x; Time complexity O(log n) for binary search (worst case).",
+        "maxMarks": 2,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match",
+        "missingPoints": "Definition of Stack, Push operation, Pop operation, Peek/Top operation, IsEmpty operation, IsFull operation.",
+        "reason": "The student's answer describes an algorithm for inserting an element into a sorted array using binary search, which is completely unrelated to the definition of a Stack and its basic operations. No credit can be awarded.",
+        "mappingConfidence": 0.30000000000000004
+      },
+      "Q2b": {
+        "question": "Q2b",
+        "expectedAnswer": "Explain push and pop operations with an example. |",
+        "studentAnswer": "(i) After 1st iteration, Q1 = [5, 3, 6, 4, 3]",
+        "maxMarks": 3,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No conceptual match. The student's answer describes a queue state, not push/pop operations.",
+        "missingPoints": "Explanation of push operation, explanation of pop operation, and an example demonstrating both.",
+        "reason": "The student's answer is completely irrelevant to the question. It describes a state of a queue (Q1) after an iteration, whereas the question asks for an explanation and example of push and pop operations (typically stack operations). No marks can be awarded.",
+        "mappingConfidence": 0.4
+      },
+      "Q3": {
+        "question": "Q3",
+        "expectedAnswer": "Differentiate between Queue and Stack. |",
+        "studentAnswer": "We are giving ptr 3 -> next = null each time. So that it is while (ptr 3 -> next != null & ptr 3 -> next) {",
+        "maxMarks": 4,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No conceptual match. The answer is completely irrelevant to the question asked.",
+        "missingPoints": "The entire differentiation between Queue and Stack is missing. The answer discusses unrelated pointer operations.",
+        "reason": "The student's answer discusses pointer manipulation in a linked list context, which is entirely unrelated to the question asking for a differentiation between Queue and Stack. No relevant concepts were addressed.",
+        "mappingConfidence": 0.4
+      }
+    },
+    "totalScore": 1.5,
+    "overallFeedback": "Limited coverage; revisit fundamentals and practice structured answers.",
+    "weakAreas": [
+      "Q1",
+      "Q2a",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q1",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2b",
+      "Q2a",
+      "Q2b",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q2a",
+      "Q1",
+      "Q2a",
+      "Q3",
+      "Q3",
+      "Q1",
+      "Q2a",
+      "Q3",
+      "Q2a"
+    ],
+    "overallConfidence": 0.55,
+    "mappingDetails": [
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.47500000000000003,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.4631578947368421,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fc325fbb64f542ffc821a",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3",
+        "matchedQuestionId": "693fc325fbb64f542ffc821b",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3",
+        "matchedQuestionId": "693fc325fbb64f542ffc821b",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc325fbb64f542ffc8218",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3",
+        "matchedQuestionId": "693fc325fbb64f542ffc821b",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc325fbb64f542ffc8219",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q1",
+    "Q2a",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q1",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2b",
+    "Q2a",
+    "Q2b",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q2a",
+    "Q1",
+    "Q2a",
+    "Q3",
+    "Q3",
+    "Q1",
+    "Q2a",
+    "Q3",
+    "Q2a"
+  ],
+  "overallConfidence": 0.55,
+  "mappingDetails": [
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.47500000000000003,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.4631578947368421,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fc325fbb64f542ffc821a",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3",
+      "matchedQuestionId": "693fc325fbb64f542ffc821b",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3",
+      "matchedQuestionId": "693fc325fbb64f542ffc821b",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc325fbb64f542ffc8218",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3",
+      "matchedQuestionId": "693fc325fbb64f542ffc821b",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc325fbb64f542ffc8219",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    }
+  ]
+}

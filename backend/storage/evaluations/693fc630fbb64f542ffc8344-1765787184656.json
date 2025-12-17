@@ -1,0 +1,263 @@
+{
+  "studentId": "693fc630fbb64f542ffc8344",
+  "recordId": "693fc630fbb64f542ffc8352",
+  "totalScore": 15.25,
+  "details": [
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "It swaps adjacent elements in many multiple passes. largest moves to end. O(n)² is stable in place",
+      "maxMarks": 5,
+      "score": 3.75,
+      "percentage": 75,
+      "conceptMatch": "Good understanding of core concepts and properties of Bubble Sort.",
+      "missingPoints": "Detailed step-by-step explanation of the algorithm's execution (e.g., nested loops, comparison logic, how the sorted portion grows), best-case time complexity (O(n)), and optimization for early termination.",
+      "reason": "Student correctly identifies the core mechanism (swapping adjacent elements), iterative nature (multiple passes), and the bubbling effect (largest moves to end). Also correctly states worst-case time complexity (O(n)²), stability, and in-place nature. However, a detailed explanation of the algorithm's step-by-step process, including comparison logic and how the sorted portion grows, is missing. Best-case time complexity was also not mentioned, which is crucial for a detailed explanation.",
+      "mappingConfidence": 0.4272727272727273,
+      "confidence": 0.5886363636363636
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "a: Stack is LIFO; push adds, pop removes top",
+      "maxMarks": 2,
+      "score": 2,
+      "percentage": 100,
+      "conceptMatch": "Excellent match. The student correctly identified the LIFO principle for a stack and accurately described both push and pop operations.",
+      "missingPoints": "None.",
+      "reason": "The student's answer fully covers the definition of a Stack (LIFO) and its basic operations (push adds, pop removes top), aligning perfectly with the requirements for full marks.",
+      "mappingConfidence": 0.38571428571428573,
+      "confidence": 0.6928571428571428
+    },
+    {
+      "number": "2a",
+      "question": "Q2a",
+      "correctAnswer": "Define a Stack and its basic operations. |",
+      "studentAnswer": "b: push(5) push(7) pop returns 7 stack becomes [5].",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Low. The student demonstrated stack operations but did not provide a definition of a Stack or its basic operations as requested.",
+      "missingPoints": "Definition of a Stack, definitions of basic operations (e.g., push, pop, peek, isEmpty, isFull).",
+      "reason": "The question explicitly asked for a *definition* of a Stack and its basic operations. The student provided an example demonstrating the push and pop operations, which, while conceptually correct in its demonstration, does not fulfill the requirement of defining the concept or its operations. No marks awarded as the core request for a definition was not met.",
+      "mappingConfidence": 0.3428571428571429,
+      "confidence": 0.5464285714285715
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "Differentiate between Queue and Stack. |",
+      "studentAnswer": "Stack LIFO: Queue FIFO. stack uses push/pop queue uses enqueue /dequeue",
+      "maxMarks": 4,
+      "score": 4,
+      "percentage": 100,
+      "conceptMatch": "Excellent match. All key differentiating concepts are present.",
+      "missingPoints": "None.",
+      "reason": "Student correctly identified LIFO/FIFO for Stack/Queue and the respective operations (push/pop, enqueue/dequeue), covering all essential differentiation points for full marks.",
+      "mappingConfidence": 0.5,
+      "confidence": 0.75
+    },
+    {
+      "number": "4",
+      "question": "Q4",
+      "correctAnswer": "What is Big-O notation? Give two examples. |",
+      "studentAnswer": "Big-O is upper evoband example O(N) O(n log n)",
+      "maxMarks": 3,
+      "score": 2.5,
+      "percentage": 83.33,
+      "conceptMatch": "The student correctly identified Big-O as an upper bound (assuming 'evoband' is a typo for 'bound') and provided two correct examples.",
+      "missingPoints": "A more complete and formal definition of Big-O notation was missing.",
+      "reason": "The student earned 0.5 marks for correctly identifying Big-O as an 'upper bound' (interpreting 'evoband' as a typo). Full marks were awarded for each of the two correct examples provided (1 mark each for O(N) and O(n log n)). The definition itself was brief and lacked detail.",
+      "mappingConfidence": 0.5384615384615385,
+      "confidence": 0.6858807692307692
+    },
+    {
+      "number": "5",
+      "question": "Q5",
+      "correctAnswer": "Write the time complexity of binary search and explain why. |",
+      "studentAnswer": "Binary search halves the array each step -> O(logn)",
+      "maxMarks": 3,
+      "score": 3,
+      "percentage": 100,
+      "conceptMatch": "Excellent",
+      "missingPoints": "None",
+      "reason": "The student correctly identified the time complexity as O(logn) and provided an accurate, concise explanation that binary search halves the array in each step, which fully addresses the question.",
+      "mappingConfidence": 0.5125,
+      "confidence": 0.75625
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "Explain Bubble Sort algorithm in detail. |",
+        "studentAnswer": "It swaps adjacent elements in many multiple passes. largest moves to end. O(n)² is stable in place",
+        "maxMarks": 5,
+        "scoreAwarded": 3.75,
+        "percentage": 75,
+        "conceptMatch": "Good understanding of core concepts and properties of Bubble Sort.",
+        "missingPoints": "Detailed step-by-step explanation of the algorithm's execution (e.g., nested loops, comparison logic, how the sorted portion grows), best-case time complexity (O(n)), and optimization for early termination.",
+        "reason": "Student correctly identifies the core mechanism (swapping adjacent elements), iterative nature (multiple passes), and the bubbling effect (largest moves to end). Also correctly states worst-case time complexity (O(n)²), stability, and in-place nature. However, a detailed explanation of the algorithm's step-by-step process, including comparison logic and how the sorted portion grows, is missing. Best-case time complexity was also not mentioned, which is crucial for a detailed explanation.",
+        "mappingConfidence": 0.4272727272727273
+      },
+      "Q2a": {
+        "question": "Q2a",
+        "expectedAnswer": "Define a Stack and its basic operations. |",
+        "studentAnswer": "b: push(5) push(7) pop returns 7 stack becomes [5].",
+        "maxMarks": 2,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Low. The student demonstrated stack operations but did not provide a definition of a Stack or its basic operations as requested.",
+        "missingPoints": "Definition of a Stack, definitions of basic operations (e.g., push, pop, peek, isEmpty, isFull).",
+        "reason": "The question explicitly asked for a *definition* of a Stack and its basic operations. The student provided an example demonstrating the push and pop operations, which, while conceptually correct in its demonstration, does not fulfill the requirement of defining the concept or its operations. No marks awarded as the core request for a definition was not met.",
+        "mappingConfidence": 0.3428571428571429
+      },
+      "Q3": {
+        "question": "Q3",
+        "expectedAnswer": "Differentiate between Queue and Stack. |",
+        "studentAnswer": "Stack LIFO: Queue FIFO. stack uses push/pop queue uses enqueue /dequeue",
+        "maxMarks": 4,
+        "scoreAwarded": 4,
+        "percentage": 100,
+        "conceptMatch": "Excellent match. All key differentiating concepts are present.",
+        "missingPoints": "None.",
+        "reason": "Student correctly identified LIFO/FIFO for Stack/Queue and the respective operations (push/pop, enqueue/dequeue), covering all essential differentiation points for full marks.",
+        "mappingConfidence": 0.5
+      },
+      "Q4": {
+        "question": "Q4",
+        "expectedAnswer": "What is Big-O notation? Give two examples. |",
+        "studentAnswer": "Big-O is upper evoband example O(N) O(n log n)",
+        "maxMarks": 3,
+        "scoreAwarded": 2.5,
+        "percentage": 83.33,
+        "conceptMatch": "The student correctly identified Big-O as an upper bound (assuming 'evoband' is a typo for 'bound') and provided two correct examples.",
+        "missingPoints": "A more complete and formal definition of Big-O notation was missing.",
+        "reason": "The student earned 0.5 marks for correctly identifying Big-O as an 'upper bound' (interpreting 'evoband' as a typo). Full marks were awarded for each of the two correct examples provided (1 mark each for O(N) and O(n log n)). The definition itself was brief and lacked detail.",
+        "mappingConfidence": 0.5384615384615385
+      },
+      "Q5": {
+        "question": "Q5",
+        "expectedAnswer": "Write the time complexity of binary search and explain why. |",
+        "studentAnswer": "Binary search halves the array each step -> O(logn)",
+        "maxMarks": 3,
+        "scoreAwarded": 3,
+        "percentage": 100,
+        "conceptMatch": "Excellent",
+        "missingPoints": "None",
+        "reason": "The student correctly identified the time complexity as O(logn) and provided an accurate, concise explanation that binary search halves the array in each step, which fully addresses the question.",
+        "mappingConfidence": 0.5125
+      }
+    },
+    "totalScore": 15.25,
+    "overallFeedback": "Strong performance with good conceptual coverage.",
+    "weakAreas": [
+      "Q1",
+      "Q2a",
+      "Q2a",
+      "Q3",
+      "Q4",
+      "Q5"
+    ],
+    "overallConfidence": 0.67,
+    "mappingDetails": [
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fc57ffbb64f542ffc8313",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4272727272727273,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc57ffbb64f542ffc8314",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.38571428571428573,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fc57ffbb64f542ffc8314",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.3428571428571429,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3",
+        "matchedQuestionId": "693fc57ffbb64f542ffc8316",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.5,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "4",
+        "matchedQuestionId": "693fc57ffbb64f542ffc8317",
+        "matchedQuestionNumber": "4",
+        "confidence": 0.5384615384615385,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "5",
+        "matchedQuestionId": "693fc57ffbb64f542ffc8318",
+        "matchedQuestionNumber": "5",
+        "confidence": 0.5125,
+        "note": "Mapped"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q1",
+    "Q2a",
+    "Q2a",
+    "Q3",
+    "Q4",
+    "Q5"
+  ],
+  "overallConfidence": 0.67,
+  "mappingDetails": [
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fc57ffbb64f542ffc8313",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4272727272727273,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc57ffbb64f542ffc8314",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.38571428571428573,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fc57ffbb64f542ffc8314",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.3428571428571429,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3",
+      "matchedQuestionId": "693fc57ffbb64f542ffc8316",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.5,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "4",
+      "matchedQuestionId": "693fc57ffbb64f542ffc8317",
+      "matchedQuestionNumber": "4",
+      "confidence": 0.5384615384615385,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "5",
+      "matchedQuestionId": "693fc57ffbb64f542ffc8318",
+      "matchedQuestionNumber": "5",
+      "confidence": 0.5125,
+      "note": "Mapped"
+    }
+  ]
+}

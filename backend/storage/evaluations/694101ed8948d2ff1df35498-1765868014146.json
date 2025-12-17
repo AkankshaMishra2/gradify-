@@ -1,0 +1,367 @@
+{
+  "studentId": "694101ed8948d2ff1df35498",
+  "recordId": "694101ee8948d2ff1df354a7",
+  "totalScore": 0,
+  "details": [
+    {
+      "number": "1",
+      "questionId": "694101618948d2ff1df35467",
+      "question": "Explain Bubble Sort algorithm in detail.",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "Full explanation of Bubble Sort algorithm, including steps, example, and complexity.",
+      "reason": "No content was provided for this question.",
+      "mappingConfidence": 0,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": ""
+    },
+    {
+      "number": "2a",
+      "questionId": "694101618948d2ff1df35468",
+      "question": "Define a Stack and its basic operations.",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "Definition of a Stack (LIFO data structure) and its basic operations (push, pop, peek, isEmpty, isFull).",
+      "reason": "The student provided an example of stack usage (postfix expression evaluation) instead of defining a stack and its basic operations as requested.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q2(a)",
+      "mappedStudentAnswerText": "A | Stack | 60 | 60, 20 20 | 60, 20, 2 2 | 60, 20, 2 / | 60, 10 + | 60, 10, 15 15 | 60, 10, 15, 5 5 | 60, 10, 15, 5 * | 60, 75 - | 70, 75, 100 100 | 70, 25 + | 70 + 25 Expr = 95"
+    },
+    {
+      "number": "2b",
+      "questionId": "694101618948d2ff1df35469",
+      "question": "Explain push and pop operations with an example.",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "Explanation of stack push operation, explanation of stack pop operation, and a clear example demonstrating both.",
+      "reason": "The student provided content related to queue operations (indicated by 'Rear', 'Front', 'Q1', 'Q2') instead of explaining stack push and pop operations with an example.",
+      "mappingConfidence": 0.9,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q2(b), Q2",
+      "mappedStudentAnswerText": "(i) After 1st iteration, Q1 = [5, 3, 6, 4, 3] , Rear 1= 0 , Front 1= 1 = [ ] , Rear 2= -1 , Front 2= -1 After 2nd iter , Q1 = [3, 6, 4, 3] , Rear 1= 0 , Front 1= 2 = [5, 7] , Rear 2= 0 , Front 2= 0 After 3rd iter , Q1 = [4, 3] , Rear 1= 1 , Front 1= 4 = [5, 3] , Rear 2= 1 , Front 2= 0 After 4th iter , Q1 = [3, 5] , Rear 1= 2 , Front 1= 2 = [5, 3] , Rear 2= 2 , Front 1= 2 = [5, 3] , Rear 2= 2 , Front 2= 2"
+    },
+    {
+      "number": "3",
+      "questionId": "694101618948d2ff1df3546a",
+      "question": "Differentiate between Queue and Stack.",
+      "maxMarks": 4,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "Key differences between Queue and Stack, such as LIFO vs FIFO, primary operations, and typical use cases.",
+      "reason": "No content was provided for this question.",
+      "mappingConfidence": 0,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": ""
+    },
+    {
+      "number": "4",
+      "questionId": "694101618948d2ff1df3546b",
+      "question": "What is Big-O notation? Give two examples.",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "Definition of Big-O notation and two distinct examples of its application to algorithms.",
+      "reason": "No content was provided for this question.",
+      "mappingConfidence": 0,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": ""
+    },
+    {
+      "number": "5",
+      "questionId": "694101618948d2ff1df3546c",
+      "question": "Write the time complexity of binary search and explain why.",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "The correct time complexity of binary search (O(log n)) and a clear explanation of why it is logarithmic (e.g., halving the search space in each step).",
+      "reason": "No content was provided for this question.",
+      "mappingConfidence": 0,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": ""
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Explain Bubble Sort algorithm in detail.",
+        "expectedAnswer": "Explain Bubble Sort algorithm in detail. |",
+        "studentAnswer": "",
+        "maxMarks": 5,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "Full explanation of Bubble Sort algorithm, including steps, example, and complexity.",
+        "reason": "No content was provided for this question.",
+        "mappingConfidence": 0,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q2a": {
+        "question": "Define a Stack and its basic operations.",
+        "expectedAnswer": "Define a Stack and its basic operations. |",
+        "studentAnswer": "A | Stack | 60 | 60, 20 20 | 60, 20, 2 2 | 60, 20, 2 / | 60, 10 + | 60, 10, 15 15 | 60, 10, 15, 5 5 | 60, 10, 15, 5 * | 60, 75 - | 70, 75, 100 100 | 70, 25 + | 70 + 25 Expr = 95",
+        "maxMarks": 2,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "Definition of a Stack (LIFO data structure) and its basic operations (push, pop, peek, isEmpty, isFull).",
+        "reason": "The student provided an example of stack usage (postfix expression evaluation) instead of defining a stack and its basic operations as requested.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q2(a)"
+      },
+      "Q2b": {
+        "question": "Explain push and pop operations with an example.",
+        "expectedAnswer": "Explain push and pop operations with an example. |",
+        "studentAnswer": "(i) After 1st iteration, Q1 = [5, 3, 6, 4, 3] , Rear 1= 0 , Front 1= 1 = [ ] , Rear 2= -1 , Front 2= -1 After 2nd iter , Q1 = [3, 6, 4, 3] , Rear 1= 0 , Front 1= 2 = [5, 7] , Rear 2= 0 , Front 2= 0 After 3rd iter , Q1 = [4, 3] , Rear 1= 1 , Front 1= 4 = [5, 3] , Rear 2= 1 , Front 2= 0 After 4th iter , Q1 = [3, 5] , Rear 1= 2 , Front 1= 2 = [5, 3] , Rear 2= 2 , Front 1= 2 = [5, 3] , Rear 2= 2 , Front 2= 2",
+        "maxMarks": 3,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "Explanation of stack push operation, explanation of stack pop operation, and a clear example demonstrating both.",
+        "reason": "The student provided content related to queue operations (indicated by 'Rear', 'Front', 'Q1', 'Q2') instead of explaining stack push and pop operations with an example.",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "Q2(b), Q2"
+      },
+      "Q3": {
+        "question": "Differentiate between Queue and Stack.",
+        "expectedAnswer": "Differentiate between Queue and Stack. |",
+        "studentAnswer": "",
+        "maxMarks": 4,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "Key differences between Queue and Stack, such as LIFO vs FIFO, primary operations, and typical use cases.",
+        "reason": "No content was provided for this question.",
+        "mappingConfidence": 0,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q4": {
+        "question": "What is Big-O notation? Give two examples.",
+        "expectedAnswer": "What is Big-O notation? Give two examples. |",
+        "studentAnswer": "",
+        "maxMarks": 3,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "Definition of Big-O notation and two distinct examples of its application to algorithms.",
+        "reason": "No content was provided for this question.",
+        "mappingConfidence": 0,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q5": {
+        "question": "Write the time complexity of binary search and explain why.",
+        "expectedAnswer": "Write the time complexity of binary search and explain why. |",
+        "studentAnswer": "",
+        "maxMarks": 3,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "The correct time complexity of binary search (O(log n)) and a clear explanation of why it is logarithmic (e.g., halving the search space in each step).",
+        "reason": "No content was provided for this question.",
+        "mappingConfidence": 0,
+        "mappedStudentAnswerLabel": null
+      }
+    },
+    "totalScore": 0,
+    "overallFeedback": "The student did not provide answers for Questions 1, 3, 4, and 5. For Question 2, the student misunderstood the requirements for both subparts. For Q2a, an example of stack usage was given instead of a definition. For Q2b, content related to queue operations was provided instead of an explanation of stack push/pop operations.",
+    "weakAreas": [
+      "Understanding of basic data structure definitions (Stack, Queue)",
+      "Ability to differentiate between data structures",
+      "Knowledge of sorting algorithms (Bubble Sort)",
+      "Understanding of algorithmic complexity (Big-O notation, Binary Search)"
+    ],
+    "overallConfidence": 1,
+    "mappingDetails": [
+      {
+        "sourceNumber": "Unmapped",
+        "matchedQuestionId": "694101618948d2ff1df35467",
+        "matchedQuestionNumber": "1",
+        "confidence": 0,
+        "note": "No student answer mapped"
+      },
+      {
+        "sourceNumber": "Q2(a)",
+        "matchedQuestionId": "694101618948d2ff1df35468",
+        "matchedQuestionNumber": "2a",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2(b), Q2",
+        "matchedQuestionId": "694101618948d2ff1df35469",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Unmapped",
+        "matchedQuestionId": "694101618948d2ff1df3546a",
+        "matchedQuestionNumber": "3",
+        "confidence": 0,
+        "note": "No student answer mapped"
+      },
+      {
+        "sourceNumber": "Unmapped",
+        "matchedQuestionId": "694101618948d2ff1df3546b",
+        "matchedQuestionNumber": "4",
+        "confidence": 0,
+        "note": "No student answer mapped"
+      },
+      {
+        "sourceNumber": "Unmapped",
+        "matchedQuestionId": "694101618948d2ff1df3546c",
+        "matchedQuestionNumber": "5",
+        "confidence": 0,
+        "note": "No student answer mapped"
+      },
+      {
+        "sourceNumber": "Q2(b)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Understanding of basic data structure definitions (Stack, Queue)",
+    "Ability to differentiate between data structures",
+    "Knowledge of sorting algorithms (Bubble Sort)",
+    "Understanding of algorithmic complexity (Big-O notation, Binary Search)"
+  ],
+  "overallConfidence": 1,
+  "mappingDetails": [
+    {
+      "sourceNumber": "Unmapped",
+      "matchedQuestionId": "694101618948d2ff1df35467",
+      "matchedQuestionNumber": "1",
+      "confidence": 0,
+      "note": "No student answer mapped"
+    },
+    {
+      "sourceNumber": "Q2(a)",
+      "matchedQuestionId": "694101618948d2ff1df35468",
+      "matchedQuestionNumber": "2a",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2(b), Q2",
+      "matchedQuestionId": "694101618948d2ff1df35469",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Unmapped",
+      "matchedQuestionId": "694101618948d2ff1df3546a",
+      "matchedQuestionNumber": "3",
+      "confidence": 0,
+      "note": "No student answer mapped"
+    },
+    {
+      "sourceNumber": "Unmapped",
+      "matchedQuestionId": "694101618948d2ff1df3546b",
+      "matchedQuestionNumber": "4",
+      "confidence": 0,
+      "note": "No student answer mapped"
+    },
+    {
+      "sourceNumber": "Unmapped",
+      "matchedQuestionId": "694101618948d2ff1df3546c",
+      "matchedQuestionNumber": "5",
+      "confidence": 0,
+      "note": "No student answer mapped"
+    },
+    {
+      "sourceNumber": "Q2(b)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    }
+  ]
+}

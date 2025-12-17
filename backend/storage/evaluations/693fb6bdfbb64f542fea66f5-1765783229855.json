@@ -1,0 +1,821 @@
+{
+  "studentId": "693fb6bdfbb64f542fea66f5",
+  "recordId": "693fb6bdfbb64f542fea6729",
+  "totalScore": 0,
+  "details": [
+    {
+      "number": "1a",
+      "question": "Q1a",
+      "correctAnswer": "2",
+      "studentAnswer": "func 1: 1st Loop worst case: Run = n 2nd Loop worst case: Run = n 3rd loop worst case: Run = 10 So, Time Complexity → n * n * 10 → 10n² O(n²) is worst time complexity.",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student provided a time complexity calculation, but the correct answer is a numerical value '2'.",
+      "missingPoints": "The correct answer '2' is entirely missing. The student provided an irrelevant concept (time complexity) compared to the expected answer.",
+      "reason": "The student's answer 'O(n²)' is a time complexity calculation, which does not align with the provided correct answer '2'. Assuming '2' is the expected numerical answer to the question, the student's response is conceptually incorrect and irrelevant to the expected answer.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "func 2: 1st Loop worst case: Run = 2m 2nd Loop worst case: Run = i = 2n/3 3rd Loop worst case: Run = j² = (2n/3)² = 4n²/9 So, Time Complexity → 2n * 2n/3 * 4n²/9 O(n⁴) is worst time complexity.",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer discusses time complexity analysis (O(n⁴)), which is entirely unrelated to the correct answer's logical condition for comparing node amounts (`curr->amount < minNode->amount`).",
+      "reason": "The student's answer is completely irrelevant to the correct answer provided for Q2. The correct answer is a specific logical comparison, while the student's answer is about algorithm time complexity. Therefore, no marks can be awarded.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also       give 1 mark //*curr->amount > *maxNode->amount    Considered correct",
+      "studentAnswer": "func 3 :- 1st loop worst case: Run = n 2nd loop worst case: Run = n (i.e. i=0) 3rd loop worst case: Run = n (i.e. i=0) (i) So, Time Complexity → n + n + n O(n^3) is worst time complexity.",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer discusses time complexity, which is unrelated to the required comparison condition for node amounts.",
+      "reason": "The student's answer is completely irrelevant to the question asked. The question requires a comparison condition for node amounts, but the student provided an analysis of time complexity.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also       give 1 mark //*curr->amount > *maxNode->amount    Considered correct",
+      "studentAnswer": "(b) Algorithm :- ① Min = arr [0] , Count = 0 ② For (i=1; i < N; i++) { if (arr[i] > Min) { Min = arr[i]; } } cout << \"Wait = \" << ++count <<endl; count = -1; } } { count++; } For main [ ] = { 20, 15, 25, 18, 9, 30 }, ① Min = 20; count = 0. ② If (15 > 20) x count = 1 if (25 > 20) → Min = 25 , Wait = 2Ø count = -1 count = 0 ③ If (18 > 25) x count = 2 if (9 > 25) x if (30 > 25) → Min = 30 , Wait = 3 count = -1 count = 0 So, for following array worst wait time is 3 days.",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer describes an algorithm for finding the maximum in an array, not the specific comparison condition for nodes (curr->amount > maxNode->amount) as required by the question.",
+      "reason": "The student's answer provides an algorithm for finding the maximum element in an array, which is conceptually different from the specific comparison condition between two nodes (curr->amount and maxNode->amount) that the question asks for. No part of the answer aligns with the expected condition.",
+      "mappingConfidence": 0.42608695652173917,
+      "confidence": 0.5880434782608696
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "# | 60 | 20 | 2 | / + | 15 * | 5 - | * + | 100",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer does not contain the required C/C++ comparison expression `curr->amount < minNode->amount`. It is entirely irrelevant to the question.",
+      "reason": "The student provided a sequence of numbers and operators that bears no conceptual or syntactical resemblance to the correct C/C++ comparison expression. No credit can be awarded as the answer is completely off-topic.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "(i) After 1st After 2nd After 3rd After 4th After 5th",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer does not provide the correct boolean condition `curr->amount < minNode->amount`. It provides a sequence of 'After Xth' which is irrelevant to the question.",
+      "reason": "The student's answer is completely irrelevant to the question asking for a specific boolean condition. No conceptual correctness or alignment with the answer key is present.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "# A Stack 60 60 20 60,20 2 60,20,2 / 60,20 + 60,10 15 60,10,15 5 60,10,15,5 * 60,10,15 - 70,75 100 70,75,100 + 70,25 Exp = 95",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The correct logical expression `curr->amount < minNode->amount` is entirely missing.",
+      "reason": "The student's answer is completely irrelevant to the question asked. It appears to be an answer for a different type of problem (e.g., stack operations or expression evaluation) and does not contain any part of the correct logical expression.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "(i) After 1st iteration, Q1 = [5,3,6,4,3] Rear1=0 , Front1=1",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer describes the state of a queue, which is completely unrelated to the correct answer's logical comparison condition `curr->amount < minNode->amount`.",
+      "reason": "The student's answer is entirely irrelevant to the correct answer provided for Q2. The correct answer is a specific logical condition, while the student's answer describes the state of a queue. There is no conceptual overlap.",
+      "mappingConfidence": 0.30000000000000004,
+      "confidence": 0.525
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [] Rear2=0 , Front2=-1 After 2nd iter. Q1 = [3,6,4,3] Rear1=0 , Front1=2",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer does not address the comparison of 'curr->amount' and 'minNode->amount'. It provides information about queue states and array values, which is entirely unrelated to the correct answer.",
+      "reason": "The student's answer is completely irrelevant to the question and the provided correct answer. It describes queue operations and array states, which bears no conceptual resemblance to the required comparison expression.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [5,3] Rear2=0 , Front2=0 After 3rd iter. Q1 = [6,4,3] Rear1=1 , Front1=4",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The core comparison logic `curr->amount < minNode->amount` is entirely missing.",
+      "reason": "The student's answer describes queue states and array manipulations, which is completely irrelevant to the expected comparison expression for Q2. No conceptual alignment with the correct answer.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [5,3] Rear2=1 , Front2=0 After 4th iter. Q1 = [3,5] Rear1=2 , Front1=2",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer is completely irrelevant to the correct answer. The correct answer is a logical comparison expression, while the student's answer describes queue states and pointers.",
+      "reason": "The student's answer describes queue operations and states, which is entirely unrelated to the correct answer's logical comparison expression (`curr->amount < minNode->amount`). There is no conceptual alignment, hence 0 marks.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [5,3] Rear2=2 , Front2=1 After 5th iter. Q1 = [5,3] Rear1=3 , Front1=2",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The correct comparison expression `curr->amount < minNode->amount`.",
+      "reason": "The student's answer is entirely irrelevant to the correct answer, which is a specific comparison condition. The provided answer describes queue states, not a logical expression.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [5,3] Rear2=2 , Front2=2 Q(ii): After 1st iteration: Q1 = [3, 75, 3, 6, 7]",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer does not contain the correct comparison expression 'curr->amount < minNode->amount' or any related concepts.",
+      "reason": "The student's answer is completely irrelevant to the correct answer for Q2. It appears to be an answer for a different question, possibly involving array or queue operations, and bears no conceptual resemblance to the required comparison of node amounts.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [ ] Rear1 = -3 Rear2 = -1 , Front1 = -1 Front2 = -1 After 2nd iter: Q1 = [3, 2, 5]",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer is completely irrelevant to the required comparison expression. It discusses queue states and array contents instead.",
+      "reason": "The student's answer does not address the question, which requires a comparison expression. The provided answer describes queue operations and states, which is conceptually unrelated to 'curr->amount < minNode->amount'.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [3] After 3rd: Q1 = [3]",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer is completely irrelevant to the question. The correct expression 'curr->amount < minNode->amount' is entirely missing.",
+      "reason": "The student's answer ' = [3] After 3rd: Q1 = [3]' bears no conceptual resemblance to the correct answer 'curr->amount < minNode->amount' for Q2. It appears to be an unrelated fragment, possibly from another question (Q1). Therefore, 0 marks are awarded.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [3, 3] After 4th: Q1 = empty",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer is completely unrelated to the correct answer `curr->amount < minNode->amount`. It does not contain any part of the required comparison logic.",
+      "reason": "The student's answer is entirely irrelevant to Question 2. It appears to be an answer to a different question, possibly related to queue states or array values, and does not address the comparison expression required for Q2.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "= [3, 3, 3] Rear1 = Front1 = -1 Front2 = 3, Rear2 = 0",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No conceptual match. The student's answer is completely irrelevant to the correct answer.",
+      "missingPoints": "The correct logical condition 'curr->amount < minNode->amount' is entirely missing.",
+      "reason": "The student provided an answer related to data structure states (arrays/queues) which bears no resemblance to the required boolean comparison for finding a minimum value.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also       give 1 mark //*curr->amount > *maxNode->amount    Considered correct",
+      "studentAnswer": "C Live",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer is completely irrelevant to the question. Expected a comparison condition involving `curr->amount` and `maxNode->amount` (or similar data/value comparison).",
+      "reason": "The student's answer 'C Live' does not correspond to the correct answer, which requires a code snippet for comparing node amounts/data. The answer provided is entirely off-topic.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Loop The",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The correct comparison condition `curr->amount < minNode->amount` is entirely missing.",
+      "reason": "The student's answer 'Loop The' is completely irrelevant and does not demonstrate any understanding of the required logical condition for comparing amounts between nodes.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "We La while",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No conceptual match.",
+      "missingPoints": "The student's answer is completely irrelevant to the correct pointer assignment and error identification. It lacks any mention of `prev`, `curr`, `next`, or the specific incorrect statement.",
+      "reason": "The student's answer 'We La while' bears no resemblance to the correct answer regarding pointer assignments (`prev = curr;`) or the identification of an incorrect statement (`pre = prev-> next is Wrong`). Therefore, no marks can be awarded.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": ": Node * head 3; Node * ptr 3 = head 3; Node * ptr 1 = head 1; Node * ptr 2 = head 2; Loop: while (ptr 1 != null && ptr 2 -> next != null) { if (ptr 1-> value > ptr 2: value) { int ptr 3 = new nn; nn->value = ptr 1.value; nn->next = ptr 2; nn->next->next = null; } else { nn->value = ptr 2.value; nn->next = ptr 1; nn->next.value = ptr 1.value; nn->next->next = ptr 1 -> null; } }",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer is a lengthy, incorrect code snippet attempting linked list operations, which is entirely unrelated to the correct answer's specific statement about a pointer assignment error.",
+      "missingPoints": "The student's answer completely misses the point of identifying the specific pointer error 'prev = curr; pre = prev-> next' is Wrong. The provided code is irrelevant to the correct answer.",
+      "reason": "The student's answer is a complex, syntactically incorrect code block that attempts to perform linked list operations. The correct answer is a very specific statement identifying a common pointer error. The student's response does not address the concept presented in the correct answer at all, thus receiving 0 marks.",
+      "mappingConfidence": 0.3285714285714286,
+      "confidence": 0.5392857142857144
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also       give 1 mark //*curr->amount > *maxNode->amount    Considered correct",
+      "studentAnswer": "We compare value of ptr 1 & ptr 2. Then insert inside new linked list 3 through ptr 3.",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Poor match. The answer is too generic and includes irrelevant information.",
+      "missingPoints": "The specific node pointers (curr, maxNode), the specific member being compared (amount/data/value), and the correct comparison operator. The mention of inserting into a new linked list is irrelevant to the question.",
+      "reason": "The student's answer vaguely mentions comparing 'value of ptr 1 & ptr 2' but fails to identify the specific nodes (curr, maxNode) or their members (amount/data/value) as required by the answer key. The subsequent statement about inserting into a new linked list is completely irrelevant to the comparison condition asked in the question. Therefore, no marks are awarded.",
+      "mappingConfidence": 0.4857142857142857,
+      "confidence": 0.6178571428571429
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Loop run until ptr 1->next or ptr 2-> next != null. Then we add remaining values of other directly to LL3.",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer describes loop termination and list merging, which is unrelated to the comparison condition provided in the correct answer.",
+      "missingPoints": "The core concept of comparing 'curr->amount' and 'minNode->amount' is entirely missing. The student's answer addresses a different problem or aspect of list manipulation.",
+      "reason": "The student's answer describes a loop termination condition and subsequent list merging, which is conceptually distinct and irrelevant to the provided correct answer 'curr->amount < minNode->amount'. No credit can be awarded.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "We are giving ptr 3 -> next = null each time. So that it is easy to transverse in next step through while (ptr 3 -> next = null) {ptr 3 = ptr 3 -> next }",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer does not address the specific error identified in the correct answer regarding `pre = prev-> next`.",
+      "reason": "The student's answer discusses an unrelated and flawed approach to linked list manipulation (`ptr 3 -> next = null` and `while (ptr 3 -> next = null)`), which does not match the correct answer's point about `pre = prev-> next` being wrong. The logic presented by the student is also incorrect for typical linked list traversal.",
+      "mappingConfidence": 0.45,
+      "confidence": 0.6
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "First we find position by Binary Search. ① Start = 0 , end = n-1 mid = start + end / 2 ② Bin Srch (int arr [], int x) { while (start < end) { if (arr [mid] <= x) { if (arr [mid + 1] >= x) { return mid; } } if (mid > key) { end = mid - 1; } else { start = mid + 1; } } } We got position, the value should be placed after arr [mid]. ③ Now, we make space by shifting values after mid. for (i = n ; i > mid ; i--) { arr [i] = arr [i-1]; } ④ Now, give value arr [mid + 1] = x; Time complexity O (log n) for binary search (worst case).",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer describes array insertion, while the correct answer is about pointer manipulation/error identification.",
+      "missingPoints": "The student's answer does not address the specific pointer manipulation issue or error identification implied by the correct answer.",
+      "reason": "The student's answer describes an algorithm for inserting an element into a sorted array, which is completely unrelated to the provided correct answer for Q3, which addresses a specific pointer manipulation statement (`prev = curr; pre = prev-> next is Wrong`). There is no conceptual overlap.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1a": {
+        "question": "Q1a",
+        "expectedAnswer": "2",
+        "studentAnswer": "func 1: 1st Loop worst case: Run = n 2nd Loop worst case: Run = n 3rd loop worst case: Run = 10 So, Time Complexity → n * n * 10 → 10n² O(n²) is worst time complexity.",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match. The student provided a time complexity calculation, but the correct answer is a numerical value '2'.",
+        "missingPoints": "The correct answer '2' is entirely missing. The student provided an irrelevant concept (time complexity) compared to the expected answer.",
+        "reason": "The student's answer 'O(n²)' is a time complexity calculation, which does not align with the provided correct answer '2'. Assuming '2' is the expected numerical answer to the question, the student's response is conceptually incorrect and irrelevant to the expected answer.",
+        "mappingConfidence": 0.4
+      },
+      "Q2": {
+        "question": "Q2",
+        "expectedAnswer": "curr->amount < minNode->amount",
+        "studentAnswer": "Loop run until ptr 1->next or ptr 2-> next != null. Then we add remaining values of other directly to LL3.",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match. The student's answer describes loop termination and list merging, which is unrelated to the comparison condition provided in the correct answer.",
+        "missingPoints": "The core concept of comparing 'curr->amount' and 'minNode->amount' is entirely missing. The student's answer addresses a different problem or aspect of list manipulation.",
+        "reason": "The student's answer describes a loop termination condition and subsequent list merging, which is conceptually distinct and irrelevant to the provided correct answer 'curr->amount < minNode->amount'. No credit can be awarded.",
+        "mappingConfidence": 0.4
+      },
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also       give 1 mark //*curr->amount > *maxNode->amount    Considered correct",
+        "studentAnswer": "We compare value of ptr 1 & ptr 2. Then insert inside new linked list 3 through ptr 3.",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Poor match. The answer is too generic and includes irrelevant information.",
+        "missingPoints": "The specific node pointers (curr, maxNode), the specific member being compared (amount/data/value), and the correct comparison operator. The mention of inserting into a new linked list is irrelevant to the question.",
+        "reason": "The student's answer vaguely mentions comparing 'value of ptr 1 & ptr 2' but fails to identify the specific nodes (curr, maxNode) or their members (amount/data/value) as required by the answer key. The subsequent statement about inserting into a new linked list is completely irrelevant to the comparison condition asked in the question. Therefore, no marks are awarded.",
+        "mappingConfidence": 0.4857142857142857
+      },
+      "Q3": {
+        "question": "Q3",
+        "expectedAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+        "studentAnswer": "First we find position by Binary Search. ① Start = 0 , end = n-1 mid = start + end / 2 ② Bin Srch (int arr [], int x) { while (start < end) { if (arr [mid] <= x) { if (arr [mid + 1] >= x) { return mid; } } if (mid > key) { end = mid - 1; } else { start = mid + 1; } } } We got position, the value should be placed after arr [mid]. ③ Now, we make space by shifting values after mid. for (i = n ; i > mid ; i--) { arr [i] = arr [i-1]; } ④ Now, give value arr [mid + 1] = x; Time complexity O (log n) for binary search (worst case).",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match. The student's answer describes array insertion, while the correct answer is about pointer manipulation/error identification.",
+        "missingPoints": "The student's answer does not address the specific pointer manipulation issue or error identification implied by the correct answer.",
+        "reason": "The student's answer describes an algorithm for inserting an element into a sorted array, which is completely unrelated to the provided correct answer for Q3, which addresses a specific pointer manipulation statement (`prev = curr; pre = prev-> next is Wrong`). There is no conceptual overlap.",
+        "mappingConfidence": 0.4
+      }
+    },
+    "totalScore": 0,
+    "overallFeedback": "Limited coverage; revisit fundamentals and practice structured answers.",
+    "weakAreas": [
+      "Q1a",
+      "Q2",
+      "Q1",
+      "Q1",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q2",
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q3",
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q3"
+    ],
+    "overallConfidence": 0.57,
+    "mappingDetails": [
+      {
+        "sourceNumber": "1a",
+        "matchedQuestionId": "693fb504fbb64f542fea6659",
+        "matchedQuestionNumber": "1a",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fb504fbb64f542fea669c",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fb504fbb64f542fea669c",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.42608695652173917,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.30000000000000004,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fb504fbb64f542fea669c",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3",
+        "matchedQuestionId": "693fb504fbb64f542fea669e",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3ba",
+        "matchedQuestionId": "693fb504fbb64f542fea669e",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.3285714285714286,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693fb504fbb64f542fea669c",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4857142857142857,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693fb504fbb64f542fea669d",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3",
+        "matchedQuestionId": "693fb504fbb64f542fea669e",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.45,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3",
+        "matchedQuestionId": "693fb504fbb64f542fea669e",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q1a",
+    "Q2",
+    "Q1",
+    "Q1",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q2",
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q3",
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q3"
+  ],
+  "overallConfidence": 0.57,
+  "mappingDetails": [
+    {
+      "sourceNumber": "1a",
+      "matchedQuestionId": "693fb504fbb64f542fea6659",
+      "matchedQuestionNumber": "1a",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fb504fbb64f542fea669c",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fb504fbb64f542fea669c",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.42608695652173917,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.30000000000000004,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fb504fbb64f542fea669c",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3",
+      "matchedQuestionId": "693fb504fbb64f542fea669e",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3ba",
+      "matchedQuestionId": "693fb504fbb64f542fea669e",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.3285714285714286,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693fb504fbb64f542fea669c",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4857142857142857,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693fb504fbb64f542fea669d",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3",
+      "matchedQuestionId": "693fb504fbb64f542fea669e",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.45,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3",
+      "matchedQuestionId": "693fb504fbb64f542fea669e",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    }
+  ]
+}

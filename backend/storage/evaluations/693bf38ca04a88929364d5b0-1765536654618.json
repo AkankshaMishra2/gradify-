@@ -1,0 +1,793 @@
+{
+  "studentId": "693bf38ca04a88929364d5b0",
+  "recordId": "693bf38da04a88929364d665",
+  "totalScore": 0,
+  "details": [
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Objectives of the Course",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Course Learning Outcomes",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "8",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "4",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "4",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "0",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "ERISE Grid Mapping",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "4",
+      "question": "Q4",
+      "correctAnswer": "curr = curr->next;",
+      "studentAnswer": "Recommended  Books (Reference Books/Textbooks)",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "5",
+      "question": "Q5",
+      "correctAnswer": "curr != head              curr->next != head is Wrong",
+      "studentAnswer": "Other readings & relevant websites",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": ".",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "No answer provided"
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": ".",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "No answer provided"
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": ".",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "No answer provided"
+    },
+    {
+      "number": "4",
+      "question": "Q4",
+      "correctAnswer": "curr = curr->next;",
+      "studentAnswer": ".",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "No answer provided"
+    },
+    {
+      "number": "5",
+      "question": "Q5",
+      "correctAnswer": "curr != head              curr->next != head is Wrong",
+      "studentAnswer": ".",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "No answer provided"
+    },
+    {
+      "number": "6",
+      "question": "Q6",
+      "correctAnswer": "maxPrev->next = maxNode->next               or //Correct maxPrev->next =maxPrev->next->next",
+      "studentAnswer": ".",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "No answer provided"
+    },
+    {
+      "number": "6",
+      "question": "Q6",
+      "correctAnswer": "maxPrev->next = maxNode->next               or //Correct maxPrev->next =maxPrev->next->next",
+      "studentAnswer": "Recommended  Tools and Platforms",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "7",
+      "question": "Q7",
+      "correctAnswer": "temp->next = maxNode;",
+      "studentAnswer": "Course Plan",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "8",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "9",
+      "question": "Q9",
+      "correctAnswer": "minPre->next = minNode->next",
+      "studentAnswer": "18",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "8",
+      "question": "Q8",
+      "correctAnswer": "temp->next = newHead;",
+      "studentAnswer": "Delivery/Instructional Resources",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "8",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "9",
+      "question": "Q9",
+      "correctAnswer": "minPre->next = minNode->next",
+      "studentAnswer": "18",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "L5h9U",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "7",
+      "question": "Q7",
+      "correctAnswer": "temp->next = maxNode;",
+      "studentAnswer": "/",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "No answer provided"
+    },
+    {
+      "number": "5",
+      "question": "Q5",
+      "correctAnswer": "curr != head              curr->next != head is Wrong",
+      "studentAnswer": "x0SKU",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "5",
+      "question": "Q5",
+      "correctAnswer": "curr != head              curr->next != head is Wrong",
+      "studentAnswer": "rzx4f4fwOPORqEZ",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "9",
+      "question": "Q9",
+      "correctAnswer": "minPre->next = minNode->next",
+      "studentAnswer": "Lab Plan",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "8",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Find the prime fa ctors of a  given number.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Compute GCD of two numbers using Euclidea n",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Distribute N items in a  circle  a nd find who gets the",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "5",
+      "question": "Q5",
+      "correctAnswer": "curr != head              curr->next != head is Wrong",
+      "studentAnswer": "gFC-a yyQMk",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "9",
+      "question": "Q9",
+      "correctAnswer": "minPre->next = minNode->next",
+      "studentAnswer": "18",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Solve a  problem using brute force.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Apply the greedy a pproa ch to interva l scheduling.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Use divide a nd conquer to sort a n a rra y.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "4",
+      "question": "Q4",
+      "correctAnswer": "curr = curr->next;",
+      "studentAnswer": "Solve 0/1 Kna psa ck using dyna mic progra mming.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "5",
+      "question": "Q5",
+      "correctAnswer": "curr != head              curr->next != head is Wrong",
+      "studentAnswer": "Genera te permuta tions of a  string using",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "6",
+      "question": "Q6",
+      "correctAnswer": "maxPrev->next = maxNode->next               or //Correct maxPrev->next =maxPrev->next->next",
+      "studentAnswer": "Give  one exa mple of a  ra ndomized a lgorithm.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "7",
+      "question": "Q7",
+      "correctAnswer": "temp->next = maxNode;",
+      "studentAnswer": "Solve Tower of Ha noi using recursion.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "8",
+      "question": "Q8",
+      "correctAnswer": "temp->next = newHead;",
+      "studentAnswer": "Find a  pa ir with sum K using two pointers.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "9",
+      "question": "Q9",
+      "correctAnswer": "minPre->next = minNode->next",
+      "studentAnswer": "Find  the ma x sum  suba rra y  of  size  k  using  sliding",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Move a  robot into a  grid using ba cktra cking.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Solve Sudoku using ba cktra cking.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Find a ll pa ths for Ra t in a  Ma ze.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "4",
+      "question": "Q4",
+      "correctAnswer": "curr = curr->next;",
+      "studentAnswer": "Print  a ll bina ry strings  of n bits.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Find  the  lowest  common a ncestor of  a   given  two",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Find the kth sma llest element in the bina ry sea rch tree",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Find ma x/min in the continuous strea m of da ta",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Sort a n a rra y using hea p sort",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Check if a  given tree is ma x-hea p or not",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~4% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Solve the fra ctiona l kna psa ck problem.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Solve a  gra ph with nega tive weights using  Bellma n-",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Longest Common Subsequence (LCS)",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Count wa ys to cover dista nce N with 1, 2, or 3 steps.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Solve Ma trix Cha in Multiplica tion using DP.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "4",
+      "question": "Q4",
+      "correctAnswer": "curr = curr->next;",
+      "studentAnswer": "Solve the 0/1 Kna psa ck problem using DP.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Find the cycle in a n undirected gra ph",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Find  the minimum number of edges  in  a  pa th of a",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Find pa th in a  directed gra ph",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "4",
+      "question": "Q4",
+      "correctAnswer": "curr = curr->next;",
+      "studentAnswer": "Find the number of isla nds",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Find shortest path using Dijkstra’s algorithm.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Solve the interva l scheduling problem.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Schedule jobs with dea dlines to ma ximize profit.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount",
+      "studentAnswer": "Solve  the  “Noise  in  the  Library”  problem  using",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "Use ha shing to ba la nce a  sca le with given weights.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Find the winner in a  voting system using ha shing.",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "8",
+      "question": "Q8",
+      "correctAnswer": "temp->next = newHead;",
+      "studentAnswer": "uFWG6xfkuc",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "10",
+      "question": "Q10",
+      "correctAnswer": "minNode->next = head                                  or  //Correct minNode->next = temp->next",
+      "studentAnswer": "Action plan for different types of learners",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "11",
+      "question": "Q11",
+      "correctAnswer": "S.push(i)",
+      "studentAnswer": "Evaluation Scheme & Components",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "12",
+      "question": "Q12",
+      "correctAnswer": "return out",
+      "studentAnswer": "Syllabus of the Course",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "8",
+      "question": "Q8",
+      "correctAnswer": "temp->next = newHead;",
+      "studentAnswer": "6%",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "10",
+      "question": "Q10",
+      "correctAnswer": "minNode->next = head                                  or  //Correct minNode->next = temp->next",
+      "studentAnswer": "10%",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "6",
+      "question": "Q6",
+      "correctAnswer": "maxPrev->next = maxNode->next               or //Correct maxPrev->next =maxPrev->next->next",
+      "studentAnswer": "8%",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "6",
+      "question": "Q6",
+      "correctAnswer": "maxPrev->next = maxNode->next               or //Correct maxPrev->next =maxPrev->next->next",
+      "studentAnswer": "10%",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    },
+    {
+      "number": "12",
+      "question": "Q12",
+      "correctAnswer": "return out",
+      "studentAnswer": "10%",
+      "maxMarks": 1,
+      "score": 0,
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "curr->amount > or >= maxNode->amount",
+        "studentAnswer": "Solve  the  “Noise  in  the  Library”  problem  using",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q2": {
+        "question": "Q2",
+        "expectedAnswer": "curr->amount < minNode->amount",
+        "studentAnswer": "Use ha shing to ba la nce a  sca le with given weights.",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q3": {
+        "question": "Q3",
+        "expectedAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+        "studentAnswer": "Find the winner in a  voting system using ha shing.",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q4": {
+        "question": "Q4",
+        "expectedAnswer": "curr = curr->next;",
+        "studentAnswer": "Find the number of isla nds",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q5": {
+        "question": "Q5",
+        "expectedAnswer": "curr != head              curr->next != head is Wrong",
+        "studentAnswer": "Genera te permuta tions of a  string using",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q6": {
+        "question": "Q6",
+        "expectedAnswer": "maxPrev->next = maxNode->next               or //Correct maxPrev->next =maxPrev->next->next",
+        "studentAnswer": "10%",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q7": {
+        "question": "Q7",
+        "expectedAnswer": "temp->next = maxNode;",
+        "studentAnswer": "Solve Tower of Ha noi using recursion.",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q9": {
+        "question": "Q9",
+        "expectedAnswer": "minPre->next = minNode->next",
+        "studentAnswer": "Find  the ma x sum  suba rra y  of  size  k  using  sliding",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q8": {
+        "question": "Q8",
+        "expectedAnswer": "temp->next = newHead;",
+        "studentAnswer": "6%",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q10": {
+        "question": "Q10",
+        "expectedAnswer": "minNode->next = head                                  or  //Correct minNode->next = temp->next",
+        "studentAnswer": "10%",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q11": {
+        "question": "Q11",
+        "expectedAnswer": "S.push(i)",
+        "studentAnswer": "Evaluation Scheme & Components",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      },
+      "Q12": {
+        "question": "Q12",
+        "expectedAnswer": "return out",
+        "studentAnswer": "10%",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      }
+    },
+    "totalScore": 0,
+    "overallFeedback": "Limited coverage; revisit fundamentals and practice structured answers."
+  }
+}

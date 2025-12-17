@@ -1,0 +1,36 @@
+{
+  "studentId": "693c5074c5ee505221e567c4",
+  "recordId": "693c5074c5ee505221e567c8",
+  "totalScore": 0,
+  "details": [
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "g N | || j R",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Minimal concept overlap",
+      "missingPoints": "Missing: explain, bubble, algorithm, detail, explain bubble",
+      "reason": "Heuristic scorer: ~0% overlap and key points covered."
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "Explain Bubble Sort algorithm in detail. |",
+        "studentAnswer": "g N | || j R",
+        "maxMarks": 5,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Minimal concept overlap",
+        "missingPoints": "Missing: explain, bubble, algorithm, detail, explain bubble",
+        "reason": "Heuristic scorer: ~0% overlap and key points covered."
+      }
+    },
+    "totalScore": 0,
+    "overallFeedback": "Limited coverage; revisit fundamentals and practice structured answers."
+  }
+}

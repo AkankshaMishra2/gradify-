@@ -1,0 +1,759 @@
+{
+  "studentId": "694102e68948d2ff1df35558",
+  "recordId": "694102e68948d2ff1df355a3",
+  "totalScore": 10.5,
+  "details": [
+    {
+      "number": "1a",
+      "questionId": "6941021c8948d2ff1df354bc",
+      "question": "Determine the time complexity of func1(int n).",
+      "maxMarks": 1,
+      "score": 1,
+      "percentage": 100,
+      "conceptMatch": "",
+      "missingPoints": "None.",
+      "reason": "The student correctly identified the worst-case time complexity as O(n^2) and provided a valid breakdown of the loop runs (n * n * 10).",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q1",
+      "mappedStudentAnswerText": "func 1:- 1st Loop worst case: Run = n 2nd Loop worst case: Run = n 3rd loop worst case: Run = 10. So, Time Complexity -> n * n * 10 -> 10n² O(n²) is worst time complexity."
+    },
+    {
+      "number": "1b",
+      "questionId": "6941021c8948d2ff1df354bd",
+      "question": "Provide an optimized algorithm for calculating wait times (rain problem).",
+      "maxMarks": 13,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "The core logic of a stack-based algorithm for finding next greater elements (or similar wait time calculation) is missing. The provided algorithm is for a different problem.",
+      "reason": "The student's algorithm is a simple linear scan to find elements greater than a running minimum, which does not solve the 'Next Greater Element' or 'Wait Time' problem typically associated with stack-based optimized solutions for rain problems. The example calculation is also for a different problem.",
+      "mappingConfidence": 0.9,
+      "confidence": 0.9,
+      "mappedStudentAnswerLabel": "Q1 (b)",
+      "mappedStudentAnswerText": "Algorithm :- ① Min = arr[0] , Count = 0 ② For (i = 1; i < N; i++) { if (arr[i] > Min) { Min = arr[i]; Count++; } } count+1 <<++count<<endl; count = -1; cout << \"Wait = \" << ++count<<endl; } { count++; For main [ ] = { 20, 15, 25, 18, 9, 30}, ① Min = 20; count = 0. ② If (15 > 20) X count = 1 If (25 > 20) → Min = 25 , Wait = 20 count = -1 count = 0 ③ If (18 > 25) X count = 1 If (9 > 25) X count = 2 If (30 > 25) → Min = 30 , Wait = 3 count = -1 count = 0 So, for following array worst wait time is 3 days."
+    },
+    {
+      "number": "2a",
+      "questionId": null,
+      "question": "Evaluate the given postfix expression using a stack.",
+      "maxMarks": 6,
+      "score": 1,
+      "percentage": 16.67,
+      "conceptMatch": "",
+      "missingPoints": "Correct sequence of operations, accurate stack states throughout, and a consistent final result matching the trace.",
+      "reason": "The student correctly processes the initial pushes and the first division operation. However, the subsequent operations and stack states diverge significantly from the key's implied expression and intermediate steps. The final answer '95' is stated, but it contradicts the student's own trace for their given expression. Minimal credit is awarded for demonstrating basic stack push/pop and one correct operation.",
+      "mappingConfidence": 0.8,
+      "confidence": 0.8,
+      "mappedStudentAnswerLabel": "Q2(a)",
+      "mappedStudentAnswerText": "60 60 20 60,20 2 60,20,2 / 60,20 + 60,20,2 15 60,20,15 5 60,20,15,5 * 60,10,15,5 - 60,10,15,5 100 70,75,100 + 70,25 70+25 Exp = 95"
+    },
+    {
+      "number": "2b",
+      "questionId": null,
+      "question": "Show the state of the circular queues (Q1 and Q2) after 5 iterations.",
+      "maxMarks": 12,
+      "score": 1,
+      "percentage": 8.33,
+      "conceptMatch": "",
+      "missingPoints": "Complete and correct states (contents and pointers) for all 5 iterations, and the initial state.",
+      "reason": "The student correctly identifies the contents of Q1 after the first iteration. However, all subsequent iterations and the states of the queue pointers (front1, rear1, front2, rear2) are either missing or incorrect compared to the answer key.",
+      "mappingConfidence": 0.8,
+      "confidence": 0.8,
+      "mappedStudentAnswerLabel": "Q2(b)",
+      "mappedStudentAnswerText": "(i) After 1st iteration, Q1 = [5,3,6,4,3]"
+    },
+    {
+      "number": "3a",
+      "questionId": "6941021c8948d2ff1df354be",
+      "question": "Provide an algorithm to merge two sorted linked lists.",
+      "maxMarks": 6,
+      "score": 1,
+      "percentage": 16.67,
+      "conceptMatch": "",
+      "missingPoints": "Correct syntax, robust loop conditions, and accurate pointer manipulation for a functional merge algorithm.",
+      "reason": "The student attempted to write a linked list merge algorithm, demonstrating an understanding of the problem and the use of pointers. However, the code contains significant syntax errors and logical flaws (e.g., incorrect node creation, problematic loop conditions, and pointer assignments).",
+      "mappingConfidence": 0.7,
+      "confidence": 0.7,
+      "mappedStudentAnswerLabel": "Q3(ba)",
+      "mappedStudentAnswerText": "Node * head 3; Node * ptr 3 = head 3; Node * ptr 1 = head1; Node * ptr 2 = head 2; Loop: while (ptr1 != null && ptr2 -> next != null) { if (ptr1.value > ptr2.value) { int ptr 3 = new nn; nn->value = ptr1.value; nn->next = ptr2; nn->next -> next = nn; head3; null; } else { nn->value = ptr2.value; nn->next = ptr1; nn->next.value = ptr1.value; nn->next -> next = null; } }"
+    },
+    {
+      "number": "3b",
+      "questionId": "6941021c8948d2ff1df354bf",
+      "question": "Describe an algorithm for inserting an element into a sorted array using binary search to find the position, and state its time complexity.",
+      "maxMarks": 9,
+      "score": 4.5,
+      "percentage": 50,
+      "conceptMatch": "",
+      "missingPoints": "Application/example of both binary search and insertion. The overall time complexity for insertion into a sorted array (which is O(N) due to shifting).",
+      "reason": "The student provided a largely correct binary search algorithm (3/3 marks) to find the insertion point and correct shifting/insertion logic (1/1 mark). However, no application or example was provided (0/3 for BS apply, 0/1 for insertion apply). The time complexity correctly stated O(log n) for binary search but missed the overall O(N) complexity for insertion into a sorted array (0.5/1 mark).",
+      "mappingConfidence": 0.9,
+      "confidence": 0.9,
+      "mappedStudentAnswerLabel": "Q3(b)",
+      "mappedStudentAnswerText": "① Start = 0, end = n-1, mid = start + end/2 ② Bin Srch (int arr[], int x) { while (start <= end) { if (arr[mid] <= x) { if (arr[mid+1] >= x) { return mid; } } if (mid > key) { end = mid-1; } else { start = mid+1; } } } We got position, the value should be placed after arr[mid]. ③ Now, we make space by shifting values after mid. for (i = n; i > mid ; i--) { arr[i] = arr[i-1]; } ④ Now, give value arr[mid+1] = x; Time complexity O(log n) for binary search (worst case)."
+    },
+    {
+      "number": "4",
+      "questionId": "6941021c8948d2ff1df354c9",
+      "question": "Complete or correct the given linked list code snippets.",
+      "maxMarks": 10,
+      "score": 2,
+      "percentage": 20,
+      "conceptMatch": "",
+      "missingPoints": "Correct answers for 8 out of 10 code snippets.",
+      "reason": "The student correctly answered two out of ten snippets (corresponding to Q68 and Q69 in the key). The remaining answers were either incorrect, too vague, or left blank.",
+      "mappingConfidence": 0.9,
+      "confidence": 0.9,
+      "mappedStudentAnswerLabel": "Q1",
+      "mappedStudentAnswerText": "max Node -> amount > curr -> amount"
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1a": {
+        "question": "Determine the time complexity of func1(int n).",
+        "expectedAnswer": "2",
+        "studentAnswer": "func 1:- 1st Loop worst case: Run = n 2nd Loop worst case: Run = n 3rd loop worst case: Run = 10. So, Time Complexity -> n * n * 10 -> 10n² O(n²) is worst time complexity.",
+        "maxMarks": 1,
+        "scoreAwarded": 1,
+        "percentage": 100,
+        "conceptMatch": "",
+        "missingPoints": "None.",
+        "reason": "The student correctly identified the worst-case time complexity as O(n^2) and provided a valid breakdown of the loop runs (n * n * 10).",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q1"
+      },
+      "Q1b": {
+        "question": "Provide an optimized algorithm for calculating wait times (rain problem).",
+        "expectedAnswer": "Optimized algorithm 3",
+        "studentAnswer": "Algorithm :- ① Min = arr[0] , Count = 0 ② For (i = 1; i < N; i++) { if (arr[i] > Min) { Min = arr[i]; Count++; } } count+1 <<++count<<endl; count = -1; cout << \"Wait = \" << ++count<<endl; } { count++; For main [ ] = { 20, 15, 25, 18, 9, 30}, ① Min = 20; count = 0. ② If (15 > 20) X count = 1 If (25 > 20) → Min = 25 , Wait = 20 count = -1 count = 0 ③ If (18 > 25) X count = 1 If (9 > 25) X count = 2 If (30 > 25) → Min = 30 , Wait = 3 count = -1 count = 0 So, for following array worst wait time is 3 days.",
+        "maxMarks": 13,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "The core logic of a stack-based algorithm for finding next greater elements (or similar wait time calculation) is missing. The provided algorithm is for a different problem.",
+        "reason": "The student's algorithm is a simple linear scan to find elements greater than a running minimum, which does not solve the 'Next Greater Element' or 'Wait Time' problem typically associated with stack-based optimized solutions for rain problems. The example calculation is also for a different problem.",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "Q1 (b)"
+      },
+      "Q2a": {
+        "question": "Evaluate the given postfix expression using a stack.",
+        "expectedAnswer": "",
+        "studentAnswer": "60 60 20 60,20 2 60,20,2 / 60,20 + 60,20,2 15 60,20,15 5 60,20,15,5 * 60,10,15,5 - 60,10,15,5 100 70,75,100 + 70,25 70+25 Exp = 95",
+        "maxMarks": 6,
+        "scoreAwarded": 1,
+        "percentage": 16.67,
+        "conceptMatch": "",
+        "missingPoints": "Correct sequence of operations, accurate stack states throughout, and a consistent final result matching the trace.",
+        "reason": "The student correctly processes the initial pushes and the first division operation. However, the subsequent operations and stack states diverge significantly from the key's implied expression and intermediate steps. The final answer '95' is stated, but it contradicts the student's own trace for their given expression. Minimal credit is awarded for demonstrating basic stack push/pop and one correct operation.",
+        "mappingConfidence": 0.8,
+        "mappedStudentAnswerLabel": "Q2(a)"
+      },
+      "Q2b": {
+        "question": "Show the state of the circular queues (Q1 and Q2) after 5 iterations.",
+        "expectedAnswer": "",
+        "studentAnswer": "(i) After 1st iteration, Q1 = [5,3,6,4,3]",
+        "maxMarks": 12,
+        "scoreAwarded": 1,
+        "percentage": 8.33,
+        "conceptMatch": "",
+        "missingPoints": "Complete and correct states (contents and pointers) for all 5 iterations, and the initial state.",
+        "reason": "The student correctly identifies the contents of Q1 after the first iteration. However, all subsequent iterations and the states of the queue pointers (front1, rear1, front2, rear2) are either missing or incorrect compared to the answer key.",
+        "mappingConfidence": 0.8,
+        "mappedStudentAnswerLabel": "Q2(b)"
+      },
+      "Q3a": {
+        "question": "Provide an algorithm to merge two sorted linked lists.",
+        "expectedAnswer": "Total - 6",
+        "studentAnswer": "Node * head 3; Node * ptr 3 = head 3; Node * ptr 1 = head1; Node * ptr 2 = head 2; Loop: while (ptr1 != null && ptr2 -> next != null) { if (ptr1.value > ptr2.value) { int ptr 3 = new nn; nn->value = ptr1.value; nn->next = ptr2; nn->next -> next = nn; head3; null; } else { nn->value = ptr2.value; nn->next = ptr1; nn->next.value = ptr1.value; nn->next -> next = null; } }",
+        "maxMarks": 6,
+        "scoreAwarded": 1,
+        "percentage": 16.67,
+        "conceptMatch": "",
+        "missingPoints": "Correct syntax, robust loop conditions, and accurate pointer manipulation for a functional merge algorithm.",
+        "reason": "The student attempted to write a linked list merge algorithm, demonstrating an understanding of the problem and the use of pointers. However, the code contains significant syntax errors and logical flaws (e.g., incorrect node creation, problematic loop conditions, and pointer assignments).",
+        "mappingConfidence": 0.7,
+        "mappedStudentAnswerLabel": "Q3(ba)"
+      },
+      "Q3b": {
+        "question": "Describe an algorithm for inserting an element into a sorted array using binary search to find the position, and state its time complexity.",
+        "expectedAnswer": "Total - 9",
+        "studentAnswer": "① Start = 0, end = n-1, mid = start + end/2 ② Bin Srch (int arr[], int x) { while (start <= end) { if (arr[mid] <= x) { if (arr[mid+1] >= x) { return mid; } } if (mid > key) { end = mid-1; } else { start = mid+1; } } } We got position, the value should be placed after arr[mid]. ③ Now, we make space by shifting values after mid. for (i = n; i > mid ; i--) { arr[i] = arr[i-1]; } ④ Now, give value arr[mid+1] = x; Time complexity O(log n) for binary search (worst case).",
+        "maxMarks": 9,
+        "scoreAwarded": 4.5,
+        "percentage": 50,
+        "conceptMatch": "",
+        "missingPoints": "Application/example of both binary search and insertion. The overall time complexity for insertion into a sorted array (which is O(N) due to shifting).",
+        "reason": "The student provided a largely correct binary search algorithm (3/3 marks) to find the insertion point and correct shifting/insertion logic (1/1 mark). However, no application or example was provided (0/3 for BS apply, 0/1 for insertion apply). The time complexity correctly stated O(log n) for binary search but missed the overall O(N) complexity for insertion into a sorted array (0.5/1 mark).",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "Q3(b)"
+      },
+      "Q4": {
+        "question": "Complete or correct the given linked list code snippets.",
+        "expectedAnswer": "for i ← n-1 down to 0 do",
+        "studentAnswer": "max Node -> amount > curr -> amount",
+        "maxMarks": 10,
+        "scoreAwarded": 2,
+        "percentage": 20,
+        "conceptMatch": "",
+        "missingPoints": "Correct answers for 8 out of 10 code snippets.",
+        "reason": "The student correctly answered two out of ten snippets (corresponding to Q68 and Q69 in the key). The remaining answers were either incorrect, too vague, or left blank.",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "Q1"
+      }
+    },
+    "totalScore": 10.5,
+    "overallFeedback": "The student demonstrates a basic understanding of time complexity analysis and some fundamental data structure operations (stack, queue, linked list). However, there are significant weaknesses in providing complete and accurate algorithms for more complex problems, tracing data structure operations precisely, and understanding the overall time complexity for multi-step algorithms. Attention to detail in code snippets and full problem solutions needs improvement.",
+    "weakAreas": [
+      "Algorithm design and implementation for complex problems (e.g., optimized wait time, linked list merge)",
+      "Precision in tracing data structure operations (stack and queue states)",
+      "Comprehensive understanding of time complexity for multi-part algorithms",
+      "Accuracy in completing/correcting code snippets"
+    ],
+    "overallConfidence": 0.86,
+    "mappingDetails": [
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": "6941021c8948d2ff1df354bc",
+        "matchedQuestionNumber": "1a",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q1 (b)",
+        "matchedQuestionId": "6941021c8948d2ff1df354bd",
+        "matchedQuestionNumber": "1b",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2(a)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.8,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2(b)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.8,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q3(ba)",
+        "matchedQuestionId": "6941021c8948d2ff1df354be",
+        "matchedQuestionNumber": "3a",
+        "confidence": 0.7,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q3(b)",
+        "matchedQuestionId": "6941021c8948d2ff1df354bf",
+        "matchedQuestionNumber": "3b",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": "6941021c8948d2ff1df354c9",
+        "matchedQuestionNumber": "4",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q4",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q5",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q6",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q7",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q4",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q5",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q6",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q7",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q8",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q9",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q10",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Algorithm design and implementation for complex problems (e.g., optimized wait time, linked list merge)",
+    "Precision in tracing data structure operations (stack and queue states)",
+    "Comprehensive understanding of time complexity for multi-part algorithms",
+    "Accuracy in completing/correcting code snippets"
+  ],
+  "overallConfidence": 0.86,
+  "mappingDetails": [
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": "6941021c8948d2ff1df354bc",
+      "matchedQuestionNumber": "1a",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q1 (b)",
+      "matchedQuestionId": "6941021c8948d2ff1df354bd",
+      "matchedQuestionNumber": "1b",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2(a)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.8,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2(b)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.8,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q3(ba)",
+      "matchedQuestionId": "6941021c8948d2ff1df354be",
+      "matchedQuestionNumber": "3a",
+      "confidence": 0.7,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q3(b)",
+      "matchedQuestionId": "6941021c8948d2ff1df354bf",
+      "matchedQuestionNumber": "3b",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": "6941021c8948d2ff1df354c9",
+      "matchedQuestionNumber": "4",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q4",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q5",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q6",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q7",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q4",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q5",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q6",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q7",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q8",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q9",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q10",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    }
+  ]
+}

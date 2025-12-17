@@ -1,0 +1,65 @@
+{
+  "studentId": "693d264d935de518c8ea5d03",
+  "recordId": "693d264d935de518c8ea5d07",
+  "totalScore": 0,
+  "details": [
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "l o — DOMS | pyere\n& T elrigmEe o\n&ﬁ*,;m B3 ik s pop et\nS //19 W&g) LAl o -~ 7\nﬁ»» . P - 7b7\n-ﬁa\\ 'J’ :L’A.'A O, @ /’/[% A0k Udts Tooidn e, .\n— S LA Lt Johigiana g ,\n\\ D [ on LOO\ng o /\n;,',E/ —d Y ] .’/-47 LM e AL AAA 4 _4. CAL A,\n‘ Yo p 0 (Logn\nB | AL\n[ ] ]\n[ ] kL\nt L .",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Minimal concept overlap",
+      "missingPoints": "Missing: explain, bubble, algorithm, detail, explain bubble",
+      "reason": "Heuristic scorer: ~0% overlap and key points covered.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.5
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "Explain Bubble Sort algorithm in detail. |",
+        "studentAnswer": "l o — DOMS | pyere\n& T elrigmEe o\n&ﬁ*,;m B3 ik s pop et\nS //19 W&g) LAl o -~ 7\nﬁ»» . P - 7b7\n-ﬁa\\ 'J’ :L’A.'A O, @ /’/[% A0k Udts Tooidn e, .\n— S LA Lt Johigiana g ,\n\\ D [ on LOO\ng o /\n;,',E/ —d Y ] .’/-47 LM e AL AAA 4 _4. CAL A,\n‘ Yo p 0 (Logn\nB | AL\n[ ] ]\n[ ] kL\nt L .",
+        "maxMarks": 5,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Minimal concept overlap",
+        "missingPoints": "Missing: explain, bubble, algorithm, detail, explain bubble",
+        "reason": "Heuristic scorer: ~0% overlap and key points covered.",
+        "mappingConfidence": 0.4
+      }
+    },
+    "totalScore": 0,
+    "overallFeedback": "Limited coverage; revisit fundamentals and practice structured answers.",
+    "weakAreas": [
+      "Q1"
+    ],
+    "overallConfidence": 0.5,
+    "mappingDetails": [
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693d2622935de518c8ea5cf5",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q1"
+  ],
+  "overallConfidence": 0.5,
+  "mappingDetails": [
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693d2622935de518c8ea5cf5",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    }
+  ]
+}

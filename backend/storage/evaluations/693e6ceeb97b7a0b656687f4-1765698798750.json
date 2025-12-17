@@ -1,0 +1,263 @@
+{
+  "studentId": "693e6ceeb97b7a0b656687f4",
+  "recordId": "693e6ceeb97b7a0b65668802",
+  "totalScore": 0,
+  "details": [
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also       give 1 mark //*curr->amount > *maxNode->amount    Considered correct",
+      "studentAnswer": "It swaps adjacent elements if memory multiple passes. largest moves to end. O(n)² is stable in place",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer completely misses the required comparison condition (curr->amount > or >= maxNode->amount) for finding a maximum element. It describes a sorting algorithm instead.",
+      "reason": "The student's answer describes characteristics of a sorting algorithm (Bubble Sort) and is entirely irrelevant to the question, which asks for a specific comparison condition to find a maximum value in a data structure (likely a linked list).",
+      "mappingConfidence": 0.4176470588235294,
+      "confidence": 0.5838235294117647
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "a: Stack is LIFO; push adds, pop removes top",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The correct comparison expression: curr->amount < minNode->amount",
+      "reason": "The student's answer describes a Stack (LIFO, push, pop), which is completely irrelevant to the question asking for a specific comparison expression between curr->amount and minNode->amount.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "2",
+      "question": "Q2",
+      "correctAnswer": "curr->amount < minNode->amount",
+      "studentAnswer": "b: push(5) push(7) pop returns 7 stack becomes [5].",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer describes stack operations, which is entirely unrelated to the correct answer, which is a conditional expression for comparing two amounts (`curr->amount < minNode->amount`).",
+      "reason": "The student provided an answer describing stack operations (push, pop) which is conceptually irrelevant to the correct answer, which is a specific conditional statement for comparing values. There is no conceptual overlap.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "3",
+      "question": "Q3",
+      "correctAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+      "studentAnswer": "Stack LIFO: Queue FIFO. stack uses push/pop queue uses enqueue/dequeue",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match",
+      "missingPoints": "The student's answer is completely unrelated to the correct answer provided for Q3.",
+      "reason": "The student's answer describes properties of Stacks and Queues, which is entirely irrelevant to the correct answer provided for Q3, which appears to be about pointer manipulation or linked list operations. No credit can be awarded as the answer does not address the question.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "4",
+      "question": "Q4",
+      "correctAnswer": "curr = curr->next;",
+      "studentAnswer": "Big-o is upper evoland example O(N) O(n log n)",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer discusses Big-O notation, which is unrelated to the correct answer of advancing a pointer in a linked list.",
+      "missingPoints": "The student's answer completely misses the concept of advancing a pointer in a data structure like a linked list. It provides information on an entirely different topic (Big-O notation).",
+      "reason": "The student's answer is completely irrelevant to the question. The correct answer 'curr = curr->next;' implies a question about pointer manipulation in data structures, while the student's answer discusses Big-O notation, which is a different concept.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    },
+    {
+      "number": "5",
+      "question": "Q5",
+      "correctAnswer": "curr != head              curr->next != head is Wrong",
+      "studentAnswer": "Binary search halves the array each step -> O(log n)",
+      "maxMarks": 1,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "No match. The student's answer discusses Binary Search complexity, which is unrelated to the correct answer's topic of linked list traversal conditions.",
+      "missingPoints": "The student's answer does not address the question about the correct condition for linked list traversal/termination (e.g., 'curr != head').",
+      "reason": "The student's answer is conceptually correct for Binary Search but is completely irrelevant to the question implied by the provided correct answer, which focuses on a specific linked list condition.",
+      "mappingConfidence": 0.4,
+      "confidence": 0.575
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also       give 1 mark //*curr->amount > *maxNode->amount    Considered correct",
+        "studentAnswer": "It swaps adjacent elements if memory multiple passes. largest moves to end. O(n)² is stable in place",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match",
+        "missingPoints": "The student's answer completely misses the required comparison condition (curr->amount > or >= maxNode->amount) for finding a maximum element. It describes a sorting algorithm instead.",
+        "reason": "The student's answer describes characteristics of a sorting algorithm (Bubble Sort) and is entirely irrelevant to the question, which asks for a specific comparison condition to find a maximum value in a data structure (likely a linked list).",
+        "mappingConfidence": 0.4176470588235294
+      },
+      "Q2": {
+        "question": "Q2",
+        "expectedAnswer": "curr->amount < minNode->amount",
+        "studentAnswer": "b: push(5) push(7) pop returns 7 stack becomes [5].",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match",
+        "missingPoints": "The student's answer describes stack operations, which is entirely unrelated to the correct answer, which is a conditional expression for comparing two amounts (`curr->amount < minNode->amount`).",
+        "reason": "The student provided an answer describing stack operations (push, pop) which is conceptually irrelevant to the correct answer, which is a specific conditional statement for comparing values. There is no conceptual overlap.",
+        "mappingConfidence": 0.4
+      },
+      "Q3": {
+        "question": "Q3",
+        "expectedAnswer": "prev = curr;                                                           pre = prev-> next  is Wrong",
+        "studentAnswer": "Stack LIFO: Queue FIFO. stack uses push/pop queue uses enqueue/dequeue",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match",
+        "missingPoints": "The student's answer is completely unrelated to the correct answer provided for Q3.",
+        "reason": "The student's answer describes properties of Stacks and Queues, which is entirely irrelevant to the correct answer provided for Q3, which appears to be about pointer manipulation or linked list operations. No credit can be awarded as the answer does not address the question.",
+        "mappingConfidence": 0.4
+      },
+      "Q4": {
+        "question": "Q4",
+        "expectedAnswer": "curr = curr->next;",
+        "studentAnswer": "Big-o is upper evoland example O(N) O(n log n)",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match. The student's answer discusses Big-O notation, which is unrelated to the correct answer of advancing a pointer in a linked list.",
+        "missingPoints": "The student's answer completely misses the concept of advancing a pointer in a data structure like a linked list. It provides information on an entirely different topic (Big-O notation).",
+        "reason": "The student's answer is completely irrelevant to the question. The correct answer 'curr = curr->next;' implies a question about pointer manipulation in data structures, while the student's answer discusses Big-O notation, which is a different concept.",
+        "mappingConfidence": 0.4
+      },
+      "Q5": {
+        "question": "Q5",
+        "expectedAnswer": "curr != head              curr->next != head is Wrong",
+        "studentAnswer": "Binary search halves the array each step -> O(log n)",
+        "maxMarks": 1,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "No match. The student's answer discusses Binary Search complexity, which is unrelated to the correct answer's topic of linked list traversal conditions.",
+        "missingPoints": "The student's answer does not address the question about the correct condition for linked list traversal/termination (e.g., 'curr != head').",
+        "reason": "The student's answer is conceptually correct for Binary Search but is completely irrelevant to the question implied by the provided correct answer, which focuses on a specific linked list condition.",
+        "mappingConfidence": 0.4
+      }
+    },
+    "totalScore": 0,
+    "overallFeedback": "Limited coverage; revisit fundamentals and practice structured answers.",
+    "weakAreas": [
+      "Q1",
+      "Q2",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5"
+    ],
+    "overallConfidence": 0.58,
+    "mappingDetails": [
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693e6bf4fe785fbc57bfebaa",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.4176470588235294,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693e6bf4fe785fbc57bfebab",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "2",
+        "matchedQuestionId": "693e6bf4fe785fbc57bfebab",
+        "matchedQuestionNumber": "2",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "3",
+        "matchedQuestionId": "693e6bf4fe785fbc57bfebac",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "4",
+        "matchedQuestionId": "693e6bf4fe785fbc57bfebad",
+        "matchedQuestionNumber": "4",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      },
+      {
+        "sourceNumber": "5",
+        "matchedQuestionId": "693e6bf4fe785fbc57bfebae",
+        "matchedQuestionNumber": "5",
+        "confidence": 0.4,
+        "note": "Weak mapping"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q1",
+    "Q2",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5"
+  ],
+  "overallConfidence": 0.58,
+  "mappingDetails": [
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693e6bf4fe785fbc57bfebaa",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.4176470588235294,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693e6bf4fe785fbc57bfebab",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "2",
+      "matchedQuestionId": "693e6bf4fe785fbc57bfebab",
+      "matchedQuestionNumber": "2",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "3",
+      "matchedQuestionId": "693e6bf4fe785fbc57bfebac",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "4",
+      "matchedQuestionId": "693e6bf4fe785fbc57bfebad",
+      "matchedQuestionNumber": "4",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    },
+    {
+      "sourceNumber": "5",
+      "matchedQuestionId": "693e6bf4fe785fbc57bfebae",
+      "matchedQuestionNumber": "5",
+      "confidence": 0.4,
+      "note": "Weak mapping"
+    }
+  ]
+}

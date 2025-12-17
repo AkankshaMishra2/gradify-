@@ -1,0 +1,273 @@
+{
+  "studentId": "694101a38948d2ff1df35475",
+  "recordId": "694101a38948d2ff1df35483",
+  "totalScore": 20,
+  "details": [
+    {
+      "number": "1",
+      "questionId": "694101618948d2ff1df35467",
+      "question": "Explain Bubble Sort algorithm in detail.",
+      "maxMarks": 5,
+      "score": 5,
+      "percentage": 100,
+      "conceptMatch": "",
+      "missingPoints": "None",
+      "reason": "The student correctly explained the core mechanism of Bubble Sort (swapping adjacent elements, multiple passes, largest element moving to the end). They also correctly identified its time complexity as O(n^2), and mentioned its stability and in-place nature, which are relevant details for a detailed explanation.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q1",
+      "mappedStudentAnswerText": "It swaps adjacent elements in memory multiple passes. largest moves to end. O(n)² is stable in place"
+    },
+    {
+      "number": "2a",
+      "questionId": "694101618948d2ff1df35468",
+      "question": "Define a Stack and its basic operations.",
+      "maxMarks": 2,
+      "score": 2,
+      "percentage": 100,
+      "conceptMatch": "",
+      "missingPoints": "None",
+      "reason": "The student correctly defined a Stack as LIFO (Last-In, First-Out) and identified its basic operations: push (adds to top) and pop (removes from top).",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q2(a)",
+      "mappedStudentAnswerText": "Stack is LIFO; push adds, pop removes top"
+    },
+    {
+      "number": "2b",
+      "questionId": "694101618948d2ff1df35469",
+      "question": "Explain push and pop operations with an example.",
+      "maxMarks": 3,
+      "score": 3,
+      "percentage": 100,
+      "conceptMatch": "",
+      "missingPoints": "None",
+      "reason": "The student provided a clear and correct example demonstrating both push and pop operations, showing the state of the stack after each operation. This implicitly explains the operations effectively.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q2(b)",
+      "mappedStudentAnswerText": "push(5) push(7) pop returns 7 stack becomes [5]."
+    },
+    {
+      "number": "3",
+      "questionId": "694101618948d2ff1df3546a",
+      "question": "Differentiate between Queue and Stack.",
+      "maxMarks": 4,
+      "score": 4,
+      "percentage": 100,
+      "conceptMatch": "",
+      "missingPoints": "None",
+      "reason": "The student correctly differentiated between Stack and Queue based on their fundamental principles (LIFO vs FIFO) and their respective primary operations (push/pop vs enqueue/dequeue).",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q3",
+      "mappedStudentAnswerText": "Stack LIFO: Queue FIFO. stack uses push/pop queue uses enqueue /dequeue"
+    },
+    {
+      "number": "4",
+      "questionId": "694101618948d2ff1df3546b",
+      "question": "What is Big-O notation? Give two examples.",
+      "maxMarks": 3,
+      "score": 3,
+      "percentage": 100,
+      "conceptMatch": "",
+      "missingPoints": "None",
+      "reason": "The student correctly defined Big-O notation as an 'upper bound' and provided two valid examples of time complexities: O(N) and O(n log n).",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q4",
+      "mappedStudentAnswerText": "Big-O is upper bound example O(N) O(n log n)"
+    },
+    {
+      "number": "5",
+      "questionId": "694101618948d2ff1df3546c",
+      "question": "Write the time complexity of binary search and explain why.",
+      "maxMarks": 3,
+      "score": 3,
+      "percentage": 100,
+      "conceptMatch": "",
+      "missingPoints": "None",
+      "reason": "The student correctly stated the time complexity of binary search as O(log n) and provided the correct explanation that it 'halves the array each step'.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q5",
+      "mappedStudentAnswerText": "Binary search halves the array each step -> O (log n)"
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Explain Bubble Sort algorithm in detail.",
+        "expectedAnswer": "Explain Bubble Sort algorithm in detail. |",
+        "studentAnswer": "It swaps adjacent elements in memory multiple passes. largest moves to end. O(n)² is stable in place",
+        "maxMarks": 5,
+        "scoreAwarded": 5,
+        "percentage": 100,
+        "conceptMatch": "",
+        "missingPoints": "None",
+        "reason": "The student correctly explained the core mechanism of Bubble Sort (swapping adjacent elements, multiple passes, largest element moving to the end). They also correctly identified its time complexity as O(n^2), and mentioned its stability and in-place nature, which are relevant details for a detailed explanation.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q1"
+      },
+      "Q2a": {
+        "question": "Define a Stack and its basic operations.",
+        "expectedAnswer": "Define a Stack and its basic operations. |",
+        "studentAnswer": "Stack is LIFO; push adds, pop removes top",
+        "maxMarks": 2,
+        "scoreAwarded": 2,
+        "percentage": 100,
+        "conceptMatch": "",
+        "missingPoints": "None",
+        "reason": "The student correctly defined a Stack as LIFO (Last-In, First-Out) and identified its basic operations: push (adds to top) and pop (removes from top).",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q2(a)"
+      },
+      "Q2b": {
+        "question": "Explain push and pop operations with an example.",
+        "expectedAnswer": "Explain push and pop operations with an example. |",
+        "studentAnswer": "push(5) push(7) pop returns 7 stack becomes [5].",
+        "maxMarks": 3,
+        "scoreAwarded": 3,
+        "percentage": 100,
+        "conceptMatch": "",
+        "missingPoints": "None",
+        "reason": "The student provided a clear and correct example demonstrating both push and pop operations, showing the state of the stack after each operation. This implicitly explains the operations effectively.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q2(b)"
+      },
+      "Q3": {
+        "question": "Differentiate between Queue and Stack.",
+        "expectedAnswer": "Differentiate between Queue and Stack. |",
+        "studentAnswer": "Stack LIFO: Queue FIFO. stack uses push/pop queue uses enqueue /dequeue",
+        "maxMarks": 4,
+        "scoreAwarded": 4,
+        "percentage": 100,
+        "conceptMatch": "",
+        "missingPoints": "None",
+        "reason": "The student correctly differentiated between Stack and Queue based on their fundamental principles (LIFO vs FIFO) and their respective primary operations (push/pop vs enqueue/dequeue).",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q3"
+      },
+      "Q4": {
+        "question": "What is Big-O notation? Give two examples.",
+        "expectedAnswer": "What is Big-O notation? Give two examples. |",
+        "studentAnswer": "Big-O is upper bound example O(N) O(n log n)",
+        "maxMarks": 3,
+        "scoreAwarded": 3,
+        "percentage": 100,
+        "conceptMatch": "",
+        "missingPoints": "None",
+        "reason": "The student correctly defined Big-O notation as an 'upper bound' and provided two valid examples of time complexities: O(N) and O(n log n).",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q4"
+      },
+      "Q5": {
+        "question": "Write the time complexity of binary search and explain why.",
+        "expectedAnswer": "Write the time complexity of binary search and explain why. |",
+        "studentAnswer": "Binary search halves the array each step -> O (log n)",
+        "maxMarks": 3,
+        "scoreAwarded": 3,
+        "percentage": 100,
+        "conceptMatch": "",
+        "missingPoints": "None",
+        "reason": "The student correctly stated the time complexity of binary search as O(log n) and provided the correct explanation that it 'halves the array each step'.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q5"
+      }
+    },
+    "totalScore": 20,
+    "overallFeedback": "The student demonstrated a strong understanding of fundamental data structures and algorithms concepts. All questions were answered accurately and comprehensively according to the marking scheme. No significant errors or omissions were found.",
+    "weakAreas": [],
+    "overallConfidence": 1,
+    "mappingDetails": [
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": "694101618948d2ff1df35467",
+        "matchedQuestionNumber": "1",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2(a)",
+        "matchedQuestionId": "694101618948d2ff1df35468",
+        "matchedQuestionNumber": "2a",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2(b)",
+        "matchedQuestionId": "694101618948d2ff1df35469",
+        "matchedQuestionNumber": "2b",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": "694101618948d2ff1df3546a",
+        "matchedQuestionNumber": "3",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q4",
+        "matchedQuestionId": "694101618948d2ff1df3546b",
+        "matchedQuestionNumber": "4",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q5",
+        "matchedQuestionId": "694101618948d2ff1df3546c",
+        "matchedQuestionNumber": "5",
+        "confidence": 1,
+        "note": "Mapped"
+      }
+    ]
+  },
+  "weakAreas": [],
+  "overallConfidence": 1,
+  "mappingDetails": [
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": "694101618948d2ff1df35467",
+      "matchedQuestionNumber": "1",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2(a)",
+      "matchedQuestionId": "694101618948d2ff1df35468",
+      "matchedQuestionNumber": "2a",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2(b)",
+      "matchedQuestionId": "694101618948d2ff1df35469",
+      "matchedQuestionNumber": "2b",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": "694101618948d2ff1df3546a",
+      "matchedQuestionNumber": "3",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q4",
+      "matchedQuestionId": "694101618948d2ff1df3546b",
+      "matchedQuestionNumber": "4",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q5",
+      "matchedQuestionId": "694101618948d2ff1df3546c",
+      "matchedQuestionNumber": "5",
+      "confidence": 1,
+      "note": "Mapped"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "studentId": "693d274c935de518c8ea5d1a",
+  "recordId": "693d274c935de518c8ea5d1e",
+  "totalScore": 3,
+  "details": [
+    {
+      "number": "1",
+      "question": "Q1",
+      "correctAnswer": "Explain Bubble Sort algorithm in detail. |",
+      "studentAnswer": "• Q1: Explain Bubble Sort algorithm in detail. | Marks: 5 \no Model Answer: Bubble Sort repeatedly swaps adjacent elements if they are in the \nwrong order. It performs multiple passes; after each pass, the largest among \nunsorted items moves to its correct position. Time complexity is O(n^2) in \naverage/worst case; best case O(n) if optimized with a swapped flag. It is stable and \nworks in-place. \n• Q2a: Define a Stack and its basic operations. | Marks: 2 \no Model Answer: A Stack is a LIFO (Last-In-First-Out) data structure. Core \noperations: push to add an element to the top, pop to remove the top element, \nand peek to inspect the top without removal. \n• Q2b: Explain push and pop operations with an example. | Marks: 3 \no Model Answer: push(x) places x at the top; pop() removes and returns the top \nelement. Example: Starting with empty stack, push(5), push(7) → top is 7. pop() \nreturns 7, stack now [5]. \n• Q3: Differentiate between Queue and Stack. | Marks: 4 \no Model Answer: Stack uses LIFO; Queue uses FIFO (First-In-First-Out). In a Stack, the \nlast inserted is first removed; in a Queue, the first inserted is first removed. Queues \nsupport enqueue and dequeue. Typical use: recursion stacks, browser history vs. \nscheduling queues. \n• Q4: What is Big-O notation? Give two examples. | Marks: 3 \no Model Answer: Big-O expresses upper bound of growth rate relative to input size. \nExamples: O(n) for linear traversal; O(n log n) for efficient sorting like \nmergesort/quick sort (average). \n• Q5: Write the time complexity of binary search and explain why. | Marks: 3 \no Model Answer: Binary search is O(log n) because it halves the search space each \niteration by comparing the middle element and discarding half the array, continuing \nuntil found or empty.",
+      "maxMarks": 5,
+      "score": 3,
+      "percentage": 60,
+      "conceptMatch": "Covered: explain, bubble, algorithm, detail, explain bubble",
+      "missingPoints": "Missing: bubble algorithm, algorithm detail",
+      "reason": "Heuristic scorer: ~57% overlap and key points covered.",
+      "mappingConfidence": 0.42307692307692313,
+      "confidence": 0.4972527472527473
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "Explain Bubble Sort algorithm in detail. |",
+        "studentAnswer": "• Q1: Explain Bubble Sort algorithm in detail. | Marks: 5 \no Model Answer: Bubble Sort repeatedly swaps adjacent elements if they are in the \nwrong order. It performs multiple passes; after each pass, the largest among \nunsorted items moves to its correct position. Time complexity is O(n^2) in \naverage/worst case; best case O(n) if optimized with a swapped flag. It is stable and \nworks in-place. \n• Q2a: Define a Stack and its basic operations. | Marks: 2 \no Model Answer: A Stack is a LIFO (Last-In-First-Out) data structure. Core \noperations: push to add an element to the top, pop to remove the top element, \nand peek to inspect the top without removal. \n• Q2b: Explain push and pop operations with an example. | Marks: 3 \no Model Answer: push(x) places x at the top; pop() removes and returns the top \nelement. Example: Starting with empty stack, push(5), push(7) → top is 7. pop() \nreturns 7, stack now [5]. \n• Q3: Differentiate between Queue and Stack. | Marks: 4 \no Model Answer: Stack uses LIFO; Queue uses FIFO (First-In-First-Out). In a Stack, the \nlast inserted is first removed; in a Queue, the first inserted is first removed. Queues \nsupport enqueue and dequeue. Typical use: recursion stacks, browser history vs. \nscheduling queues. \n• Q4: What is Big-O notation? Give two examples. | Marks: 3 \no Model Answer: Big-O expresses upper bound of growth rate relative to input size. \nExamples: O(n) for linear traversal; O(n log n) for efficient sorting like \nmergesort/quick sort (average). \n• Q5: Write the time complexity of binary search and explain why. | Marks: 3 \no Model Answer: Binary search is O(log n) because it halves the search space each \niteration by comparing the middle element and discarding half the array, continuing \nuntil found or empty.",
+        "maxMarks": 5,
+        "scoreAwarded": 3,
+        "percentage": 60,
+        "conceptMatch": "Covered: explain, bubble, algorithm, detail, explain bubble",
+        "missingPoints": "Missing: bubble algorithm, algorithm detail",
+        "reason": "Heuristic scorer: ~57% overlap and key points covered.",
+        "mappingConfidence": 0.42307692307692313
+      }
+    },
+    "totalScore": 3,
+    "overallFeedback": "Decent understanding; consider improving detail and accuracy.",
+    "weakAreas": [
+      "Q1"
+    ],
+    "overallConfidence": 0.5,
+    "mappingDetails": [
+      {
+        "sourceNumber": "1",
+        "matchedQuestionId": "693d2738935de518c8ea5d0c",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.42307692307692313,
+        "note": "Weak mapping"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q1"
+  ],
+  "overallConfidence": 0.5,
+  "mappingDetails": [
+    {
+      "sourceNumber": "1",
+      "matchedQuestionId": "693d2738935de518c8ea5d0c",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.42307692307692313,
+      "note": "Weak mapping"
+    }
+  ]
+}

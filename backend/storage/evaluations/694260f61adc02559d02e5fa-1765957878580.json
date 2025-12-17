@@ -1,0 +1,999 @@
+{
+  "studentId": "694260f61adc02559d02e5fa",
+  "recordId": "694260f61adc02559d02e633",
+  "totalScore": 16,
+  "details": [
+    {
+      "number": "1a",
+      "questionId": "694260421adc02559d02e5ec",
+      "question": "func1(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop Outer loop (i) runs from 1 to n → O(n). Middle loop (j) runs from 1 to n → O(n). Inner loop (k) runs from 1 to 10 → O(1) (constant). T(n)=O(n)×O(n)×O(1) = O(n²) Time Complexity: O(n²) fun2(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop Outer loop (i) runs from 0 to 2n → O(n). Middle loop (j) runs from 0 to i/3. In worst case, when i ≈ n, it runs O(n) times. Inner loop (k) runs from 0 to j². Worst case when j ≈ n, it runs O(n²) times. So: T(n)=O(n)×O(n)×O(n²) = O(n⁴), Time Complexity = O(n⁴) fun3(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop T(n)=O(n)×O(n)×O(n),Time Complexity = O(n 3 )",
+      "maxMarks": 6,
+      "score": 4.5,
+      "percentage": 75,
+      "conceptMatch": "",
+      "missingPoints": "For func3, the justification for O(n³) was incorrect (summation instead of multiplication of complexities).",
+      "reason": "Student correctly identified O(n²) for func1 with correct justification (2 marks). Student correctly identified O(n⁴) for func2 with correct justification (2 marks). For func3, the student correctly identified O(n³) but provided an incorrect justification (n+n+n instead of n*n*n). According to the marking scheme, 1.5 marks are awarded for the correct answer without justification.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q1(a), Q1(b), Q1(a)",
+      "mappedStudentAnswerText": ": func 1: 1st Loop worst case: Run = n 2nd Loop worst case: Run = n 3rd Loop worst case: Run = 10 So, Time Complexity → n * n * 10 → 10 n² O(n²) is worst time complexity. : func 2: 1st Loop worst case: Run = 2m 2nd Loop worst case: Run = 2n 3rd Loop worst case: Run = (2n)² = 4n² So, Time Complexity → 2m * 2n * 4n² O(n⁴) is worst time complexity. : Func 3:- 1st loop worst case: Run = n (i.e. i=0) 2nd loop worst case: Run = n (i.e. i=0) 3rd loop worst case: Run = n So, Time complexity → n + n + n O(n³) is worst time complexity."
+    },
+    {
+      "number": "1b",
+      "questionId": "694260421adc02559d02e5ed",
+      "question": "(Total - 9 marks) [ Max 4 Marks ( 2 Marks for algo + 2 Marks for execution using the given rain array) if the question is solved using another method which involves complexity more than O (n) ] Optimized Algorithm that returns the number of days one must wait until a future day with strictly greater rainfall occurs; (3 marks) Algorithm NextGreaterRain(rain[0..n-1]): Input: rain[0..n-1] // array of daily rainfall values Output: out[0..n-1] // number of days until next greater rainfall 1. n ← length of rain 2. out[0..n-1] ← 0 // initialize output array 3. S ← empty stack // will store indices of days 4. for i ← n-1 down to 0 do 5. while S is not empty AND rain[S.top()] ≤ rain[i] do 6. S.pop() 7. if S is not empty then 8. out[i] ← S.top() - i 9. else 10. out[i] ← 0 11. S.push(i) 12. return out ( 6 Marks ) [ 1 mark for each iteration. In each iteration, focus on the stack contents, specifically the 4th column, and the current output array, which is the 6th column. ] Alternate Solution Algorithm NextGreaterRain_Forward(rain[0..n-1]): Input: rain[0..n-1] Output: out[0..n-1] 1. n ← length of rain 2. out[0..n-1] ← 0 3. S ← empty stack // will store indices 4. for i ← 0 to n-1 do 5. while S is not empty AND rain[i] > rain[S.top()] do 6. j ← S.pop() 7. out[j] ← i - j 8. S.push(i) 9. return out QUESTION 2",
+      "maxMarks": 9,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "The student's algorithm is a simple linear scan that attempts to find the maximum value and its position, rather than the 'next greater' element. The logic for tracking wait days is incorrect. The algorithm and its execution do not solve the problem as stated.",
+      "reason": "The student provided an algorithm and execution that does not correctly solve the 'Next Greater Rain' problem. The approach is a linear scan that attempts to find a maximum, not the next greater element, and the logic for calculating wait days is flawed. No marks were awarded as the solution is fundamentally incorrect and does not align with the problem's requirements or the provided optimized/alternate solutions.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q1(b)",
+      "mappedStudentAnswerText": ": Algorithm :- ① Min = arr[0] , Count = 0 ② For (i = 1; i < N; i++) { if (arr[i] > Min) { Min = arr[i]; Count << \"Wait = \" << ++Count << endl; count = -1; } count++; } For main [] = {20, 15, 25, 18, 9, 303}, ① Min = 20; count = 0. ② If (15 > 20) X count = 1 if (25 > 20) → Min = 25 , Wait = 2 count = -1 count = 0 ③ If (18 > 25) X count = 1 if (9 > 25) X count = 2 if (30 > 25) → Min = 30 , Wait = 3 count = -1 count = 0 So, for following array worst wait time is 3 days."
+    },
+    {
+      "number": "2a",
+      "questionId": "694260421adc02559d02e5ee",
+      "question": "(Total - 5 marks) Token Action Stack 60 push 60 [60] 20 push 20 [60, 20] 2 push 2 [60, 20, 2] / pop 20,2 → 20 ÷ 2 = 10 → push 10 [60, 10] 1 mark + pop 60,10 → 60 + 10 = 70 → push 70 [70] 1 mark 15 push 15 [70, 15] 5 push 5 [70, 15, 5] pop 15,5 → 15 × 5 = 75 → push 75 [70, 75] 1 mark pop 70,75 → 70 − 75 = −5 → push −5 [−5] 1 mark 100 push 100 [−5, 100] + pop −5,100 → −5 + 100 = 95 → push 95 [95] 1 mark Give full marks for this type of solution also",
+      "maxMarks": 5,
+      "score": 2,
+      "percentage": 40,
+      "conceptMatch": "",
+      "missingPoints": "The intermediate steps and stack contents are largely unclear and inconsistent with the correct postfix evaluation sequence. Only one operation was clearly correct, and the final result was correct despite the flawed trace.",
+      "reason": "The student provided a detailed trace for postfix evaluation. One operation (20 / 2 = 10) was clearly shown correctly (1 mark). The final result (95) is correct (1 mark). However, the intermediate stack states and the sequence of operations are very confusing and do not consistently follow the correct evaluation steps, making it difficult to award marks for other operations.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q2(a), Q2(a)",
+      "mappedStudentAnswerText": ": # 60 20 2 / 15 5 100 + Exp : 60 | 60 20 | 60,20 2 | 60,20,2 / | 60,10 15 | 60,10,15 + | 60,10 5 | 60,10,15,5 | 60,10 | 60,10 100 | 70,75,100 + | 70,75 Expr = 95 | 70 + 25"
+    },
+    {
+      "number": "2b",
+      "questionId": "694260421adc02559d02e5ef",
+      "question": "(Total - 10 marks) (Total - 5 marks) Part 1: Push at rear, Pop from front (Total - 5 marks) Part 2: Push at front, Pop from rear Initial State: Q1: Contents = [2, 5, 3, 6, 4], front1 = 0, rear1 = 4 Q2: Empty front2 = -1, rear2 = -1 Iteration 1: (1 mark) Q1: Contents = [5, 3, 6, 4, 3], front1 = 1, rear1 = 0 Q2: Empty front2 = -1, rear2 = -1 Iteration 2: (1 mark) Q1: Contents = [3, 6, 4, 3], front1 = 2, rear1 = 0 Q2: Contents = [5], front2 = 0, rear2 = 0 Iteration 3: (1 mark) Q1: Contents = [6, 4, 3], front1 = 3, rear1 = 0 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Iteration 4: (1 mark) Q1: Contents = [4, 3, 6], front1 = 4, rear1 = 1 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Iteration 5: (1 mark) Q1: Contents = [3, 6, 5], front1 = 0, rear1 = 2 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Initial State: Q1: Contents = [2, 5, 3, 6, 4], front1 = 0, rear1 = 4 Q2: Empty front2 = -1, rear2 = -1 Iteration 1: (1 mark) Q1: Contents = [3, 2, 5, 3, 6], front1 = 4, rear1 = 3 Q2: Empty front2 = -1, rear2 = -1 Iteration 2: (1 mark) Q1: Contents = [3, 2, 5, 3], front1 = 4, rear1 = 2 Q2: Contents = [3], front2 = 0, rear2 = 0 Iteration 3: (1 mark) Q1: Contents = [3, 2, 5], front1 = 4, rear1 = 1 Q2: Contents = [3, 3], front2 = 4, rear2 = 0 Iteration 4: (1 mark) Q1: Contents = [3, 2], front1 = 4, rear1 = 0 Q2: Contents = [3, 3, 3], front2 = 3, rear2 = 0 Iteration 5: (1 mark) Q1: Contents = [3], front1 = 4, rear1 = 4 Q2: Contents = [3, 3, 3, 3], front2 = 2, rear2 = 0 If every answer is wrong, then 1 mark out of 10 if a student tried to attempt and showed few iterations. QUESTION 3",
+      "maxMarks": 10,
+      "score": 6.5,
+      "percentage": 65,
+      "conceptMatch": "",
+      "missingPoints": "For Part 1, Iterations 3, 4, and 5 had incorrect Q1 contents and/or incorrect front/rear pointers for Q2. For Part 2, Iterations 1, 2, and 4 had incorrect Q1 contents and/or incorrect front/rear pointers for Q2.",
+      "reason": "The student attempted both parts of the question by showing queue states after each iteration. For Part 1 (Push at rear, Pop from front), Iteration 1 was fully correct (1 mark). Iteration 2 had correct Q1 contents and pointers (1 mark), but Q2 contents were partially incorrect. Iterations 3, 4, and 5 had correct Q2 contents but incorrect Q1 contents and/or pointers, earning 0.5 marks each for the correct Q2 contents. For Part 2 (Push at front, Pop from rear), Iteration 1 had correct Q1 pointers (0.5 marks). Iteration 2 had correct Q2 contents (0.5 marks). Iterations 3 and 4 had correct Q2 contents (1 mark each). Overall, the student demonstrated a partial understanding of queue operations and state tracking.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q2(b), Q2(b), Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2",
+      "mappedStudentAnswerText": "(i) After 1st After 2nd After 3rd After 4th After 5th : (i) After 1st iteration. : = [5,3,6,4,3] : = [ ] Rear1 = 0 , Front1 = 1 Rear2 = 2 , Front2 = -1 After 2nd iter. : = [3,6,4,3] : = [5,7] Rear1 = 0 , Front1 = 2 Rear2 = 0 , Front2 = 0 After 3rd iter. : = [4,3] : = [5,3] Rear1 = 1 , Front1 = 4 Rear2 = 1 , Front2 = 0 After 4th iter. : = [3,5] : = [5,3] Rear1 = 2 , Front1 = 2 Rear2 = 1 , Front2 = 1 After 5th iter. : = [5,3] : = [5,3] Rear1 = 3 , Front1 = 2 Rear2 = 2 , Front2 = 0 Q(ii): After 1st iteration: : = [3] : = [] Rear1 = 3 Front1 = 4 Rear2 = -1 Front2 = -1 After 2nd iter: : = [3, 2, 5] : = [3] Rear1 = Front1 = -1 Front2 = 3 Rear2 = 0 After 3rd: : = [3] : = [3, 3] After 4th: : = empty : = [3, 3, 3]"
+    },
+    {
+      "number": "3a",
+      "questionId": "694260421adc02559d02e5f0",
+      "question": "(Total - 6 marks) Handling edge cases (1M) - Empty list handling: if (!head1) and if (!head2) Correct initial head selection or dummy node (1M) - Proper initialization Correct merging logic (3M) - Loop logic with comparisons and pointer movement Final attachment of remaining nodes (1M) - If any list is left, append it to the merged list Note:a) If simply 2 LLs are merged then 2 marks b) If the two linked lists are merged first and then sorted, 5 marks are awarded. Node* sortedMerge(Node* head1, Node* head2) { // Create a dummy node to simplify the merging process Node* dummy = new Node(-1); Node* curr = dummy; // Iterate through both linked lists while (head1 != nullptr && head2 != nullptr) { // Add the smaller node to the merged list if (head1->data <= head2->data) { curr->next = head1; head1 = head1->next; } else { curr->next = head2; head2 = head2->next; } curr = curr->next; } // If any list is left, append it to the merged list if (head1 != nullptr) { curr->next = head1; } else { curr->next = head2; } return dummy->next; }",
+      "maxMarks": 6,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "The provided code snippet for merging linked lists is fundamentally incorrect. It fails to correctly initialize the merged list, uses an incorrect loop condition, and the logic for creating and linking nodes within the loop is flawed. It does not handle edge cases or the final attachment of remaining nodes correctly.",
+      "reason": "The student provided a code snippet and some descriptive text for merging two sorted linked lists. The code is incorrect in its initialization, loop condition, and merging logic. It does not correctly create or link nodes, nor does it handle edge cases or remaining nodes. Therefore, no marks were awarded.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q3(b), Q1, Q2, Q3",
+      "mappedStudentAnswerText": "a): Node * head 3; Node * ptr 3 = head 3; Node * ptr 1 = head 1; Node * ptr 2 = head 2; Loop: while (ptr1 != null && ptr2 -> next != null) { if (ptr1 -> value > ptr2: value) { int ptr 3 = new nn; nn -> value = ptr1.value; nn -> next = ptr2.value; nn -> next -> next = null head 3; null; } else { nn -> value = ptr2.value; nn -> next = ptr1; nn -> next.value = ptr 1.value; nn -> next -> next = null; } } } } : We compare value of ptr1 & ptr 2. Then insert inside new linked list 3 through ptr 3. : Loop run until ptr1 -> next or ptr2 -> next null. Then we add remaining values of other directly to LL3. : We are giving ptr 3 -> next = null each time. So that it is easy to transverse in next step through while (ptr3->next=null)&ptr3 = ptr3 -> next}"
+    },
+    {
+      "number": "3b",
+      "questionId": "694260421adc02559d02e5f1",
+      "question": "(Total - 9 marks) 3M for Binary Search algo (recursive approach also considered) + 1M for insertion algo + 3M for BS apply + 1M insertion apply + 1M for Time Complexity Note: a) Linear search algo (1 marks) + Linear search apply (1 marks) b) For the final answer, 1 mark; c) For calling the array with values in the program, 1 mark. d) Loop missing in Binary Search algo then 1 Marks will be deducted. (2 out of 3) BINARY SEARCH TO FIND POSITION FOR INSERTION (3 marks) findPosition(arr, n, x): start = 0 end = n-1 pos = n // default insert at end while start <= end: mid = (start + end) / 2 if arr[mid] >= x: pos = mid end = mid - 1 else: start = mid + 1 return pos INSERTION ALGORITHM (1 mark) insert(arr, n, x): pos = findPosition(arr, n, x) for i from n-1 downto pos: arr[i+1] = arr[i] arr[pos] = x return n+1 STEPS: arr = {10,20,30,40,50} , n = 5 , x = 25 BINARY SEARCH (3 marks) Start = 0, end = 4 mid=2 → arr[2]=30 ≥ 25 → pos = 2, end = 1 start=0, end=1 mid=0 → arr[0]=10 < 25 → start=1 mid=1 → arr[1]=20 < 25 → start=2 stops → pos=2 INSERTION (1 mark) arr = {10, 20, 30, 40, 50, _} shift from i=4→2 after shifting: {10, 20, 30, 30, 40, 50} place 25 at pos=2 final = {10, 20, 25, 30, 40, 50} TIME COMPLEXITY – O(n) or O(n + log n) (1 mark) QUESTION 4 Sol 4a (Total - 5 marks) - 4M for application + 0.5M for not stable + 0.5M for explanation or example [If instead of apply, correct algorithm is written then 1M out of 4M is given.] yield = [45, 36, 78, 10, 12] Swap a[0] ↔ a[3] ⇒ [10, 36, 78, 45, 12] Swap a[1] ↔ a[4] ⇒ [10, 12, 78, 45, 36] Swap a[2] ↔ a[4] ⇒ [10, 12, 36, 45, 78] Swap a[3] ↔ a[3] (no change) ⇒ [10, 12, 36, 45, 78] Sorted array: [10, 12, 36, 45, 78] Max element placed at the end version: yield = [45, 36, 78, 10, 12] Swap a[2] ↔ a[4] ⇒ [45, 36, 12, 10, 78] Swap a[0] ↔ a[3] ⇒ [10, 36, 12, 45, 78] Swap a[1] ↔ a[2] ⇒ [10, 12, 36, 45, 78] Swap a[1] ↔ a[1] (no change) Sorted array: [10, 12, 36, 45, 78] No, the standard selection sort is not a stable sorting algorithm. It may change the relative order of equal keys because it performs a direct swap between the current position and the found minimum (which can move an earlier equal item behind a later equal item). //If bubble/insertion sort is done in place of selection then 1 mark out of 4 assuming last iteration sorted output is correct. Selection Algo and first iteration in detail written similarly other iterations so i considered as steps and 2 marks are given out of 4. Sol 4b (Total - 10 marks) 1. curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also give 1 mark //*curr->amount > *maxNode->amount Considered correct 2. curr->amount < minNode->amount 3. prev = curr; pre = prev-> next is Wrong 4. curr = curr->next; 5. curr != head curr->next != head is Wrong 6. maxPrev->next = maxNode->next or //Correct maxPrev->next =maxPrev->next->next 7. temp->next = maxNode; 8. temp->next = newHead; 9. minPre->next = minNode->next minMode->next = minNode->next or //Correct minPrev->next =minPrev->next->next 10. minNode->next = head or //Correct minNode->next = temp->next",
+      "maxMarks": 9,
+      "score": 1.5,
+      "percentage": 16.67,
+      "conceptMatch": "",
+      "missingPoints": "The binary search algorithm provided is incorrect, specifically the loop condition (`start < end`) and the logic for finding the insertion point. The application of binary search and insertion was not demonstrated. The time complexity only mentioned O(log n) for binary search, missing the overall O(n) for insertion into an array.",
+      "reason": "The student's binary search algorithm for finding the insertion position is incorrect (0 marks). The insertion algorithm (shifting elements and placing the new value) is correct (1 mark). The student did not apply the algorithms to a specific array (0 marks for application). The time complexity was stated as O(log n) for binary search, which is correct for the search part, but the overall complexity for insertion into an array is O(n) due to shifting. Partial credit (0.5 marks) was given for correctly identifying the binary search complexity.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q1, Q2, Q3, Q4",
+      "mappedStudentAnswerText": ":Start = 0, end = n-1 mid = start + end/2 :BinSrch (int arr[], int x) { while (start < end) { if (arr [mid] <= x) { if (arr [mid+1] >= x) { return mid; } } } } { if (mid > Key) { end = mid-1; } else { start = mid + i; } } } We got position, the value should be placed after arr [mid]. :Now, we make space by shifting values after mid. for (i = n ; i > mid ; i--) { arr [i] = arr [i-1]; } :Now, give value arr [mid+1] = x; Time complexity O (log n) for binary search (worst case)."
+    },
+    {
+      "number": "4a",
+      "questionId": null,
+      "question": "Sol 4a (Total - 5 marks) - 4M for application + 0.5M for not stable + 0.5M for explanation or example [If instead of apply, correct algorithm is written then 1M out of 4M is given.] yield = [45, 36, 78, 10, 12] Swap a[0] ↔ a[3] ⇒ [10, 36, 78, 45, 12] Swap a[1] ↔ a[4] ⇒ [10, 12, 78, 45, 36] Swap a[2] ↔ a[4] ⇒ [10, 12, 36, 45, 78] Swap a[3] ↔ a[3] (no change) ⇒ [10, 12, 36, 45, 78] Sorted array: [10, 12, 36, 45, 78] Max element placed at the end version: yield = [45, 36, 78, 10, 12] Swap a[2] ↔ a[4] ⇒ [45, 36, 12, 10, 78] Swap a[0] ↔ a[3] ⇒ [10, 36, 12, 45, 78] Swap a[1] ↔ a[2] ⇒ [10, 12, 36, 45, 78] Swap a[1] ↔ a[1] (no change) Sorted array: [10, 12, 36, 45, 78] No, the standard selection sort is not a stable sorting algorithm. It may change the relative order of equal keys because it performs a direct swap between the current position and the found minimum (which can move an earlier equal item behind a later equal item). //If bubble/insertion sort is done in place of selection then 1 mark out of 4 assuming last iteration sorted output is correct. Selection Algo and first iteration in detail written similarly other iterations so i considered as steps and 2 marks are given out of 4.",
+      "maxMarks": 5,
+      "score": 1.5,
+      "percentage": 30,
+      "conceptMatch": "",
+      "missingPoints": "The intermediate steps for selection sort application were incorrect. The explanation for why selection sort is not stable was incorrect, focusing on efficiency rather than the preservation of relative order for equal elements.",
+      "reason": "The student provided intermediate array states for selection sort application. While the final sorted array is correct (1 mark), the intermediate steps shown are incorrect and do not follow the standard selection sort process. The student correctly stated that selection sort is not stable (0.5 marks), but the explanation provided was about time complexity/efficiency rather than stability (0 marks for explanation).",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q1, Q2, Q3",
+      "mappedStudentAnswerText": ": 45, 36, 10, 12, 78 : 36, 10, 12, 45, 78 : 10, 12, 36, 45, 78 No Algorithm is stable and best always. As, in selection sort first we need to find max value in array. If value is at end then it take too much time in loop."
+    },
+    {
+      "number": "4b",
+      "questionId": null,
+      "question": "Sol 4b (Total - 10 marks) 1. curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also give 1 mark //*curr->amount > *maxNode->amount Considered correct 2. curr->amount < minNode->amount 3. prev = curr; pre = prev-> next is Wrong 4. curr = curr->next; 5. curr != head curr->next != head is Wrong 6. maxPrev->next = maxNode->next or //Correct maxPrev->next =maxPrev->next->next 7. temp->next = maxNode; 8. temp->next = newHead; 9. minPre->next = minNode->next minMode->next = minNode->next or //Correct minPrev->next =minPrev->next->next 10. minNode->next = head or //Correct minNode->next = temp->next",
+      "maxMarks": 10,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "",
+      "missingPoints": "All 10 blanks were filled incorrectly. The student either provided the wrong comparison, an assignment instead of a comparison, an incorrect variable, or an incorrect pointer manipulation.",
+      "reason": "The student attempted to fill in the blanks for the linked list operations. All 10 answers provided were incorrect, demonstrating a lack of understanding of the required pointer manipulations and comparisons in the context of linked list algorithms.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": "Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10",
+      "mappedStudentAnswerText": ": max Node -> amount > curr -> amount : min Node -> amount <- curr -> amount : curr : head -> next : curr -> next != null : return : : : return :"
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1a": {
+        "question": "func1(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop Outer loop (i) runs from 1 to n → O(n). Middle loop (j) runs from 1 to n → O(n). Inner loop (k) runs from 1 to 10 → O(1) (constant). T(n)=O(n)×O(n)×O(1) = O(n²) Time Complexity: O(n²) fun2(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop Outer loop (i) runs from 0 to 2n → O(n). Middle loop (j) runs from 0 to i/3. In worst case, when i ≈ n, it runs O(n) times. Inner loop (k) runs from 0 to j². Worst case when j ≈ n, it runs O(n²) times. So: T(n)=O(n)×O(n)×O(n²) = O(n⁴), Time Complexity = O(n⁴) fun3(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop T(n)=O(n)×O(n)×O(n),Time Complexity = O(n 3 )",
+        "expectedAnswer": "func1(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop Outer loop (i) runs from 1 to n → O(n). Middle loop (j) runs from 1 to n → O(n). Inner loop (k) runs from 1 to 10 → O(1) (constant). T(n)=O(n)×O(n)×O(1) = O(n²) Time Complexity: O(n²) fun2(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop Outer loop (i) runs from 0 to 2n → O(n). Middle loop (j) runs from 0 to i/3. In worst case, when i ≈ n, it runs O(n) times. Inner loop (k) runs from 0 to j². Worst case when j ≈ n, it runs O(n²) times. So: T(n)=O(n)×O(n)×O(n²) = O(n⁴), Time Complexity = O(n⁴) fun3(int n) (2 marks) [ 1.5 marks if the correct answer is written without justification ] If the answer is wrong, 0.5 for the correct complexity corresponding to each loop T(n)=O(n)×O(n)×O(n),Time Complexity = O(n 3 )",
+        "studentAnswer": ": func 1: 1st Loop worst case: Run = n 2nd Loop worst case: Run = n 3rd Loop worst case: Run = 10 So, Time Complexity → n * n * 10 → 10 n² O(n²) is worst time complexity. : func 2: 1st Loop worst case: Run = 2m 2nd Loop worst case: Run = 2n 3rd Loop worst case: Run = (2n)² = 4n² So, Time Complexity → 2m * 2n * 4n² O(n⁴) is worst time complexity. : Func 3:- 1st loop worst case: Run = n (i.e. i=0) 2nd loop worst case: Run = n (i.e. i=0) 3rd loop worst case: Run = n So, Time complexity → n + n + n O(n³) is worst time complexity.",
+        "maxMarks": 6,
+        "scoreAwarded": 4.5,
+        "percentage": 75,
+        "conceptMatch": "",
+        "missingPoints": "For func3, the justification for O(n³) was incorrect (summation instead of multiplication of complexities).",
+        "reason": "Student correctly identified O(n²) for func1 with correct justification (2 marks). Student correctly identified O(n⁴) for func2 with correct justification (2 marks). For func3, the student correctly identified O(n³) but provided an incorrect justification (n+n+n instead of n*n*n). According to the marking scheme, 1.5 marks are awarded for the correct answer without justification.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q1(a), Q1(b), Q1(a)"
+      },
+      "Q1b": {
+        "question": "(Total - 9 marks) [ Max 4 Marks ( 2 Marks for algo + 2 Marks for execution using the given rain array) if the question is solved using another method which involves complexity more than O (n) ] Optimized Algorithm that returns the number of days one must wait until a future day with strictly greater rainfall occurs; (3 marks) Algorithm NextGreaterRain(rain[0..n-1]): Input: rain[0..n-1] // array of daily rainfall values Output: out[0..n-1] // number of days until next greater rainfall 1. n ← length of rain 2. out[0..n-1] ← 0 // initialize output array 3. S ← empty stack // will store indices of days 4. for i ← n-1 down to 0 do 5. while S is not empty AND rain[S.top()] ≤ rain[i] do 6. S.pop() 7. if S is not empty then 8. out[i] ← S.top() - i 9. else 10. out[i] ← 0 11. S.push(i) 12. return out ( 6 Marks ) [ 1 mark for each iteration. In each iteration, focus on the stack contents, specifically the 4th column, and the current output array, which is the 6th column. ] Alternate Solution Algorithm NextGreaterRain_Forward(rain[0..n-1]): Input: rain[0..n-1] Output: out[0..n-1] 1. n ← length of rain 2. out[0..n-1] ← 0 3. S ← empty stack // will store indices 4. for i ← 0 to n-1 do 5. while S is not empty AND rain[i] > rain[S.top()] do 6. j ← S.pop() 7. out[j] ← i - j 8. S.push(i) 9. return out QUESTION 2",
+        "expectedAnswer": "(Total - 9 marks) [ Max 4 Marks ( 2 Marks for algo + 2 Marks for execution using the given rain array) if the question is solved using another method which involves complexity more than O (n) ] Optimized Algorithm that returns the number of days one must wait until a future day with strictly greater rainfall occurs; (3 marks) Algorithm NextGreaterRain(rain[0..n-1]): Input: rain[0..n-1] // array of daily rainfall values Output: out[0..n-1] // number of days until next greater rainfall 1. n ← length of rain 2. out[0..n-1] ← 0 // initialize output array 3. S ← empty stack // will store indices of days 4. for i ← n-1 down to 0 do 5. while S is not empty AND rain[S.top()] ≤ rain[i] do 6. S.pop() 7. if S is not empty then 8. out[i] ← S.top() - i 9. else 10. out[i] ← 0 11. S.push(i) 12. return out ( 6 Marks ) [ 1 mark for each iteration. In each iteration, focus on the stack contents, specifically the 4th column, and the current output array, which is the 6th column. ] Alternate Solution Algorithm NextGreaterRain_Forward(rain[0..n-1]): Input: rain[0..n-1] Output: out[0..n-1] 1. n ← length of rain 2. out[0..n-1] ← 0 3. S ← empty stack // will store indices 4. for i ← 0 to n-1 do 5. while S is not empty AND rain[i] > rain[S.top()] do 6. j ← S.pop() 7. out[j] ← i - j 8. S.push(i) 9. return out QUESTION 2",
+        "studentAnswer": ": Algorithm :- ① Min = arr[0] , Count = 0 ② For (i = 1; i < N; i++) { if (arr[i] > Min) { Min = arr[i]; Count << \"Wait = \" << ++Count << endl; count = -1; } count++; } For main [] = {20, 15, 25, 18, 9, 303}, ① Min = 20; count = 0. ② If (15 > 20) X count = 1 if (25 > 20) → Min = 25 , Wait = 2 count = -1 count = 0 ③ If (18 > 25) X count = 1 if (9 > 25) X count = 2 if (30 > 25) → Min = 30 , Wait = 3 count = -1 count = 0 So, for following array worst wait time is 3 days.",
+        "maxMarks": 9,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "The student's algorithm is a simple linear scan that attempts to find the maximum value and its position, rather than the 'next greater' element. The logic for tracking wait days is incorrect. The algorithm and its execution do not solve the problem as stated.",
+        "reason": "The student provided an algorithm and execution that does not correctly solve the 'Next Greater Rain' problem. The approach is a linear scan that attempts to find a maximum, not the next greater element, and the logic for calculating wait days is flawed. No marks were awarded as the solution is fundamentally incorrect and does not align with the problem's requirements or the provided optimized/alternate solutions.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q1(b)"
+      },
+      "Q2a": {
+        "question": "(Total - 5 marks) Token Action Stack 60 push 60 [60] 20 push 20 [60, 20] 2 push 2 [60, 20, 2] / pop 20,2 → 20 ÷ 2 = 10 → push 10 [60, 10] 1 mark + pop 60,10 → 60 + 10 = 70 → push 70 [70] 1 mark 15 push 15 [70, 15] 5 push 5 [70, 15, 5] pop 15,5 → 15 × 5 = 75 → push 75 [70, 75] 1 mark pop 70,75 → 70 − 75 = −5 → push −5 [−5] 1 mark 100 push 100 [−5, 100] + pop −5,100 → −5 + 100 = 95 → push 95 [95] 1 mark Give full marks for this type of solution also",
+        "expectedAnswer": "(Total - 5 marks) Token Action Stack 60 push 60 [60] 20 push 20 [60, 20] 2 push 2 [60, 20, 2] / pop 20,2 → 20 ÷ 2 = 10 → push 10 [60, 10] 1 mark + pop 60,10 → 60 + 10 = 70 → push 70 [70] 1 mark 15 push 15 [70, 15] 5 push 5 [70, 15, 5] pop 15,5 → 15 × 5 = 75 → push 75 [70, 75] 1 mark pop 70,75 → 70 − 75 = −5 → push −5 [−5] 1 mark 100 push 100 [−5, 100] + pop −5,100 → −5 + 100 = 95 → push 95 [95] 1 mark Give full marks for this type of solution also",
+        "studentAnswer": ": # 60 20 2 / 15 5 100 + Exp : 60 | 60 20 | 60,20 2 | 60,20,2 / | 60,10 15 | 60,10,15 + | 60,10 5 | 60,10,15,5 | 60,10 | 60,10 100 | 70,75,100 + | 70,75 Expr = 95 | 70 + 25",
+        "maxMarks": 5,
+        "scoreAwarded": 2,
+        "percentage": 40,
+        "conceptMatch": "",
+        "missingPoints": "The intermediate steps and stack contents are largely unclear and inconsistent with the correct postfix evaluation sequence. Only one operation was clearly correct, and the final result was correct despite the flawed trace.",
+        "reason": "The student provided a detailed trace for postfix evaluation. One operation (20 / 2 = 10) was clearly shown correctly (1 mark). The final result (95) is correct (1 mark). However, the intermediate stack states and the sequence of operations are very confusing and do not consistently follow the correct evaluation steps, making it difficult to award marks for other operations.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q2(a), Q2(a)"
+      },
+      "Q2b": {
+        "question": "(Total - 10 marks) (Total - 5 marks) Part 1: Push at rear, Pop from front (Total - 5 marks) Part 2: Push at front, Pop from rear Initial State: Q1: Contents = [2, 5, 3, 6, 4], front1 = 0, rear1 = 4 Q2: Empty front2 = -1, rear2 = -1 Iteration 1: (1 mark) Q1: Contents = [5, 3, 6, 4, 3], front1 = 1, rear1 = 0 Q2: Empty front2 = -1, rear2 = -1 Iteration 2: (1 mark) Q1: Contents = [3, 6, 4, 3], front1 = 2, rear1 = 0 Q2: Contents = [5], front2 = 0, rear2 = 0 Iteration 3: (1 mark) Q1: Contents = [6, 4, 3], front1 = 3, rear1 = 0 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Iteration 4: (1 mark) Q1: Contents = [4, 3, 6], front1 = 4, rear1 = 1 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Iteration 5: (1 mark) Q1: Contents = [3, 6, 5], front1 = 0, rear1 = 2 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Initial State: Q1: Contents = [2, 5, 3, 6, 4], front1 = 0, rear1 = 4 Q2: Empty front2 = -1, rear2 = -1 Iteration 1: (1 mark) Q1: Contents = [3, 2, 5, 3, 6], front1 = 4, rear1 = 3 Q2: Empty front2 = -1, rear2 = -1 Iteration 2: (1 mark) Q1: Contents = [3, 2, 5, 3], front1 = 4, rear1 = 2 Q2: Contents = [3], front2 = 0, rear2 = 0 Iteration 3: (1 mark) Q1: Contents = [3, 2, 5], front1 = 4, rear1 = 1 Q2: Contents = [3, 3], front2 = 4, rear2 = 0 Iteration 4: (1 mark) Q1: Contents = [3, 2], front1 = 4, rear1 = 0 Q2: Contents = [3, 3, 3], front2 = 3, rear2 = 0 Iteration 5: (1 mark) Q1: Contents = [3], front1 = 4, rear1 = 4 Q2: Contents = [3, 3, 3, 3], front2 = 2, rear2 = 0 If every answer is wrong, then 1 mark out of 10 if a student tried to attempt and showed few iterations. QUESTION 3",
+        "expectedAnswer": "(Total - 10 marks) (Total - 5 marks) Part 1: Push at rear, Pop from front (Total - 5 marks) Part 2: Push at front, Pop from rear Initial State: Q1: Contents = [2, 5, 3, 6, 4], front1 = 0, rear1 = 4 Q2: Empty front2 = -1, rear2 = -1 Iteration 1: (1 mark) Q1: Contents = [5, 3, 6, 4, 3], front1 = 1, rear1 = 0 Q2: Empty front2 = -1, rear2 = -1 Iteration 2: (1 mark) Q1: Contents = [3, 6, 4, 3], front1 = 2, rear1 = 0 Q2: Contents = [5], front2 = 0, rear2 = 0 Iteration 3: (1 mark) Q1: Contents = [6, 4, 3], front1 = 3, rear1 = 0 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Iteration 4: (1 mark) Q1: Contents = [4, 3, 6], front1 = 4, rear1 = 1 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Iteration 5: (1 mark) Q1: Contents = [3, 6, 5], front1 = 0, rear1 = 2 Q2: Contents = [5, 3], front2 = 0, rear2 = 1 Initial State: Q1: Contents = [2, 5, 3, 6, 4], front1 = 0, rear1 = 4 Q2: Empty front2 = -1, rear2 = -1 Iteration 1: (1 mark) Q1: Contents = [3, 2, 5, 3, 6], front1 = 4, rear1 = 3 Q2: Empty front2 = -1, rear2 = -1 Iteration 2: (1 mark) Q1: Contents = [3, 2, 5, 3], front1 = 4, rear1 = 2 Q2: Contents = [3], front2 = 0, rear2 = 0 Iteration 3: (1 mark) Q1: Contents = [3, 2, 5], front1 = 4, rear1 = 1 Q2: Contents = [3, 3], front2 = 4, rear2 = 0 Iteration 4: (1 mark) Q1: Contents = [3, 2], front1 = 4, rear1 = 0 Q2: Contents = [3, 3, 3], front2 = 3, rear2 = 0 Iteration 5: (1 mark) Q1: Contents = [3], front1 = 4, rear1 = 4 Q2: Contents = [3, 3, 3, 3], front2 = 2, rear2 = 0 If every answer is wrong, then 1 mark out of 10 if a student tried to attempt and showed few iterations. QUESTION 3",
+        "studentAnswer": "(i) After 1st After 2nd After 3rd After 4th After 5th : (i) After 1st iteration. : = [5,3,6,4,3] : = [ ] Rear1 = 0 , Front1 = 1 Rear2 = 2 , Front2 = -1 After 2nd iter. : = [3,6,4,3] : = [5,7] Rear1 = 0 , Front1 = 2 Rear2 = 0 , Front2 = 0 After 3rd iter. : = [4,3] : = [5,3] Rear1 = 1 , Front1 = 4 Rear2 = 1 , Front2 = 0 After 4th iter. : = [3,5] : = [5,3] Rear1 = 2 , Front1 = 2 Rear2 = 1 , Front2 = 1 After 5th iter. : = [5,3] : = [5,3] Rear1 = 3 , Front1 = 2 Rear2 = 2 , Front2 = 0 Q(ii): After 1st iteration: : = [3] : = [] Rear1 = 3 Front1 = 4 Rear2 = -1 Front2 = -1 After 2nd iter: : = [3, 2, 5] : = [3] Rear1 = Front1 = -1 Front2 = 3 Rear2 = 0 After 3rd: : = [3] : = [3, 3] After 4th: : = empty : = [3, 3, 3]",
+        "maxMarks": 10,
+        "scoreAwarded": 6.5,
+        "percentage": 65,
+        "conceptMatch": "",
+        "missingPoints": "For Part 1, Iterations 3, 4, and 5 had incorrect Q1 contents and/or incorrect front/rear pointers for Q2. For Part 2, Iterations 1, 2, and 4 had incorrect Q1 contents and/or incorrect front/rear pointers for Q2.",
+        "reason": "The student attempted both parts of the question by showing queue states after each iteration. For Part 1 (Push at rear, Pop from front), Iteration 1 was fully correct (1 mark). Iteration 2 had correct Q1 contents and pointers (1 mark), but Q2 contents were partially incorrect. Iterations 3, 4, and 5 had correct Q2 contents but incorrect Q1 contents and/or pointers, earning 0.5 marks each for the correct Q2 contents. For Part 2 (Push at front, Pop from rear), Iteration 1 had correct Q1 pointers (0.5 marks). Iteration 2 had correct Q2 contents (0.5 marks). Iterations 3 and 4 had correct Q2 contents (1 mark each). Overall, the student demonstrated a partial understanding of queue operations and state tracking.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q2(b), Q2(b), Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2"
+      },
+      "Q3a": {
+        "question": "(Total - 6 marks) Handling edge cases (1M) - Empty list handling: if (!head1) and if (!head2) Correct initial head selection or dummy node (1M) - Proper initialization Correct merging logic (3M) - Loop logic with comparisons and pointer movement Final attachment of remaining nodes (1M) - If any list is left, append it to the merged list Note:a) If simply 2 LLs are merged then 2 marks b) If the two linked lists are merged first and then sorted, 5 marks are awarded. Node* sortedMerge(Node* head1, Node* head2) { // Create a dummy node to simplify the merging process Node* dummy = new Node(-1); Node* curr = dummy; // Iterate through both linked lists while (head1 != nullptr && head2 != nullptr) { // Add the smaller node to the merged list if (head1->data <= head2->data) { curr->next = head1; head1 = head1->next; } else { curr->next = head2; head2 = head2->next; } curr = curr->next; } // If any list is left, append it to the merged list if (head1 != nullptr) { curr->next = head1; } else { curr->next = head2; } return dummy->next; }",
+        "expectedAnswer": "(Total - 6 marks) Handling edge cases (1M) - Empty list handling: if (!head1) and if (!head2) Correct initial head selection or dummy node (1M) - Proper initialization Correct merging logic (3M) - Loop logic with comparisons and pointer movement Final attachment of remaining nodes (1M) - If any list is left, append it to the merged list Note:a) If simply 2 LLs are merged then 2 marks b) If the two linked lists are merged first and then sorted, 5 marks are awarded. Node* sortedMerge(Node* head1, Node* head2) { // Create a dummy node to simplify the merging process Node* dummy = new Node(-1); Node* curr = dummy; // Iterate through both linked lists while (head1 != nullptr && head2 != nullptr) { // Add the smaller node to the merged list if (head1->data <= head2->data) { curr->next = head1; head1 = head1->next; } else { curr->next = head2; head2 = head2->next; } curr = curr->next; } // If any list is left, append it to the merged list if (head1 != nullptr) { curr->next = head1; } else { curr->next = head2; } return dummy->next; }",
+        "studentAnswer": "a): Node * head 3; Node * ptr 3 = head 3; Node * ptr 1 = head 1; Node * ptr 2 = head 2; Loop: while (ptr1 != null && ptr2 -> next != null) { if (ptr1 -> value > ptr2: value) { int ptr 3 = new nn; nn -> value = ptr1.value; nn -> next = ptr2.value; nn -> next -> next = null head 3; null; } else { nn -> value = ptr2.value; nn -> next = ptr1; nn -> next.value = ptr 1.value; nn -> next -> next = null; } } } } : We compare value of ptr1 & ptr 2. Then insert inside new linked list 3 through ptr 3. : Loop run until ptr1 -> next or ptr2 -> next null. Then we add remaining values of other directly to LL3. : We are giving ptr 3 -> next = null each time. So that it is easy to transverse in next step through while (ptr3->next=null)&ptr3 = ptr3 -> next}",
+        "maxMarks": 6,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "The provided code snippet for merging linked lists is fundamentally incorrect. It fails to correctly initialize the merged list, uses an incorrect loop condition, and the logic for creating and linking nodes within the loop is flawed. It does not handle edge cases or the final attachment of remaining nodes correctly.",
+        "reason": "The student provided a code snippet and some descriptive text for merging two sorted linked lists. The code is incorrect in its initialization, loop condition, and merging logic. It does not correctly create or link nodes, nor does it handle edge cases or remaining nodes. Therefore, no marks were awarded.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q3(b), Q1, Q2, Q3"
+      },
+      "Q3b": {
+        "question": "(Total - 9 marks) 3M for Binary Search algo (recursive approach also considered) + 1M for insertion algo + 3M for BS apply + 1M insertion apply + 1M for Time Complexity Note: a) Linear search algo (1 marks) + Linear search apply (1 marks) b) For the final answer, 1 mark; c) For calling the array with values in the program, 1 mark. d) Loop missing in Binary Search algo then 1 Marks will be deducted. (2 out of 3) BINARY SEARCH TO FIND POSITION FOR INSERTION (3 marks) findPosition(arr, n, x): start = 0 end = n-1 pos = n // default insert at end while start <= end: mid = (start + end) / 2 if arr[mid] >= x: pos = mid end = mid - 1 else: start = mid + 1 return pos INSERTION ALGORITHM (1 mark) insert(arr, n, x): pos = findPosition(arr, n, x) for i from n-1 downto pos: arr[i+1] = arr[i] arr[pos] = x return n+1 STEPS: arr = {10,20,30,40,50} , n = 5 , x = 25 BINARY SEARCH (3 marks) Start = 0, end = 4 mid=2 → arr[2]=30 ≥ 25 → pos = 2, end = 1 start=0, end=1 mid=0 → arr[0]=10 < 25 → start=1 mid=1 → arr[1]=20 < 25 → start=2 stops → pos=2 INSERTION (1 mark) arr = {10, 20, 30, 40, 50, _} shift from i=4→2 after shifting: {10, 20, 30, 30, 40, 50} place 25 at pos=2 final = {10, 20, 25, 30, 40, 50} TIME COMPLEXITY – O(n) or O(n + log n) (1 mark) QUESTION 4 Sol 4a (Total - 5 marks) - 4M for application + 0.5M for not stable + 0.5M for explanation or example [If instead of apply, correct algorithm is written then 1M out of 4M is given.] yield = [45, 36, 78, 10, 12] Swap a[0] ↔ a[3] ⇒ [10, 36, 78, 45, 12] Swap a[1] ↔ a[4] ⇒ [10, 12, 78, 45, 36] Swap a[2] ↔ a[4] ⇒ [10, 12, 36, 45, 78] Swap a[3] ↔ a[3] (no change) ⇒ [10, 12, 36, 45, 78] Sorted array: [10, 12, 36, 45, 78] Max element placed at the end version: yield = [45, 36, 78, 10, 12] Swap a[2] ↔ a[4] ⇒ [45, 36, 12, 10, 78] Swap a[0] ↔ a[3] ⇒ [10, 36, 12, 45, 78] Swap a[1] ↔ a[2] ⇒ [10, 12, 36, 45, 78] Swap a[1] ↔ a[1] (no change) Sorted array: [10, 12, 36, 45, 78] No, the standard selection sort is not a stable sorting algorithm. It may change the relative order of equal keys because it performs a direct swap between the current position and the found minimum (which can move an earlier equal item behind a later equal item). //If bubble/insertion sort is done in place of selection then 1 mark out of 4 assuming last iteration sorted output is correct. Selection Algo and first iteration in detail written similarly other iterations so i considered as steps and 2 marks are given out of 4. Sol 4b (Total - 10 marks) 1. curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also give 1 mark //*curr->amount > *maxNode->amount Considered correct 2. curr->amount < minNode->amount 3. prev = curr; pre = prev-> next is Wrong 4. curr = curr->next; 5. curr != head curr->next != head is Wrong 6. maxPrev->next = maxNode->next or //Correct maxPrev->next =maxPrev->next->next 7. temp->next = maxNode; 8. temp->next = newHead; 9. minPre->next = minNode->next minMode->next = minNode->next or //Correct minPrev->next =minPrev->next->next 10. minNode->next = head or //Correct minNode->next = temp->next",
+        "expectedAnswer": "(Total - 9 marks) 3M for Binary Search algo (recursive approach also considered) + 1M for insertion algo + 3M for BS apply + 1M insertion apply + 1M for Time Complexity Note: a) Linear search algo (1 marks) + Linear search apply (1 marks) b) For the final answer, 1 mark; c) For calling the array with values in the program, 1 mark. d) Loop missing in Binary Search algo then 1 Marks will be deducted. (2 out of 3) BINARY SEARCH TO FIND POSITION FOR INSERTION (3 marks) findPosition(arr, n, x): start = 0 end = n-1 pos = n // default insert at end while start <= end: mid = (start + end) / 2 if arr[mid] >= x: pos = mid end = mid - 1 else: start = mid + 1 return pos INSERTION ALGORITHM (1 mark) insert(arr, n, x): pos = findPosition(arr, n, x) for i from n-1 downto pos: arr[i+1] = arr[i] arr[pos] = x return n+1 STEPS: arr = {10,20,30,40,50} , n = 5 , x = 25 BINARY SEARCH (3 marks) Start = 0, end = 4 mid=2 → arr[2]=30 ≥ 25 → pos = 2, end = 1 start=0, end=1 mid=0 → arr[0]=10 < 25 → start=1 mid=1 → arr[1]=20 < 25 → start=2 stops → pos=2 INSERTION (1 mark) arr = {10, 20, 30, 40, 50, _} shift from i=4→2 after shifting: {10, 20, 30, 30, 40, 50} place 25 at pos=2 final = {10, 20, 25, 30, 40, 50} TIME COMPLEXITY – O(n) or O(n + log n) (1 mark) QUESTION 4 Sol 4a (Total - 5 marks) - 4M for application + 0.5M for not stable + 0.5M for explanation or example [If instead of apply, correct algorithm is written then 1M out of 4M is given.] yield = [45, 36, 78, 10, 12] Swap a[0] ↔ a[3] ⇒ [10, 36, 78, 45, 12] Swap a[1] ↔ a[4] ⇒ [10, 12, 78, 45, 36] Swap a[2] ↔ a[4] ⇒ [10, 12, 36, 45, 78] Swap a[3] ↔ a[3] (no change) ⇒ [10, 12, 36, 45, 78] Sorted array: [10, 12, 36, 45, 78] Max element placed at the end version: yield = [45, 36, 78, 10, 12] Swap a[2] ↔ a[4] ⇒ [45, 36, 12, 10, 78] Swap a[0] ↔ a[3] ⇒ [10, 36, 12, 45, 78] Swap a[1] ↔ a[2] ⇒ [10, 12, 36, 45, 78] Swap a[1] ↔ a[1] (no change) Sorted array: [10, 12, 36, 45, 78] No, the standard selection sort is not a stable sorting algorithm. It may change the relative order of equal keys because it performs a direct swap between the current position and the found minimum (which can move an earlier equal item behind a later equal item). //If bubble/insertion sort is done in place of selection then 1 mark out of 4 assuming last iteration sorted output is correct. Selection Algo and first iteration in detail written similarly other iterations so i considered as steps and 2 marks are given out of 4. Sol 4b (Total - 10 marks) 1. curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also give 1 mark //*curr->amount > *maxNode->amount Considered correct 2. curr->amount < minNode->amount 3. prev = curr; pre = prev-> next is Wrong 4. curr = curr->next; 5. curr != head curr->next != head is Wrong 6. maxPrev->next = maxNode->next or //Correct maxPrev->next =maxPrev->next->next 7. temp->next = maxNode; 8. temp->next = newHead; 9. minPre->next = minNode->next minMode->next = minNode->next or //Correct minPrev->next =minPrev->next->next 10. minNode->next = head or //Correct minNode->next = temp->next",
+        "studentAnswer": ":Start = 0, end = n-1 mid = start + end/2 :BinSrch (int arr[], int x) { while (start < end) { if (arr [mid] <= x) { if (arr [mid+1] >= x) { return mid; } } } } { if (mid > Key) { end = mid-1; } else { start = mid + i; } } } We got position, the value should be placed after arr [mid]. :Now, we make space by shifting values after mid. for (i = n ; i > mid ; i--) { arr [i] = arr [i-1]; } :Now, give value arr [mid+1] = x; Time complexity O (log n) for binary search (worst case).",
+        "maxMarks": 9,
+        "scoreAwarded": 1.5,
+        "percentage": 16.67,
+        "conceptMatch": "",
+        "missingPoints": "The binary search algorithm provided is incorrect, specifically the loop condition (`start < end`) and the logic for finding the insertion point. The application of binary search and insertion was not demonstrated. The time complexity only mentioned O(log n) for binary search, missing the overall O(n) for insertion into an array.",
+        "reason": "The student's binary search algorithm for finding the insertion position is incorrect (0 marks). The insertion algorithm (shifting elements and placing the new value) is correct (1 mark). The student did not apply the algorithms to a specific array (0 marks for application). The time complexity was stated as O(log n) for binary search, which is correct for the search part, but the overall complexity for insertion into an array is O(n) due to shifting. Partial credit (0.5 marks) was given for correctly identifying the binary search complexity.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q1, Q2, Q3, Q4"
+      },
+      "Q4a": {
+        "question": "Sol 4a (Total - 5 marks) - 4M for application + 0.5M for not stable + 0.5M for explanation or example [If instead of apply, correct algorithm is written then 1M out of 4M is given.] yield = [45, 36, 78, 10, 12] Swap a[0] ↔ a[3] ⇒ [10, 36, 78, 45, 12] Swap a[1] ↔ a[4] ⇒ [10, 12, 78, 45, 36] Swap a[2] ↔ a[4] ⇒ [10, 12, 36, 45, 78] Swap a[3] ↔ a[3] (no change) ⇒ [10, 12, 36, 45, 78] Sorted array: [10, 12, 36, 45, 78] Max element placed at the end version: yield = [45, 36, 78, 10, 12] Swap a[2] ↔ a[4] ⇒ [45, 36, 12, 10, 78] Swap a[0] ↔ a[3] ⇒ [10, 36, 12, 45, 78] Swap a[1] ↔ a[2] ⇒ [10, 12, 36, 45, 78] Swap a[1] ↔ a[1] (no change) Sorted array: [10, 12, 36, 45, 78] No, the standard selection sort is not a stable sorting algorithm. It may change the relative order of equal keys because it performs a direct swap between the current position and the found minimum (which can move an earlier equal item behind a later equal item). //If bubble/insertion sort is done in place of selection then 1 mark out of 4 assuming last iteration sorted output is correct. Selection Algo and first iteration in detail written similarly other iterations so i considered as steps and 2 marks are given out of 4.",
+        "expectedAnswer": "",
+        "studentAnswer": ": 45, 36, 10, 12, 78 : 36, 10, 12, 45, 78 : 10, 12, 36, 45, 78 No Algorithm is stable and best always. As, in selection sort first we need to find max value in array. If value is at end then it take too much time in loop.",
+        "maxMarks": 5,
+        "scoreAwarded": 1.5,
+        "percentage": 30,
+        "conceptMatch": "",
+        "missingPoints": "The intermediate steps for selection sort application were incorrect. The explanation for why selection sort is not stable was incorrect, focusing on efficiency rather than the preservation of relative order for equal elements.",
+        "reason": "The student provided intermediate array states for selection sort application. While the final sorted array is correct (1 mark), the intermediate steps shown are incorrect and do not follow the standard selection sort process. The student correctly stated that selection sort is not stable (0.5 marks), but the explanation provided was about time complexity/efficiency rather than stability (0 marks for explanation).",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q1, Q2, Q3"
+      },
+      "Q4b": {
+        "question": "Sol 4b (Total - 10 marks) 1. curr->amount > or >= maxNode->amount //if instead of amount, data/value written then also give 1 mark //*curr->amount > *maxNode->amount Considered correct 2. curr->amount < minNode->amount 3. prev = curr; pre = prev-> next is Wrong 4. curr = curr->next; 5. curr != head curr->next != head is Wrong 6. maxPrev->next = maxNode->next or //Correct maxPrev->next =maxPrev->next->next 7. temp->next = maxNode; 8. temp->next = newHead; 9. minPre->next = minNode->next minMode->next = minNode->next or //Correct minPrev->next =minPrev->next->next 10. minNode->next = head or //Correct minNode->next = temp->next",
+        "expectedAnswer": "",
+        "studentAnswer": ": max Node -> amount > curr -> amount : min Node -> amount <- curr -> amount : curr : head -> next : curr -> next != null : return : : : return :",
+        "maxMarks": 10,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "",
+        "missingPoints": "All 10 blanks were filled incorrectly. The student either provided the wrong comparison, an assignment instead of a comparison, an incorrect variable, or an incorrect pointer manipulation.",
+        "reason": "The student attempted to fill in the blanks for the linked list operations. All 10 answers provided were incorrect, demonstrating a lack of understanding of the required pointer manipulations and comparisons in the context of linked list algorithms.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": "Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10"
+      }
+    },
+    "totalScore": 16,
+    "overallFeedback": "The student demonstrated a foundational understanding of time complexity analysis and some basic queue operations. However, there are significant weaknesses in algorithm design, detailed execution tracing, and understanding of specific data structure manipulations, particularly for linked lists and more complex algorithms like 'Next Greater Rain' and binary search for insertion. Attention to detail in algorithm steps and pointer management is crucial for improvement.",
+    "weakAreas": [
+      "Algorithm Design (Next Greater Rain, Sorted Merge)",
+      "Detailed Execution Tracing (Postfix Evaluation, Queue Operations, Selection Sort)",
+      "Binary Search Algorithm Implementation",
+      "Linked List Pointer Manipulation",
+      "Understanding of Sorting Algorithm Stability"
+    ],
+    "overallConfidence": 1,
+    "mappingDetails": [
+      {
+        "sourceNumber": "Q1(a), Q1(b), Q1(a)",
+        "matchedQuestionId": "694260421adc02559d02e5ec",
+        "matchedQuestionNumber": "1a",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q1(b)",
+        "matchedQuestionId": "694260421adc02559d02e5ed",
+        "matchedQuestionNumber": "1b",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2(a), Q2(a)",
+        "matchedQuestionId": "694260421adc02559d02e5ee",
+        "matchedQuestionNumber": "2a",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2(b), Q2(b), Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2",
+        "matchedQuestionId": "694260421adc02559d02e5ef",
+        "matchedQuestionNumber": "2b",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q3(b), Q1, Q2, Q3",
+        "matchedQuestionId": "694260421adc02559d02e5f0",
+        "matchedQuestionNumber": "3a",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q1, Q2, Q3, Q4",
+        "matchedQuestionId": "694260421adc02559d02e5f1",
+        "matchedQuestionNumber": "3b",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q1, Q2, Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": "4a",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": "4b",
+        "confidence": 1,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q1(a)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1(a)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2(a)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2(b)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2(a)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2(b)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3(b)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q4",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q2",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q4",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q5",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q6",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q7",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q8",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q9",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      },
+      {
+        "sourceNumber": "Q10",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": null,
+        "confidence": 0,
+        "note": "Unmapped student answer"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Algorithm Design (Next Greater Rain, Sorted Merge)",
+    "Detailed Execution Tracing (Postfix Evaluation, Queue Operations, Selection Sort)",
+    "Binary Search Algorithm Implementation",
+    "Linked List Pointer Manipulation",
+    "Understanding of Sorting Algorithm Stability"
+  ],
+  "overallConfidence": 1,
+  "mappingDetails": [
+    {
+      "sourceNumber": "Q1(a), Q1(b), Q1(a)",
+      "matchedQuestionId": "694260421adc02559d02e5ec",
+      "matchedQuestionNumber": "1a",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q1(b)",
+      "matchedQuestionId": "694260421adc02559d02e5ed",
+      "matchedQuestionNumber": "1b",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2(a), Q2(a)",
+      "matchedQuestionId": "694260421adc02559d02e5ee",
+      "matchedQuestionNumber": "2a",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2(b), Q2(b), Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2, Q1, Q2",
+      "matchedQuestionId": "694260421adc02559d02e5ef",
+      "matchedQuestionNumber": "2b",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q3(b), Q1, Q2, Q3",
+      "matchedQuestionId": "694260421adc02559d02e5f0",
+      "matchedQuestionNumber": "3a",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q1, Q2, Q3, Q4",
+      "matchedQuestionId": "694260421adc02559d02e5f1",
+      "matchedQuestionNumber": "3b",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q1, Q2, Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": "4a",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": "4b",
+      "confidence": 1,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q1(a)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1(a)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2(a)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2(b)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2(a)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2(b)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3(b)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q4",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q2",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q4",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q5",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q6",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q7",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q8",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q9",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    },
+    {
+      "sourceNumber": "Q10",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": null,
+      "confidence": 0,
+      "note": "Unmapped student answer"
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "studentId": "6940f2e9ba57462f541010c8",
+  "recordId": "6940f2e9ba57462f541010d6",
+  "totalScore": 2,
+  "details": [
+    {
+      "number": "1",
+      "questionId": "6940f254ba57462f54101097",
+      "question": "Q1",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Minimal concept overlap",
+      "missingPoints": "Core concepts absent",
+      "reason": "Heuristic scorer: ~3% overlap and key points covered.",
+      "mappingConfidence": 0.6652173913043479,
+      "confidence": 0.2817391304347826,
+      "mappedStudentAnswerLabel": "Q1",
+      "mappedStudentAnswerText": "It swaps adjacent elements if memory multiple passes. largest moves to end. O(n)^2 stable in place"
+    },
+    {
+      "number": "2a",
+      "questionId": "6940f254ba57462f54101098",
+      "question": "Q2a",
+      "maxMarks": 2,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Minimal concept overlap",
+      "missingPoints": "Core concepts absent",
+      "reason": "Heuristic scorer: ~11% overlap and key points covered.",
+      "mappingConfidence": 0.655,
+      "confidence": 0.33057142857142857,
+      "mappedStudentAnswerLabel": "Q2a",
+      "mappedStudentAnswerText": "Stack is LIFO; push adds, pop removes top"
+    },
+    {
+      "number": "2b",
+      "questionId": "6940f254ba57462f54101099",
+      "question": "Q2b",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Minimal concept overlap",
+      "missingPoints": "Core concepts absent",
+      "reason": "Heuristic scorer: ~9% overlap and key points covered.",
+      "mappingConfidence": 0.683846153846154,
+      "confidence": 0.328923076923077,
+      "mappedStudentAnswerLabel": "Q2b",
+      "mappedStudentAnswerText": "push(5) push(7) pop returns 7 stack becomes [5]."
+    },
+    {
+      "number": "3",
+      "questionId": "6940f254ba57462f5410109a",
+      "question": "Q3",
+      "maxMarks": 4,
+      "score": 1,
+      "percentage": 25,
+      "conceptMatch": "Minimal concept overlap",
+      "missingPoints": "Core concepts absent",
+      "reason": "Heuristic scorer: ~23% overlap and key points covered.",
+      "mappingConfidence": 0.6883333333333335,
+      "confidence": 0.4124761904761905,
+      "mappedStudentAnswerLabel": "Q3",
+      "mappedStudentAnswerText": "Stack LIFO: Queue FIFO. stack uses push/pop queue uses enqueue/dequeue"
+    },
+    {
+      "number": "4",
+      "questionId": "6940f254ba57462f5410109b",
+      "question": "Q4",
+      "maxMarks": 3,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Minimal concept overlap",
+      "missingPoints": "Core concepts absent",
+      "reason": "Heuristic scorer: ~14% overlap and key points covered.",
+      "mappingConfidence": 0.7107692307692308,
+      "confidence": 0.3673846153846154,
+      "mappedStudentAnswerLabel": "Q4",
+      "mappedStudentAnswerText": "Big-O is upper bound example O(N) O(n log n)"
+    },
+    {
+      "number": "5",
+      "questionId": "6940f254ba57462f5410109c",
+      "question": "Q5",
+      "maxMarks": 3,
+      "score": 1,
+      "percentage": 33.33,
+      "conceptMatch": "Minimal concept overlap",
+      "missingPoints": "Core concepts absent",
+      "reason": "Heuristic scorer: ~27% overlap and key points covered.",
+      "mappingConfidence": 0.6917647058823531,
+      "confidence": 0.4367058823529413,
+      "mappedStudentAnswerLabel": "Q5",
+      "mappedStudentAnswerText": "Binary search halves the array each step -> O(log n)"
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1": {
+        "question": "Q1",
+        "expectedAnswer": "Explain Bubble Sort algorithm in detail. |",
+        "studentAnswer": "It swaps adjacent elements if memory multiple passes. largest moves to end. O(n)^2 stable in place",
+        "maxMarks": 5,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Minimal concept overlap",
+        "missingPoints": "Core concepts absent",
+        "reason": "Heuristic scorer: ~3% overlap and key points covered.",
+        "mappingConfidence": 0.6652173913043479,
+        "mappedStudentAnswerLabel": "Q1"
+      },
+      "Q2a": {
+        "question": "Q2a",
+        "expectedAnswer": "Define a Stack and its basic operations. |",
+        "studentAnswer": "Stack is LIFO; push adds, pop removes top",
+        "maxMarks": 2,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Minimal concept overlap",
+        "missingPoints": "Core concepts absent",
+        "reason": "Heuristic scorer: ~11% overlap and key points covered.",
+        "mappingConfidence": 0.655,
+        "mappedStudentAnswerLabel": "Q2a"
+      },
+      "Q2b": {
+        "question": "Q2b",
+        "expectedAnswer": "Explain push and pop operations with an example. |",
+        "studentAnswer": "push(5) push(7) pop returns 7 stack becomes [5].",
+        "maxMarks": 3,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Minimal concept overlap",
+        "missingPoints": "Core concepts absent",
+        "reason": "Heuristic scorer: ~9% overlap and key points covered.",
+        "mappingConfidence": 0.683846153846154,
+        "mappedStudentAnswerLabel": "Q2b"
+      },
+      "Q3": {
+        "question": "Q3",
+        "expectedAnswer": "Differentiate between Queue and Stack. |",
+        "studentAnswer": "Stack LIFO: Queue FIFO. stack uses push/pop queue uses enqueue/dequeue",
+        "maxMarks": 4,
+        "scoreAwarded": 1,
+        "percentage": 25,
+        "conceptMatch": "Minimal concept overlap",
+        "missingPoints": "Core concepts absent",
+        "reason": "Heuristic scorer: ~23% overlap and key points covered.",
+        "mappingConfidence": 0.6883333333333335,
+        "mappedStudentAnswerLabel": "Q3"
+      },
+      "Q4": {
+        "question": "Q4",
+        "expectedAnswer": "What is Big-O notation? Give two examples. |",
+        "studentAnswer": "Big-O is upper bound example O(N) O(n log n)",
+        "maxMarks": 3,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Minimal concept overlap",
+        "missingPoints": "Core concepts absent",
+        "reason": "Heuristic scorer: ~14% overlap and key points covered.",
+        "mappingConfidence": 0.7107692307692308,
+        "mappedStudentAnswerLabel": "Q4"
+      },
+      "Q5": {
+        "question": "Q5",
+        "expectedAnswer": "Write the time complexity of binary search and explain why. |",
+        "studentAnswer": "Binary search halves the array each step -> O(log n)",
+        "maxMarks": 3,
+        "scoreAwarded": 1,
+        "percentage": 33.33,
+        "conceptMatch": "Minimal concept overlap",
+        "missingPoints": "Core concepts absent",
+        "reason": "Heuristic scorer: ~27% overlap and key points covered.",
+        "mappingConfidence": 0.6917647058823531,
+        "mappedStudentAnswerLabel": "Q5"
+      }
+    },
+    "totalScore": 2,
+    "overallFeedback": "Limited coverage; revisit fundamentals and practice structured answers.",
+    "weakAreas": [
+      "Q1",
+      "Q2a",
+      "Q2b",
+      "Q3",
+      "Q4",
+      "Q5"
+    ],
+    "overallConfidence": 0.36,
+    "mappingDetails": [
+      {
+        "sourceNumber": "Q1",
+        "matchedQuestionId": "6940f254ba57462f54101097",
+        "matchedQuestionNumber": "1",
+        "confidence": 0.6652173913043479,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2a",
+        "matchedQuestionId": "6940f254ba57462f54101098",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.655,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2b",
+        "matchedQuestionId": "6940f254ba57462f54101099",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.683846153846154,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q3",
+        "matchedQuestionId": "6940f254ba57462f5410109a",
+        "matchedQuestionNumber": "3",
+        "confidence": 0.6883333333333335,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q4",
+        "matchedQuestionId": "6940f254ba57462f5410109b",
+        "matchedQuestionNumber": "4",
+        "confidence": 0.7107692307692308,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q5",
+        "matchedQuestionId": "6940f254ba57462f5410109c",
+        "matchedQuestionNumber": "5",
+        "confidence": 0.6917647058823531,
+        "note": "Mapped"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q1",
+    "Q2a",
+    "Q2b",
+    "Q3",
+    "Q4",
+    "Q5"
+  ],
+  "overallConfidence": 0.36,
+  "mappingDetails": [
+    {
+      "sourceNumber": "Q1",
+      "matchedQuestionId": "6940f254ba57462f54101097",
+      "matchedQuestionNumber": "1",
+      "confidence": 0.6652173913043479,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2a",
+      "matchedQuestionId": "6940f254ba57462f54101098",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.655,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2b",
+      "matchedQuestionId": "6940f254ba57462f54101099",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.683846153846154,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q3",
+      "matchedQuestionId": "6940f254ba57462f5410109a",
+      "matchedQuestionNumber": "3",
+      "confidence": 0.6883333333333335,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q4",
+      "matchedQuestionId": "6940f254ba57462f5410109b",
+      "matchedQuestionNumber": "4",
+      "confidence": 0.7107692307692308,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q5",
+      "matchedQuestionId": "6940f254ba57462f5410109c",
+      "matchedQuestionNumber": "5",
+      "confidence": 0.6917647058823531,
+      "note": "Mapped"
+    }
+  ]
+}
