@@ -54,12 +54,12 @@ app.use('/api', useLimiter ? rateLimiter : (req, res, next) => next(), exportRou
 app.get('/health', (req, res) => res.json({ ok: true }));
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../../dist')));
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, '../../dist/index.html'));
 });
 
 // Centralized error handler so Multer and other middleware surface clean responses
