@@ -285,6 +285,352 @@ const callGeminiEvaluation = async (answerKey, studentAnswers) => {
   }
 };
 
+const normalizeLlmResult = (raw, answerKey, studentAnswers) => {
+  const questions = Array.isArray(raw?.questions) ? raw.questions : [];
+  const details = [];
+  const mappingDetails = [];
+  const usedLabels = new Set();
+
+  questions.forEach((entry) => {
+    const number = String(entry?.questionNumber || '').trim() || '';
+    const keyMatch = answerKey.find((q) => String(q.number) === number) || null;
+    const score = clamp(Number(entry?.scoreAwarded || entry?.score || 0), 0, Number(entry?.maxMarks || keyMatch?.maxMarks || 0));
+    const maxMarks = Number(entry?.maxMarks || keyMatch?.maxMarks || 0);
+    const percentage = maxMarks ? Number(((score / maxMarks) * 100).toFixed(2)) : 0;
+    const mappingConfidence = clamp(Number(entry?.mappingConfidence ?? entry?.confidence ?? 0.75), 0, 1);
+    const confidence = clamp(Number(entry?.confidence ?? percentage / 100), 0, 1);
+    const mappedLabel = entry?.mappedStudentAnswerLabel || null;
+    if (mappedLabel) usedLabels.add(mappedLabel.toLowerCase());
+
+    details.push({
+      number: number || (keyMatch ? String(keyMatch.number) : ''),
+      questionId: keyMatch ? keyMatch.id : null,
+      question: sanitize(entry?.questionText || keyMatch?.question || ''),
+      maxMarks,
+      score,
+      percentage,
+      conceptMatch: sanitize(entry?.conceptMatch || ''),
+      missingPoints: sanitize(entry?.missingPoints || ''),
+      reason: sanitize(entry?.reason || ''),
+      mappingConfidence,
+      confidence,
+      mappedStudentAnswerLabel: mappedLabel,
+      mappedStudentAnswerText: sanitize(entry?.mappedStudentAnswerText || ''),
+    });
+
+    mappingDetails.push({
+      sourceNumber: mappedLabel || 'Unmapped',
+      matchedQuestionId: keyMatch ? keyMatch.id : null,
+      matchedQuestionNumber: number || (keyMatch ? String(keyMatch.number) : null),
+      confidence: mappingConfidence,
+      note: mappedLabel ? (mappingConfidence < 0.5 ? 'Weak mapping' : 'Mapped') : 'No student answer mapped',
+    });
+  });
+
+  studentAnswers.forEach((ans) => {
+    const key = (ans.label || '').toLowerCase();
+    if (!key || usedLabels.has(key)) return;
+    mappingDetails.push({
+      sourceNumber: ans.label,
+      matchedQuestionId: null,
+      matchedQuestionNumber: null,
+      confidence: 0,
+      note: 'Unmapped student answer',
+    });
+  });
+
+  const totalScore = Number(raw?.totalScore ?? details.reduce((acc, d) => acc + Number(d.score || 0), 0));
+  const weakAreas = Array.isArray(raw?.weakAreas) ? raw.weakAreas.map((w) => String(w)) : [];
+  const overallFeedback = sanitize(raw?.overallFeedback || raw?.summary || 'Review the provided solutions to strengthen weak concepts.');
+  const overallConfidence = clamp(Number(raw?.overallConfidence ?? raw?.confidence ?? 0.75), 0, 1);
+
+  const confidenceAccumulator = details.reduce((acc, d) => acc + clamp(d.confidence, 0, 1), 0);
+  const averagedConfidence = details.length ? Number((confidenceAccumulator / details.length).toFixed(2)) : overallConfidence;
+
+  const examinerEvaluation = {};
+  details.forEach((d) => {
+    examinerEvaluation[`Q${d.number}`] = {
+      question: d.question,
+      expectedAnswer: answerKey.find((kq) => String(kq.number) === String(d.number))?.correctAnswer || '',
+      studentAnswer: d.mappedStudentAnswerText,
+      maxMarks: d.maxMarks,
+      scoreAwarded: d.score,
+      percentage: d.percentage,
+      conceptMatch: d.conceptMatch,
+      missingPoints: d.missingPoints,
+      reason: d.reason,
+      mappingConfidence: d.mappingConfidence,
+      mappedStudentAnswerLabel: d.mappedStudentAnswerLabel,
+    };
+  });
+
+  return {
+    details,
+    totalScore,
+    overallFeedback,
+    weakAreas,
+    overallConfidence: averagedConfidence,
+    mappingDetails,
+    examinerJson: {
+      evaluation: examinerEvaluation,
+      totalScore,
+      overallFeedback,
+      weakAreas,
+      overallConfidence: averagedConfidence,
+      mappingDetails,
+    },
+  };
+};
+
+const fallbackScore = ({ correctAnswer, studentAnswer, maxMarks }) => {
+  const ca = normalizeText(correctAnswer);
+  const sa = normalizeText(studentAnswer);
+  if (!sa) return { score: 0, reason: 'No answer provided', coverage: 0 };
+  if (sa === ca) {
+    const full = Number(maxMarks) || 0;
+    return { score: full, reason: 'Exact match', coverage: 1 };
+  }
+
+  const keyphrases = extractKeyphrases(ca);
+  const kpCoverage = keyphrases.length ? keyphrases.filter((kp) => sa.includes(kp)).length / keyphrases.length : 0;
+  const jaccard = jaccardSimilarity(ca, sa);
+  const coverage = Math.max(jaccard * 0.6 + kpCoverage * 0.4, kpCoverage * 0.8);
+  const max = Number(maxMarks) || 0;
+  const score = Math.round(clamp(coverage, 0, 1) * max);
+  const reason = `Heuristic scorer: ~${Math.round((coverage || 0) * 100)}% overlap and key points covered.`;
+  return { score, reason, coverage };
+};
+
+const heuristicResult = ({ correctAnswer, studentAnswer, maxMarks }) => {
+  const { score, reason, coverage } = fallbackScore({ correctAnswer, studentAnswer, maxMarks });
+  const max = Number(maxMarks || 0);
+  const percentage = max ? Number(((score / max) * 100).toFixed(2)) : 0;
+  const ca = normalizeText(correctAnswer);
+  const sa = normalizeText(studentAnswer);
+  const keyphrases = extractKeyphrases(ca);
+  const covered = keyphrases.filter((kp) => sa.includes(kp));
+  const missing = keyphrases.filter((kp) => !sa.includes(kp));
+  return {
+    score,
+    maxMarks: max,
+    percentage,
+    conceptMatch: covered.length ? `Covered: ${covered.slice(0, 5).join(', ')}` : 'Minimal concept overlap',
+    missingPoints: missing.length ? `Missing: ${missing.slice(0, 5).join(', ')}` : 'Few missing key points',
+    reason,
+    confidence: clamp(coverage || 0.6, 0, 1),
+  };
+};
+
+const legacyEvaluateExam = (answerKey, studentAnswers) => {
+  const preparedAnswers = studentAnswers.map((ans, idx) => {
+    const labelInfo = parseQuestionLabel(ans.label || ans.number || `Q${idx + 1}`);
+    const contentHints = extractContentHints(ans.answer || '');
+    return {
+      index: idx,
+      label: labelInfo.display || `Q${idx + 1}`,
+      normalized: labelInfo.normalized,
+      labelInfo,
+      contentHints,
+      answer: ans.answer || '',
+      pageIndex: ans.pageIndex ?? null,
+    };
+  });
+
+  const details = [];
+  const mappingDetails = [];
+  const usedAnswerIndexes = new Set();
+  let lastMatchedIndex = -1;
+  let totalScore = 0;
+  let confidenceAccumulator = 0;
+
+  answerKey.forEach((kq, qi) => {
+    const keyLabelInfo = kq.labelInfo || parseQuestionLabel(kq.number);
+    const enrichedKey = { ...kq, labelInfo: keyLabelInfo, normalized: keyLabelInfo.normalized };
+    let selected = null;
+    let metrics = { combined: 0 };
+    const totalAnswers = preparedAnswers.length;
+
+    for (const candidate of preparedAnswers) {
+      if (usedAnswerIndexes.has(candidate.index)) continue;
+      const candidateMetrics = computeAlignmentScore({
+        candidate,
+        keyQuestion: enrichedKey,
+        keyIndex: qi,
+        totalAnswers,
+        lastMatchedIndex,
+      });
+      if (!selected || candidateMetrics.combined > metrics.combined) {
+        selected = candidate;
+        metrics = candidateMetrics;
+      }
+    }
+
+    if (selected && metrics.combined < 0.35) {
+      const sequential = preparedAnswers.find((c) => !usedAnswerIndexes.has(c.index) && c.index > lastMatchedIndex)
+        || preparedAnswers.find((c) => !usedAnswerIndexes.has(c.index));
+      if (sequential && sequential.index !== selected.index) {
+        const seqMetrics = computeAlignmentScore({
+          candidate: sequential,
+          keyQuestion: enrichedKey,
+          keyIndex: qi,
+          totalAnswers,
+          lastMatchedIndex,
+        });
+        if (seqMetrics.combined > metrics.combined) {
+          selected = sequential;
+          metrics = seqMetrics;
+        }
+      }
+    }
+
+    if (selected) {
+      usedAnswerIndexes.add(selected.index);
+      lastMatchedIndex = selected.index;
+    }
+
+    const studentAnswer = selected ? selected.answer : '';
+    const { score, reason, coverage } = fallbackScore({
+      correctAnswer: enrichedKey.correctAnswer,
+      studentAnswer,
+      maxMarks: enrichedKey.maxMarks,
+    });
+    const maxMarks = Number(enrichedKey.maxMarks || 0);
+    const percentage = maxMarks ? Number(((score / maxMarks) * 100).toFixed(2)) : 0;
+    const mappingConfidence = selected ? metrics.combined : 0;
+    const confidence = clamp(mappingConfidence * 0.4 + coverage * 0.6, 0, 1);
+
+    totalScore += score;
+    confidenceAccumulator += confidence;
+
+    const detail = {
+      number: String(enrichedKey.number),
+      questionId: enrichedKey.id,
+      question: enrichedKey.question || `Q${enrichedKey.number}`,
+      maxMarks,
+      score,
+      percentage,
+      conceptMatch: coverage > 0.6 ? 'Key ideas partially present' : coverage > 0.3 ? 'Limited overlap with key concepts' : 'Minimal concept overlap',
+      missingPoints: coverage > 0.6 ? 'Missing detailed steps required for full marks' : 'Core concepts absent',
+      reason,
+      mappingConfidence,
+      confidence,
+      mappedStudentAnswerLabel: selected ? selected.label : null,
+      mappedStudentAnswerText: studentAnswer,
+    };
+    details.push(detail);
+
+    mappingDetails.push({
+      sourceNumber: selected ? selected.label : 'Unanswered',
+      matchedQuestionId: enrichedKey.id,
+      matchedQuestionNumber: String(enrichedKey.number),
+      confidence: mappingConfidence,
+      note: selected ? (mappingConfidence < 0.5 ? 'Weak mapping' : 'Mapped') : 'No student answer mapped',
+    });
+  });
+
+  preparedAnswers.forEach((ans) => {
+    if (usedAnswerIndexes.has(ans.index)) return;
+    mappingDetails.push({
+      sourceNumber: ans.label,
+      matchedQuestionId: null,
+      matchedQuestionNumber: null,
+      confidence: 0,
+      note: 'Unmapped student answer',
+    });
+  });
+
+  const weakAreas = details
+    .filter((d) => d.percentage < 70 || d.mappingConfidence < 0.6)
+    .map((d) => `Q${d.number}`);
+
+  const overallConfidence = details.length ? Number((confidenceAccumulator / details.length).toFixed(2)) : 0;
+
+  const maxTotal = details.reduce((acc, d) => acc + (d.maxMarks || 0), 0);
+  const percentage = maxTotal ? Math.round((totalScore / maxTotal) * 100) : 0;
+  let overallFeedback = 'Limited coverage; revisit fundamentals and practice structured answers.';
+  if (percentage >= 80) overallFeedback = 'Strong performance with good conceptual coverage.';
+  else if (percentage >= 60) overallFeedback = 'Decent understanding; improve detail and accuracy.';
+  else if (percentage >= 40) overallFeedback = 'Partial understanding; review key concepts and worked examples.';
+
+  const examinerEvaluation = {};
+  details.forEach((d) => {
+    examinerEvaluation[`Q${d.number}`] = {
+      question: d.question,
+      expectedAnswer: answerKey.find((kq) => String(kq.number) === String(d.number))?.correctAnswer || '',
+      studentAnswer: d.mappedStudentAnswerText,
+      maxMarks: d.maxMarks,
+      scoreAwarded: d.score,
+      percentage: d.percentage,
+      conceptMatch: d.conceptMatch,
+      missingPoints: d.missingPoints,
+      reason: d.reason,
+      mappingConfidence: d.mappingConfidence,
+      mappedStudentAnswerLabel: d.mappedStudentAnswerLabel,
+    };
+  });
+
+  return {
+    details,
+    totalScore,
+    overallFeedback,
+    weakAreas,
+    overallConfidence,
+    mappingDetails,
+    examinerJson: {
+      evaluation: examinerEvaluation,
+      totalScore,
+      overallFeedback,
+      weakAreas,
+      overallConfidence,
+      mappingDetails,
+    },
+  };
+};
+
+export const evaluateExam = async ({ answerKey, studentAnswers }) => {
+  const canonicalKey = Array.isArray(answerKey) ? answerKey : [];
+  if (!canonicalKey.length) {
+    throw new Error('Answer key is required for evaluation');
+  }
+
+  const preparedKey = canonicalKey.map((q, idx) => {
+    const numberLabel = q.number || q.label || idx + 1;
+    const labelInfo = parseQuestionLabel(numberLabel);
+    return {
+      id: String(q._id || idx),
+      number: String(numberLabel),
+      question: sanitize(q.question || q.prompt || ''),
+      correctAnswer: sanitize(q.correctAnswer || q.answer || ''),
+      markingScheme: sanitize(q.markingScheme || q.scoringGuidelines || ''),
+      maxMarks: Number(q.maxMarks || q.marks || 0) || 0,
+      labelInfo,
+      normalized: labelInfo.normalized,
+    };
+  });
+
+  const preparedAnswers = (Array.isArray(studentAnswers) ? studentAnswers : []).map((ans, idx) => {
+    const label = ans.label || ans.number || ans.questionNo || `Answer${idx + 1}`;
+    const labelInfo = parseQuestionLabel(label);
+    const contentHints = extractContentHints(ans.answer || ans.text || '');
+    return {
+      label: labelInfo.display || `Answer${idx + 1}`,
+      normalized: labelInfo.normalized,
+      labelInfo,
+      contentHints,
+      answer: String(ans.answer || ans.text || '').trim(),
+      pageIndex: ans.pageIndex ?? ans.page ?? null,
+      index: idx,
+    };
+  });
+
+  const llmRaw = await callGeminiEvaluation(preparedKey, preparedAnswers);
+  if (llmRaw) {
+    return normalizeLlmResult(llmRaw, preparedKey, preparedAnswers);
+  }
+
+  return legacyEvaluateExam(preparedKey, preparedAnswers);
+};
+
 // ===================== SINGLE ANSWER EVAL =====================
 export const evaluateAnswer = async ({ question, correctAnswer, studentAnswer, maxMarks }) => {
   const trimmed = String(studentAnswer || '').trim();
