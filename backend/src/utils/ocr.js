@@ -36,12 +36,18 @@ async function extractWithVision(filePath, mimeHint = 'image/jpeg') {
     return '';
   }
   try {
-    console.log('[Vision] Attempting Gemini extraction for:', filePath);
+    console.log('[Vision] Attempting Gemini extraction for:', filePath, 'Mime:', mimeHint);
     const model = genAI.getGenerativeModel({ 
       model: process.env.GEMINI_VISION_MODEL || 'gemini-2.5-flash'
     });
     
     const buf = fs.readFileSync(filePath);
+    // Check if file is too large for inline data (limit is usually 20MB for Gemini, but safer to keep lower)
+    if (buf.length > 10 * 1024 * 1024) {
+        console.warn('[Vision] File too large for inline processing:', filePath);
+        return '';
+    }
+
     const imageData = {
       inlineData: {
         data: buf.toString('base64'),
@@ -54,7 +60,6 @@ async function extractWithVision(filePath, mimeHint = 'image/jpeg') {
     const response = await result.response;
     const text = response.text() || '';
     console.log('[Vision] Extracted text length:', text.length);
-    console.log('[Vision] First 200 chars:', text.substring(0, 200));
     return text;
   } catch (e) {
     console.error('[Vision] Error:', e.message);
@@ -100,6 +105,7 @@ export const extractTextFromFile = async (filePath) => {
     const exists = fs.existsSync(filePath);
     if (!exists) throw new Error('File not found for OCR');
     const ext = path.extname(filePath).toLowerCase();
+    
     // Handle DOCX/DOC first
     if (ext === '.docx') {
       const docx = await extractDocx(filePath);
@@ -109,95 +115,55 @@ export const extractTextFromFile = async (filePath) => {
       const doc = await extractDoc(filePath);
       if (doc.trim()) return doc;
     }
+
+    // Handle PDF
     if (ext === '.pdf') {
+      // 1. Try fast text extraction (for digital PDFs)
       try {
         const buf = fs.readFileSync(filePath);
         const parsed = await pdfParse(buf);
-        if (parsed?.text && parsed.text.trim().length > 0) return parsed.text;
-      } catch (e) {
-        // ignore and try rasterization
-      }
-      // Rasterize PDF pages to images and run Tesseract per page
-      try {
-        const images = await rasterizePdfToImages(filePath);
-        let combined = '';
-        for (const img of images) {
-          const processed = await sharp(img)
-            .rotate()
-            .resize({ width: 1800, height: null, fit: 'inside' })
-            .median(1)
-            .grayscale()
-            .normalize()
-            .threshold(170)
-            .toFormat('png')
-            .toBuffer();
-          const { data } = await Tesseract.recognize(processed, 'eng');
-          combined += (data?.text || '') + '\n';
+        if (parsed?.text && parsed.text.trim().length > 50) { 
+            return parsed.text;
         }
-        if (combined.trim().length > 0) return combined;
       } catch (e) {
-        // fall through to try Tesseract on pdf (may fail)
+        console.warn('[OCR] pdf-parse failed, trying Vision:', e.message);
       }
+
+      // 2. Try Gemini Vision (for scanned PDFs) - Replaces local rasterization
+      if (genAI) {
+          const visionText = await extractWithVision(filePath, 'application/pdf');
+          if (visionText.trim().length > 0) return visionText;
+      }
+
+      console.warn('[OCR] PDF extraction failed (No text found and Vision failed/skipped)');
+      return '';
     }
-    // For images (jpg, jpeg, png), preprocess adaptively AND try Vision first if available
+
+    // Handle Images (JPG, PNG)
     if (['.jpg', '.jpeg', '.png'].includes(ext)) {
-      try {
-        const thresholds = [150, 180];
-        let bestText = '';
-        let bestScore = 0;
-        let visionText = '';
-        let visionScore = 0;
-
-        if (genAI) {
-          visionText = await extractWithVision(filePath, ext === '.png' ? 'image/png' : 'image/jpeg');
-          visionScore = scoreTextConfidence(visionText);
-          if (visionText.trim().length > 0) {
-            bestText = visionText;
-            bestScore = visionScore;
-            if (visionScore >= 0.75) {
-              return visionText;
-            }
-          }
-        }
-
-        if (visionScore < 0.75) {
-          for (const th of thresholds) {
-            const processed = await sharp(filePath)
-              .rotate()
-              .resize({ width: 1800, height: null, fit: 'inside' })
-              .median(1)
-              .grayscale()
-              .normalize()
-              .threshold(th)
-              .toFormat('png')
-              .toBuffer();
-            const { data } = await Tesseract.recognize(processed, 'eng');
-            const txt = data?.text || '';
-            const sc = scoreTextConfidence(txt);
-            if (sc > bestScore) {
-              bestScore = sc;
-              bestText = txt;
-            }
-            if (bestScore >= 0.85) break;
-          }
-        }
-
-        if (bestText.trim().length > 0) return bestText;
-      } catch (e) {
-        // fall through to default
+      // 1. Try Vision FIRST (Best quality, no local memory spike)
+      if (genAI) {
+          const visionText = await extractWithVision(filePath, ext === '.png' ? 'image/png' : 'image/jpeg');
+          if (visionText.trim().length > 0) return visionText;
       }
-    }
-    if (!['.pdf', '.doc', '.docx'].includes(ext)) {
+
+      // 2. Fallback to Tesseract (Only if Vision fails)
       try {
-        const { data } = await Tesseract.recognize(filePath, 'eng');
-        if (data?.text && data.text.trim().length > 0) return data.text;
+        console.log('[OCR] Vision failed/skipped, falling back to Tesseract');
+        const processed = await sharp(filePath)
+            .resize({ width: 1800, height: null, fit: 'inside' })
+            .grayscale()
+            .toBuffer();
+        const { data } = await Tesseract.recognize(processed, 'eng');
+        return data?.text || '';
       } catch (err) {
         console.warn('[OCR] Fallback Tesseract failed:', err.message);
       }
     }
+    
     return '';
   } catch (e) {
-    // Return empty string to allow graceful 400 responses upstream
+    console.error('[OCR] Critical Error:', e.message);
     return '';
   }
 };
