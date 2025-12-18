@@ -15,6 +15,7 @@ const qMarkSchema = new mongoose.Schema({
 
 const studentSchema = new mongoose.Schema(
   {
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true, index: true },
     name: { type: String, required: true },
     rollNumber: { type: String, required: true, index: true },
     extractedAnswers: [{ number: String, answer: String }],

@@ -2,8 +2,11 @@ import Student from '../models/Student.js';
 
 export const listStudents = async (req, res) => {
   try {
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
     const { q, status } = req.query;
-    const filter = {};
+    const filter = { createdBy: userId };
     if (status) filter.status = status;
     if (q) {
       filter.$or = [
@@ -20,8 +23,11 @@ export const listStudents = async (req, res) => {
 
 export const getStudent = async (req, res) => {
   try {
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
     const { id } = req.params;
-    const student = await Student.findById(id);
+    const student = await Student.findOne({ _id: id, createdBy: userId });
     if (!student) return res.status(404).json({ error: 'Student not found' });
     return res.json({ student });
   } catch (err) {
@@ -31,9 +37,12 @@ export const getStudent = async (req, res) => {
 
 export const deleteStudent = async (req, res) => {
   try {
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
     const { id } = req.params;
     console.log(`Attempting to delete student with ID: ${id}`);
-    const student = await Student.findByIdAndDelete(id);
+    const student = await Student.findOneAndDelete({ _id: id, createdBy: userId });
     if (!student) {
       console.log(`Student with ID: ${id} not found`);
       return res.status(404).json({ error: 'Student not found' });

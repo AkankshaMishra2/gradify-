@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 const evalSchema = new mongoose.Schema(
   {
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true, index: true },
     student: { type: mongoose.Schema.Types.ObjectId, ref: 'Student', required: true },
     answerKey: { type: mongoose.Schema.Types.ObjectId, ref: 'AnswerKey', required: true },
     evaluatorModel: { type: String },

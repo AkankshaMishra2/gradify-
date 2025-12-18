@@ -3,7 +3,10 @@ import { studentsToCsv } from '../utils/csv.js';
 
 export const exportCsv = async (req, res) => {
   try {
-    const students = await Student.find({}).sort({ createdAt: -1 });
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
+    const students = await Student.find({ createdBy: userId }).sort({ createdAt: -1 });
     const csv = studentsToCsv(students);
     res.setHeader('Content-Type', 'text/csv');
     res.setHeader('Content-Disposition', 'attachment; filename="gradify_students.csv"');

@@ -31,6 +31,9 @@ const collectUploadedFiles = (req) => {
 export const uploadSheet = async (req, res) => {
   console.log('[Upload] Received upload request');
   try {
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
     const files = collectUploadedFiles(req);
     console.log(`[Upload] Processing ${files.length} files`);
     if (!files.length) return res.status(400).json({ error: 'No files uploaded' });
@@ -64,6 +67,9 @@ export const uploadSheet = async (req, res) => {
 
 export const uploadAndEvaluate = async (req, res) => {
   try {
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
     const files = collectUploadedFiles(req);
     if (!files.length) return res.status(400).json({ error: 'No files uploaded' });
 
@@ -102,7 +108,7 @@ export const uploadAndEvaluate = async (req, res) => {
       });
     }
 
-    const key = await AnswerKey.findById(keyId);
+    const key = await AnswerKey.findOne({ _id: keyId, createdBy: userId });
     if (!key) return res.status(404).json({ error: 'Answer key not found' });
 
     const normalizeQ = (n) => String(n || '')
@@ -160,6 +166,7 @@ export const uploadAndEvaluate = async (req, res) => {
     };
 
     const student = await Student.create({
+      createdBy: userId,
       name: studentName,
       rollNumber: rollNumber,
       extractedAnswers: answers,
@@ -181,6 +188,7 @@ export const uploadAndEvaluate = async (req, res) => {
     });
 
     const record = await EvaluationRecord.create({
+      createdBy: userId,
       student: student._id,
       answerKey: key._id,
       evaluatorModel: process.env.GEMINI_MODEL || 'gemini-2.5-flash',

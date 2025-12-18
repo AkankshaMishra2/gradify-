@@ -16,9 +16,11 @@ export const evaluate = async (req, res) => {
   const parsed = evalSchema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ error: 'Invalid input', details: parsed.error.flatten() });
   const { student: studentInfo, keyId, answers } = parsed.data;
+  const userId = req.user?.id;
+  if (!userId) return res.status(401).json({ error: 'Unauthorized' });
 
   try {
-    const key = await AnswerKey.findById(keyId);
+    const key = await AnswerKey.findOne({ _id: keyId, createdBy: userId });
     if (!key) return res.status(404).json({ error: 'Answer key not found' });
 
     const normalizeQ = (n) => String(n || '')
@@ -75,6 +77,7 @@ export const evaluate = async (req, res) => {
     };
 
     const student = await Student.create({
+      createdBy: userId,
       name: studentInfo.name,
       rollNumber: studentInfo.rollNumber,
       extractedAnswers: answers,
@@ -96,6 +99,7 @@ export const evaluate = async (req, res) => {
     });
 
     const record = await EvaluationRecord.create({
+      createdBy: userId,
       student: student._id,
       answerKey: key._id,
       evaluatorModel: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
@@ -128,7 +132,13 @@ export const evaluate = async (req, res) => {
 export const getLatestEvaluationByStudent = async (req, res) => {
   try {
     const { studentId } = req.params;
-    const record = await EvaluationRecord.findOne({ student: studentId }).sort({ createdAt: -1 });
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
+    const student = await Student.findOne({ _id: studentId, createdBy: userId });
+    if (!student) return res.status(404).json({ error: 'Evaluation record not found' });
+
+    const record = await EvaluationRecord.findOne({ student: studentId, createdBy: userId }).sort({ createdAt: -1 });
     if (!record) return res.status(404).json({ error: 'Evaluation record not found' });
     return res.json({ record });
   } catch (err) {
