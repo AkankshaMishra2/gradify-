@@ -13,8 +13,9 @@ dist-ssr
 *.local
 
 # Environment files
-/backend.env
+*.env
 .env.*
+backend/.env
 
 # Editor directories and files
 .vscode/*
