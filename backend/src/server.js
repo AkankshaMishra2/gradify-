@@ -46,7 +46,7 @@ app.use(helmet({
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "blob:"],
-      connectSrc: ["'self'", "https://gradify-2.onrender.com", "http://localhost:5000", "https://gradify-d7dt.vercel.app"],
+      connectSrc: ["'self'", "https://gradify-crr7.onrender.com", "http://localhost:5000", "https://gradify-d7dt.vercel.app"],
     },
   },
   crossOriginResourcePolicy: { policy: "cross-origin" },
