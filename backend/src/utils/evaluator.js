@@ -18,17 +18,20 @@ Evaluation principles (MANDATORY):
 1. Treat the official answer key as the single source of truth.
 2. First align student content to the correct question and subpart before grading. Never assume ordering.
 3. Award marks primarily based on conceptual understanding and correct approach.
-4. If the student applies the correct algorithm, data structure, or method, award full marks even if:
-   - Minor arithmetic mistakes exist
-   - Intermediate steps are missing
-   - Presentation or notation is informal
-5. Deduct marks only for fundamental conceptual errors, wrong algorithm, or missing core steps.
-6. Ignore handwriting issues, OCR noise, spelling/grammar mistakes, overwriting, or red-ink annotations.
-7. Alternate methods earn credit only if allowed by the answer key.
-8. Never invent knowledge that the student did not explicitly demonstrate.
-9. Explain scoring briefly and objectively, like a human examiner.
+4. If the student applies the correct algorithm, data structure, or method, award **most** marks (at least 60% of the question) even if:
+  - Minor arithmetic mistakes exist
+  - Intermediate steps are missing
+  - Code is incomplete or informal
+  - Presentation or notation is informal
+5. Give only small deductions (remain at or above 80%) for present but slightly flawed implementations when the core algorithm is clear.
+6. Deduct marks substantially only for fundamental conceptual errors, wrong algorithm, missing core steps, or logical contradictions.
+7. Blank or irrelevant answers get 0.
+8. Ignore handwriting issues, OCR noise, spelling/grammar mistakes, overwriting, or evaluator markings.
+9. Alternate methods earn credit when they satisfy the answer key’s intent.
+10. Never invent knowledge that the student did not explicitly demonstrate.
+11. Explain scoring briefly and objectively, like a human examiner.
 
-Always behave like a real university examiner, not a strict validator.
+Always behave like a generous but fair university examiner, not a strict validator.
 `;
 
 // -------- OUTPUT SCHEMA GUIDE --------
@@ -66,24 +69,26 @@ Evaluate ONE question using the official answer key and the student answer.
 Mandatory grading rules:
 1. Match the student answer to the answer key concept-by-concept, not word-by-word.
 2. If the student demonstrates the correct algorithm, data structure, or logical approach, award FULL marks.
-3. Do NOT deduct marks for:
+3. If the student clearly presents the right algorithm but the explanation is brief, incomplete, or informal, still award at least 60% of the marks.
+4. If the student shows the full algorithm with only minor mistakes, keep the score at or above 80%.
+5. Do NOT deduct marks for:
    - Minor calculation errors
    - Missing intermediate values
    - Informal stack/queue representations
    - Incomplete explanations when the method is correct
-4. For algorithmic questions:
+6. For algorithmic questions:
    - Correct algorithm + correct steps = full marks
    - Time complexity may be ignored unless explicitly asked
-5. Allocate partial credit proportionally ONLY if:
+7. Allocate partial credit proportionally ONLY if:
    - Some required conceptual steps are present
    - But the core algorithm is incomplete or partially incorrect
-6. Deduct marks ONLY for:
+8. Deduct marks ONLY for:
    - Wrong algorithm
    - Incorrect operand order (e.g., reversed subtraction/division)
    - Logical contradictions
    - Completely missing the core idea
-7. Blank or irrelevant answers get 0.
-8. Ignore handwriting noise, spelling mistakes, OCR artifacts, and evaluator markings.
+9. Blank or irrelevant answers get 0.
+10. Ignore handwriting noise, spelling mistakes, OCR artifacts, and evaluator markings.
 
 Scoring rules:
 - Score must be between 0 and maxMarks (inclusive).
@@ -113,6 +118,44 @@ const sanitize = (input, limit = 4000) => {
     .replace(/\s+/g, ' ')
     .trim();
   return cleaned.length > limit ? `${cleaned.slice(0, limit - 3)}...` : cleaned;
+};
+
+const roundToTwo = (value) => {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) return 0;
+  return Number(numeric.toFixed(2));
+};
+
+const bucketPercentage = (percentage) => {
+  const pct = clamp(Number(percentage) || 0, 0, 100);
+  if (pct <= 20) return 0;
+  if (pct <= 40) return 40;
+  if (pct <= 60) return 60;
+  if (pct <= 80) return 80;
+  return 100;
+};
+
+const enforceScoreBucketing = ({ score, maxMarks }) => {
+  const safeMax = Math.max(Number(maxMarks) || 0, 0);
+  const safeScore = clamp(Number(score) || 0, 0, safeMax);
+  const rawPercentage = safeMax ? roundToTwo((safeScore / safeMax) * 100) : 0;
+  const bucket = bucketPercentage(rawPercentage);
+  const bucketScore = safeMax ? roundToTwo((bucket / 100) * safeMax) : 0;
+  return { score: bucketScore, percentage: bucket, rawPercentage };
+};
+
+const gradeBands = [
+  { upper: 32, grade: 'F' },
+  { upper: 44, grade: 'D' },
+  { upper: 59, grade: 'C' },
+  { upper: 74, grade: 'B' },
+  { upper: 100, grade: 'A' },
+];
+
+const assignGrade = (percentage) => {
+  const pct = clamp(Number(percentage) || 0, 0, 100);
+  const band = gradeBands.find((b) => pct <= b.upper) || gradeBands[gradeBands.length - 1];
+  return band.grade;
 };
 
 const normalizeText = (input) =>
@@ -294,13 +337,22 @@ const normalizeLlmResult = (raw, answerKey, studentAnswers) => {
   questions.forEach((entry) => {
     const number = String(entry?.questionNumber || '').trim() || '';
     const keyMatch = answerKey.find((q) => String(q.number) === number) || null;
-    const score = clamp(Number(entry?.scoreAwarded || entry?.score || 0), 0, Number(entry?.maxMarks || keyMatch?.maxMarks || 0));
     const maxMarks = Number(entry?.maxMarks || keyMatch?.maxMarks || 0);
-    const percentage = maxMarks ? Number(((score / maxMarks) * 100).toFixed(2)) : 0;
+    const rawScore = clamp(Number(entry?.scoreAwarded || entry?.score || 0), 0, maxMarks);
+    const { score, percentage, rawPercentage } = enforceScoreBucketing({ score: rawScore, maxMarks });
     const mappingConfidence = clamp(Number(entry?.mappingConfidence ?? entry?.confidence ?? 0.75), 0, 1);
     const confidence = clamp(Number(entry?.confidence ?? percentage / 100), 0, 1);
     const mappedLabel = entry?.mappedStudentAnswerLabel || null;
     if (mappedLabel) usedLabels.add(mappedLabel.toLowerCase());
+
+    let reasonText = entry?.reason || '';
+    if (!reasonText && percentage >= 60) {
+      reasonText = 'Major algorithmic idea recognised; partial deduction applied.';
+    }
+    if (percentage !== rawPercentage) {
+      const bucketMsg = `Bucketed to ${percentage}% (raw ${rawPercentage}%).`;
+      reasonText = reasonText ? `${reasonText} ${bucketMsg}` : bucketMsg;
+    }
 
     details.push({
       number: number || (keyMatch ? String(keyMatch.number) : ''),
@@ -311,7 +363,7 @@ const normalizeLlmResult = (raw, answerKey, studentAnswers) => {
       percentage,
       conceptMatch: sanitize(entry?.conceptMatch || ''),
       missingPoints: sanitize(entry?.missingPoints || ''),
-      reason: sanitize(entry?.reason || ''),
+      reason: sanitize(reasonText),
       mappingConfidence,
       confidence,
       mappedStudentAnswerLabel: mappedLabel,
@@ -339,7 +391,10 @@ const normalizeLlmResult = (raw, answerKey, studentAnswers) => {
     });
   });
 
-  const totalScore = Number(raw?.totalScore ?? details.reduce((acc, d) => acc + Number(d.score || 0), 0));
+  const totalScore = roundToTwo(details.reduce((acc, d) => acc + Number(d.score || 0), 0));
+  const maxTotal = answerKey.reduce((acc, q) => acc + Math.max(Number(q.maxMarks) || 0, 0), 0);
+  const percentageTotal = maxTotal ? roundToTwo((totalScore / maxTotal) * 100) : 0;
+  const grade = assignGrade(percentageTotal);
   const weakAreas = Array.isArray(raw?.weakAreas) ? raw.weakAreas.map((w) => String(w)) : [];
   const overallFeedback = sanitize(raw?.overallFeedback || raw?.summary || 'Review the provided solutions to strengthen weak concepts.');
   const overallConfidence = clamp(Number(raw?.overallConfidence ?? raw?.confidence ?? 0.75), 0, 1);
@@ -367,6 +422,9 @@ const normalizeLlmResult = (raw, answerKey, studentAnswers) => {
   return {
     details,
     totalScore,
+    maxScore: maxTotal,
+    percentage: percentageTotal,
+    grade,
     overallFeedback,
     weakAreas,
     overallConfidence: averagedConfidence,
@@ -374,6 +432,9 @@ const normalizeLlmResult = (raw, answerKey, studentAnswers) => {
     examinerJson: {
       evaluation: examinerEvaluation,
       totalScore,
+      maxScore: maxTotal,
+      percentage: percentageTotal,
+      grade,
       overallFeedback,
       weakAreas,
       overallConfidence: averagedConfidence,
@@ -383,40 +444,65 @@ const normalizeLlmResult = (raw, answerKey, studentAnswers) => {
 };
 
 const fallbackScore = ({ correctAnswer, studentAnswer, maxMarks }) => {
+  const safeMax = Math.max(Number(maxMarks) || 0, 0);
   const ca = normalizeText(correctAnswer);
   const sa = normalizeText(studentAnswer);
-  if (!sa) return { score: 0, reason: 'No answer provided', coverage: 0 };
+  if (!sa) {
+    return {
+      rawScore: 0,
+      rawPercentage: 0,
+      reason: 'No answer provided',
+      coverage: 0,
+      keyphrases: [],
+      coveredKeyphrases: [],
+      missingKeyphrases: [],
+    };
+  }
   if (sa === ca) {
-    const full = Number(maxMarks) || 0;
-    return { score: full, reason: 'Exact match', coverage: 1 };
+    return {
+      rawScore: safeMax,
+      rawPercentage: 100,
+      reason: 'Exact match',
+      coverage: 1,
+      keyphrases: [],
+      coveredKeyphrases: [],
+      missingKeyphrases: [],
+    };
   }
 
   const keyphrases = extractKeyphrases(ca);
-  const kpCoverage = keyphrases.length ? keyphrases.filter((kp) => sa.includes(kp)).length / keyphrases.length : 0;
+  const coveredKeyphrases = keyphrases.filter((kp) => sa.includes(kp));
+  const missingKeyphrases = keyphrases.filter((kp) => !sa.includes(kp));
+  const kpCoverage = keyphrases.length ? coveredKeyphrases.length / keyphrases.length : 0;
   const jaccard = jaccardSimilarity(ca, sa);
-  const coverage = Math.max(jaccard * 0.6 + kpCoverage * 0.4, kpCoverage * 0.8);
-  const max = Number(maxMarks) || 0;
-  const score = Math.round(clamp(coverage, 0, 1) * max);
-  const reason = `Heuristic scorer: ~${Math.round((coverage || 0) * 100)}% overlap and key points covered.`;
-  return { score, reason, coverage };
+  const coverage = clamp(Math.max(jaccard * 0.6 + kpCoverage * 0.4, kpCoverage * 0.8), 0, 1);
+  const rawScore = roundToTwo(coverage * safeMax);
+  const rawPercentage = safeMax ? roundToTwo((rawScore / safeMax) * 100) : roundToTwo(coverage * 100);
+  const reason = `Heuristic scorer: ~${roundToTwo((coverage || 0) * 100)}% concept overlap.`;
+  return { rawScore, rawPercentage, reason, coverage, keyphrases, coveredKeyphrases, missingKeyphrases };
 };
 
 const heuristicResult = ({ correctAnswer, studentAnswer, maxMarks }) => {
-  const { score, reason, coverage } = fallbackScore({ correctAnswer, studentAnswer, maxMarks });
+  const { rawScore, rawPercentage, reason, coverage, coveredKeyphrases, missingKeyphrases } = fallbackScore({
+    correctAnswer,
+    studentAnswer,
+    maxMarks,
+  });
   const max = Number(maxMarks || 0);
-  const percentage = max ? Number(((score / max) * 100).toFixed(2)) : 0;
-  const ca = normalizeText(correctAnswer);
-  const sa = normalizeText(studentAnswer);
-  const keyphrases = extractKeyphrases(ca);
-  const covered = keyphrases.filter((kp) => sa.includes(kp));
-  const missing = keyphrases.filter((kp) => !sa.includes(kp));
+  const { score, percentage } = enforceScoreBucketing({ score: rawScore, maxMarks: max });
+  const coveragePct = roundToTwo((coverage || 0) * 100);
+  const bucketNote = percentage !== rawPercentage ? ` Bucketed to ${percentage}% of marks.` : '';
   return {
     score,
     maxMarks: max,
     percentage,
-    conceptMatch: covered.length ? `Covered: ${covered.slice(0, 5).join(', ')}` : 'Minimal concept overlap',
-    missingPoints: missing.length ? `Missing: ${missing.slice(0, 5).join(', ')}` : 'Few missing key points',
-    reason,
+    conceptMatch: coveredKeyphrases.length
+      ? `Covered: ${coveredKeyphrases.slice(0, 5).join(', ')}`
+      : 'Minimal concept overlap',
+    missingPoints: missingKeyphrases.length
+      ? `Missing: ${missingKeyphrases.slice(0, 5).join(', ')}`
+      : 'Few missing key points',
+    reason: `${reason} (${coveragePct}% raw similarity).${bucketNote}`.trim(),
     confidence: clamp(coverage || 0.6, 0, 1),
   };
 };
@@ -489,18 +575,32 @@ const legacyEvaluateExam = (answerKey, studentAnswers) => {
     }
 
     const studentAnswer = selected ? selected.answer : '';
-    const { score, reason, coverage } = fallbackScore({
+    const fallback = fallbackScore({
       correctAnswer: enrichedKey.correctAnswer,
       studentAnswer,
       maxMarks: enrichedKey.maxMarks,
     });
     const maxMarks = Number(enrichedKey.maxMarks || 0);
-    const percentage = maxMarks ? Number(((score / maxMarks) * 100).toFixed(2)) : 0;
+    const { score, percentage } = enforceScoreBucketing({ score: fallback.rawScore, maxMarks });
+    const bucketNote = percentage !== fallback.rawPercentage ? ` Bucketed to ${percentage}% of marks.` : '';
     const mappingConfidence = selected ? metrics.combined : 0;
-    const confidence = clamp(mappingConfidence * 0.4 + coverage * 0.6, 0, 1);
+    const confidence = clamp(mappingConfidence * 0.4 + fallback.coverage * 0.6, 0, 1);
 
     totalScore += score;
     confidenceAccumulator += confidence;
+
+    let conceptMatch = 'Minimal concept overlap';
+    let missingPoints = 'Core concepts absent';
+    if (fallback.coverage >= 0.75) {
+      conceptMatch = 'Core algorithm demonstrated; mostly correct';
+      missingPoints = 'Minor clarifications needed for full marks';
+    } else if (fallback.coverage >= 0.55) {
+      conceptMatch = 'Major idea present but incomplete';
+      missingPoints = 'Add key supporting steps for full credit';
+    } else if (fallback.coverage >= 0.35) {
+      conceptMatch = 'Partial concept overlap';
+      missingPoints = 'Significant reasoning steps missing';
+    }
 
     const detail = {
       number: String(enrichedKey.number),
@@ -509,9 +609,9 @@ const legacyEvaluateExam = (answerKey, studentAnswers) => {
       maxMarks,
       score,
       percentage,
-      conceptMatch: coverage > 0.6 ? 'Key ideas partially present' : coverage > 0.3 ? 'Limited overlap with key concepts' : 'Minimal concept overlap',
-      missingPoints: coverage > 0.6 ? 'Missing detailed steps required for full marks' : 'Core concepts absent',
-      reason,
+      conceptMatch,
+      missingPoints,
+      reason: `${fallback.reason}${bucketNote}`.trim(),
       mappingConfidence,
       confidence,
       mappedStudentAnswerLabel: selected ? selected.label : null,
@@ -539,6 +639,8 @@ const legacyEvaluateExam = (answerKey, studentAnswers) => {
     });
   });
 
+  totalScore = roundToTwo(totalScore);
+
   const weakAreas = details
     .filter((d) => d.percentage < 70 || d.mappingConfidence < 0.6)
     .map((d) => `Q${d.number}`);
@@ -546,7 +648,8 @@ const legacyEvaluateExam = (answerKey, studentAnswers) => {
   const overallConfidence = details.length ? Number((confidenceAccumulator / details.length).toFixed(2)) : 0;
 
   const maxTotal = details.reduce((acc, d) => acc + (d.maxMarks || 0), 0);
-  const percentage = maxTotal ? Math.round((totalScore / maxTotal) * 100) : 0;
+  const percentage = maxTotal ? roundToTwo((totalScore / maxTotal) * 100) : 0;
+  const grade = assignGrade(percentage);
   let overallFeedback = 'Limited coverage; revisit fundamentals and practice structured answers.';
   if (percentage >= 80) overallFeedback = 'Strong performance with good conceptual coverage.';
   else if (percentage >= 60) overallFeedback = 'Decent understanding; improve detail and accuracy.';
@@ -572,6 +675,9 @@ const legacyEvaluateExam = (answerKey, studentAnswers) => {
   return {
     details,
     totalScore,
+    maxScore: maxTotal,
+    percentage,
+    grade,
     overallFeedback,
     weakAreas,
     overallConfidence,
@@ -579,6 +685,9 @@ const legacyEvaluateExam = (answerKey, studentAnswers) => {
     examinerJson: {
       evaluation: examinerEvaluation,
       totalScore,
+      maxScore: maxTotal,
+      percentage,
+      grade,
       overallFeedback,
       weakAreas,
       overallConfidence,
@@ -673,16 +782,22 @@ Max Marks: ${maxMarks}
   if (!text) throw new Error('Empty response');
 
   const parsed = JSON.parse(text);
-  const score = clamp(Number(parsed.score), 0, Number(parsed.maxMarks || maxMarks));
-  const percentage = Number(((score / (parsed.maxMarks || maxMarks)) * 100).toFixed(2));
+  const safeMax = Number(parsed.maxMarks || maxMarks);
+  const rawScore = clamp(Number(parsed.score), 0, safeMax);
+  const { score, percentage, rawPercentage } = enforceScoreBucketing({ score: rawScore, maxMarks: safeMax });
+  let reason = parsed.reason || '';
+  if (percentage !== rawPercentage) {
+    const bucketMsg = `Bucketed to ${percentage}% (raw ${rawPercentage}%).`;
+    reason = reason ? `${reason} ${bucketMsg}` : bucketMsg;
+  }
 
   return {
     score,
-    maxMarks: parsed.maxMarks || maxMarks,
+    maxMarks: safeMax,
     percentage,
     conceptMatch: parsed.conceptMatch || '',
     missingPoints: parsed.missingPoints || '',
-    reason: parsed.reason || '',
+    reason,
     confidence: clamp(percentage / 100, 0, 1),
   };
 };

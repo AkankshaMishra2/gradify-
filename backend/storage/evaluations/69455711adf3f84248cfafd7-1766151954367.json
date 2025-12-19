@@ -1,0 +1,359 @@
+{
+  "studentId": "69455711adf3f84248cfafd7",
+  "recordId": "69455712adf3f84248cfb006",
+  "totalScore": 0,
+  "details": [
+    {
+      "number": "1a",
+      "question": "",
+      "correctAnswer": "Find the time complexity of the given functions. | Marks: 6\nfunc1(int n) | Marks: 2\nModel Answer:\nThe outer loop runs from 1 to n, contributing O(n).\nThe middle loop also runs from 1 to n, contributing O(n).\nThe inner loop runs from 1 to 10, which is constant, so O(1).\nOverall time complexity:\nT(n) = O(n) × O(n) × O(1) = O(n²).\nfunc2(int n) | Marks: 2\nModel Answer:\nThe outer loop runs from 0 to 2n, giving O(n).\nThe middle loop runs up to i/3, which in the worst case is O(n).\nThe inner loop runs up to j², which becomes O(n²) in the worst case.\nOverall time complexity:\nT(n) = O(n) × O(n) × O(n²) = O(n⁴).\nfunc3(int n) | Marks: 2\nModel Answer:\nAll three nested loops run up to n.\nOverall time complexity:\nT(n) = O(n) × O(n) × O(n) = O(n³).",
+      "studentAnswer": ": func 1:-\n1st loop worst case: Run = - n\n2nd loop worst case: Run = n\n3rd loop worst case: Run = 10\nSo, Time Complexity -> n * n * 10\n> 10 n²\nO(n²) is worst time complexity.",
+      "maxMarks": 6,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Partial conceptual match",
+      "missingPoints": "",
+      "reason": "Marks awarded based on conceptual correctness",
+      "mappingConfidence": 0.9,
+      "confidence": 0,
+      "mappedStudentAnswerLabel": "1a"
+    },
+    {
+      "number": "1b",
+      "question": "",
+      "correctAnswer": "Optimized algorithm to find days until next greater rainfall. | Marks: 9\nModel Answer:\nThis problem is solved using a stack-based approach in O(n) time.\nThe algorithm traverses the rainfall array from right to left while maintaining a stack that stores\nindices of days with greater rainfall.\nFor each day:\nPop elements from the stack while the current rainfall is greater or equal.\nIf the stack is not empty, the difference between indices gives the number of days.\nOtherwise, the answer is 0.\nThis ensures each element is pushed and popped at most once.\nTime Complexity: O(n)\nSpace Complexity: O(n)\nQUESTION 2",
+      "studentAnswer": ":\nAlgorithm :-\n① Min = arr[0] , Count = 0\n② For (i=1 ; i<N ; i++) {\nif (arr[i] > Min) {\nMin = arr[i] ;\ncout << \"Wait = \" << ++count << endl;\n}\ncount++;\n}\n}\nFor main [] = {20, 15, 25, 18, 9, 30},\n① Min = 20; count = 0.\n② If (15>20) X count = 1\nIf (25>20) → Min = 25 , Wait = 2\ncount = -1\ncount = 0\n③ If (18>25) X count = 1\nIf (9>25) X count = 2\nIf (30>25) → Min=30 , Wait = 3\ncount = -1\ncount = 0\nSo, for following array worst wait time is 3 days.",
+      "maxMarks": 9,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Partial conceptual match",
+      "missingPoints": "",
+      "reason": "Marks awarded based on conceptual correctness",
+      "mappingConfidence": 0.9,
+      "confidence": 0,
+      "mappedStudentAnswerLabel": "1b"
+    },
+    {
+      "number": "2a",
+      "question": "",
+      "correctAnswer": "Evaluate the given postfix expression using stack. | Marks: 5\nModel Answer:\nThe postfix expression is evaluated using a stack by scanning tokens from left to right.\nOperands are pushed onto the stack.\nWhen an operator is encountered, the top two elements are popped, the operation is applied, and\nthe result is pushed back.\nFinal evaluated result: 95",
+      "studentAnswer": ":\n# 60\n20\n2\n/\n15\n5\n+",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Partial conceptual match",
+      "missingPoints": "",
+      "reason": "Marks awarded based on conceptual correctness",
+      "mappingConfidence": 0.9,
+      "confidence": 0,
+      "mappedStudentAnswerLabel": "2a"
+    },
+    {
+      "number": "2b",
+      "question": "",
+      "correctAnswer": "Perform the given queue operations. | Marks: 10\nPart 1: Push at rear, Pop from front | Marks: 5\nModel Answer:\nElements are inserted at the rear of Queue Q1 and removed from the front.\nAfter each iteration, the front and rear pointers are updated correctly.\nThe intermediate states of Q1 and Q2 follow circular queue behavior.\nPart 2: Push at front, Pop from rear | Marks: 5\nModel Answer:\nElements are inserted at the front and removed from the rear of the queue.\nThe circular nature of the queue is preserved, and pointer updates ensure correct order after each\niteration.\nQUESTION 3",
+      "studentAnswer": ":\n(i) After 1st\nAfter 2nd\nAfter 3rd\nAfter 4th\nAfter 5th",
+      "maxMarks": 10,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Partial conceptual match",
+      "missingPoints": "",
+      "reason": "Marks awarded based on conceptual correctness",
+      "mappingConfidence": 0.9,
+      "confidence": 0,
+      "mappedStudentAnswerLabel": "2b"
+    },
+    {
+      "number": "3a",
+      "question": "",
+      "correctAnswer": "Merge two sorted linked lists. | Marks: 6\nModel Answer:\nThe two linked lists are merged by comparing node values one by one.\nA dummy node is used to simplify pointer handling.\nAt each step, the smaller node is linked to the result list, and the pointer is advanced.\nAfter one list is exhausted, the remaining nodes of the other list are appended.\nThis approach maintains sorted order efficiently.",
+      "studentAnswer": "",
+      "maxMarks": 6,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Partial conceptual match",
+      "missingPoints": "",
+      "reason": "Marks awarded based on conceptual correctness",
+      "mappingConfidence": 0.9,
+      "confidence": 0,
+      "mappedStudentAnswerLabel": null
+    },
+    {
+      "number": "3b",
+      "question": "",
+      "correctAnswer": "Insert an element into a sorted array using Binary Search. | Marks: 9\nModel Answer:\nBinary Search is used to find the correct insertion position in O(log n) time.\nOnce the position is found, elements are shifted to the right, and the new element is inserted.\nFinal array after insertion:\n{10, 20, 25, 30, 40, 50}\nOverall Time Complexity: O(n) (due to shifting).\nQUESTION 4",
+      "studentAnswer": ": First we find position by Binary Search.\n① Start = 0, end = n-1\nmid = start + end/2\n② Bin Srch (int arr[], int x) {\nwhile (start <= end) {\nif (arr[mid] == x) {\nif (arr[mid+1] >= x) {\nreturn mid;\n}\n}\nif (mid > key) {\nend = mid-1;\n} else {\nstart = mid+1;\n}\n}\n}\nWe got position, the value should be placed after arr[mid].\nNow, we make space by shifting values after mid.\n③ for (i = n; i > mid; i--) {\narr[i] = arr[i-1];\n}\n④ Now, give value\narr[mid+1] = x;\nTime complexity O(log n) for binary search (worst case).",
+      "maxMarks": 9,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Partial conceptual match",
+      "missingPoints": "",
+      "reason": "Marks awarded based on conceptual correctness",
+      "mappingConfidence": 0.9,
+      "confidence": 0,
+      "mappedStudentAnswerLabel": "3b"
+    },
+    {
+      "number": "4a",
+      "question": "",
+      "correctAnswer": "Apply Selection Sort and state whether it is stable. | Marks: 5\nModel Answer:\nSelection Sort repeatedly selects the minimum element from the unsorted portion and swaps it with\nthe first unsorted element.\nAfter successive iterations, the array becomes sorted in ascending order.\nFinal sorted array: [10, 12, 36, 45, 78]\nSelection Sort is not stable because swapping can change the relative order of equal elements.",
+      "studentAnswer": "",
+      "maxMarks": 5,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Partial conceptual match",
+      "missingPoints": "",
+      "reason": "Marks awarded based on conceptual correctness",
+      "mappingConfidence": 0.9,
+      "confidence": 0,
+      "mappedStudentAnswerLabel": null
+    },
+    {
+      "number": "4b",
+      "question": "",
+      "correctAnswer": "Identify correct statements related to linked list manipulation. | Marks: 10\nModel Answer:\nCorrect pointer comparisons, node traversal, and reassignment logic are required to correctly\nidentify and reposition minimum and maximum nodes in a circular linked list.\nConditions involving curr, prev, maxNode, and minNode must ensure traversal does not break\ncircularity and updates are performed safely.",
+      "studentAnswer": "",
+      "maxMarks": 10,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "Partial conceptual match",
+      "missingPoints": "",
+      "reason": "Marks awarded based on conceptual correctness",
+      "mappingConfidence": 0.9,
+      "confidence": 0,
+      "mappedStudentAnswerLabel": null
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1a": {
+        "question": "",
+        "expectedAnswer": "Find the time complexity of the given functions. | Marks: 6\nfunc1(int n) | Marks: 2\nModel Answer:\nThe outer loop runs from 1 to n, contributing O(n).\nThe middle loop also runs from 1 to n, contributing O(n).\nThe inner loop runs from 1 to 10, which is constant, so O(1).\nOverall time complexity:\nT(n) = O(n) × O(n) × O(1) = O(n²).\nfunc2(int n) | Marks: 2\nModel Answer:\nThe outer loop runs from 0 to 2n, giving O(n).\nThe middle loop runs up to i/3, which in the worst case is O(n).\nThe inner loop runs up to j², which becomes O(n²) in the worst case.\nOverall time complexity:\nT(n) = O(n) × O(n) × O(n²) = O(n⁴).\nfunc3(int n) | Marks: 2\nModel Answer:\nAll three nested loops run up to n.\nOverall time complexity:\nT(n) = O(n) × O(n) × O(n) = O(n³).",
+        "studentAnswer": "",
+        "maxMarks": 6,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Partial conceptual match",
+        "missingPoints": "",
+        "reason": "Marks awarded based on conceptual correctness",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "1a"
+      },
+      "Q1b": {
+        "question": "",
+        "expectedAnswer": "Optimized algorithm to find days until next greater rainfall. | Marks: 9\nModel Answer:\nThis problem is solved using a stack-based approach in O(n) time.\nThe algorithm traverses the rainfall array from right to left while maintaining a stack that stores\nindices of days with greater rainfall.\nFor each day:\nPop elements from the stack while the current rainfall is greater or equal.\nIf the stack is not empty, the difference between indices gives the number of days.\nOtherwise, the answer is 0.\nThis ensures each element is pushed and popped at most once.\nTime Complexity: O(n)\nSpace Complexity: O(n)\nQUESTION 2",
+        "studentAnswer": "",
+        "maxMarks": 9,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Partial conceptual match",
+        "missingPoints": "",
+        "reason": "Marks awarded based on conceptual correctness",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "1b"
+      },
+      "Q2a": {
+        "question": "",
+        "expectedAnswer": "Evaluate the given postfix expression using stack. | Marks: 5\nModel Answer:\nThe postfix expression is evaluated using a stack by scanning tokens from left to right.\nOperands are pushed onto the stack.\nWhen an operator is encountered, the top two elements are popped, the operation is applied, and\nthe result is pushed back.\nFinal evaluated result: 95",
+        "studentAnswer": "",
+        "maxMarks": 5,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Partial conceptual match",
+        "missingPoints": "",
+        "reason": "Marks awarded based on conceptual correctness",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "2a"
+      },
+      "Q2b": {
+        "question": "",
+        "expectedAnswer": "Perform the given queue operations. | Marks: 10\nPart 1: Push at rear, Pop from front | Marks: 5\nModel Answer:\nElements are inserted at the rear of Queue Q1 and removed from the front.\nAfter each iteration, the front and rear pointers are updated correctly.\nThe intermediate states of Q1 and Q2 follow circular queue behavior.\nPart 2: Push at front, Pop from rear | Marks: 5\nModel Answer:\nElements are inserted at the front and removed from the rear of the queue.\nThe circular nature of the queue is preserved, and pointer updates ensure correct order after each\niteration.\nQUESTION 3",
+        "studentAnswer": "",
+        "maxMarks": 10,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Partial conceptual match",
+        "missingPoints": "",
+        "reason": "Marks awarded based on conceptual correctness",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "2b"
+      },
+      "Q3a": {
+        "question": "",
+        "expectedAnswer": "Merge two sorted linked lists. | Marks: 6\nModel Answer:\nThe two linked lists are merged by comparing node values one by one.\nA dummy node is used to simplify pointer handling.\nAt each step, the smaller node is linked to the result list, and the pointer is advanced.\nAfter one list is exhausted, the remaining nodes of the other list are appended.\nThis approach maintains sorted order efficiently.",
+        "studentAnswer": "",
+        "maxMarks": 6,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Partial conceptual match",
+        "missingPoints": "",
+        "reason": "Marks awarded based on conceptual correctness",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q3b": {
+        "question": "",
+        "expectedAnswer": "Insert an element into a sorted array using Binary Search. | Marks: 9\nModel Answer:\nBinary Search is used to find the correct insertion position in O(log n) time.\nOnce the position is found, elements are shifted to the right, and the new element is inserted.\nFinal array after insertion:\n{10, 20, 25, 30, 40, 50}\nOverall Time Complexity: O(n) (due to shifting).\nQUESTION 4",
+        "studentAnswer": "",
+        "maxMarks": 9,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Partial conceptual match",
+        "missingPoints": "",
+        "reason": "Marks awarded based on conceptual correctness",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": "3b"
+      },
+      "Q4a": {
+        "question": "",
+        "expectedAnswer": "Apply Selection Sort and state whether it is stable. | Marks: 5\nModel Answer:\nSelection Sort repeatedly selects the minimum element from the unsorted portion and swaps it with\nthe first unsorted element.\nAfter successive iterations, the array becomes sorted in ascending order.\nFinal sorted array: [10, 12, 36, 45, 78]\nSelection Sort is not stable because swapping can change the relative order of equal elements.",
+        "studentAnswer": "",
+        "maxMarks": 5,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Partial conceptual match",
+        "missingPoints": "",
+        "reason": "Marks awarded based on conceptual correctness",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q4b": {
+        "question": "",
+        "expectedAnswer": "Identify correct statements related to linked list manipulation. | Marks: 10\nModel Answer:\nCorrect pointer comparisons, node traversal, and reassignment logic are required to correctly\nidentify and reposition minimum and maximum nodes in a circular linked list.\nConditions involving curr, prev, maxNode, and minNode must ensure traversal does not break\ncircularity and updates are performed safely.",
+        "studentAnswer": "",
+        "maxMarks": 10,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "Partial conceptual match",
+        "missingPoints": "",
+        "reason": "Marks awarded based on conceptual correctness",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": null
+      }
+    },
+    "totalScore": 0,
+    "overallFeedback": "Insufficient conceptual clarity.",
+    "weakAreas": [
+      "Q1a",
+      "Q1b",
+      "Q2a",
+      "Q2b",
+      "Q3a",
+      "Q3b",
+      "Q4a",
+      "Q4b"
+    ],
+    "overallConfidence": 0,
+    "mappingDetails": [
+      {
+        "sourceNumber": "1a",
+        "matchedQuestionNumber": "1a",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "1b",
+        "matchedQuestionNumber": "1b",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "2a",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "2b",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Unknown",
+        "matchedQuestionNumber": "3a",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "3b",
+        "matchedQuestionNumber": "3b",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Unknown",
+        "matchedQuestionNumber": "4a",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Unknown",
+        "matchedQuestionNumber": "4b",
+        "confidence": 0.9,
+        "note": "Mapped"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q1a",
+    "Q1b",
+    "Q2a",
+    "Q2b",
+    "Q3a",
+    "Q3b",
+    "Q4a",
+    "Q4b"
+  ],
+  "overallConfidence": 0,
+  "mappingDetails": [
+    {
+      "sourceNumber": "1a",
+      "matchedQuestionNumber": "1a",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "1b",
+      "matchedQuestionNumber": "1b",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "2a",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "2b",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Unknown",
+      "matchedQuestionNumber": "3a",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "3b",
+      "matchedQuestionNumber": "3b",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Unknown",
+      "matchedQuestionNumber": "4a",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Unknown",
+      "matchedQuestionNumber": "4b",
+      "confidence": 0.9,
+      "note": "Mapped"
+    }
+  ]
+}

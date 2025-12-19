@@ -591,9 +591,79 @@ export const parseStudentAnswers = (text) => {
     merged.push({ ...ans, answer: ans.answer.trim() });
   });
 
+  const metadataKeywords = [
+    'name',
+    'roll',
+    'seat',
+    'course',
+    'subject',
+    'date',
+    'marks',
+    'invigilator',
+    'teacher',
+    'faculty',
+    'branch',
+    'code',
+    'paper',
+  ];
+
+  const looksLikeMetadataAnswer = (ans, isEdge = false) => {
+    if (!ans) return false;
+    const label = String(ans.label || '').trim();
+    const lowerLabel = label.toLowerCase();
+    const answerText = String(ans.answer || '').trim();
+    const lowerAnswer = answerText.toLowerCase();
+    const meta = ans.meta || {};
+
+    if (!answerText) return true;
+    if (metadataKeywords.some((kw) => lowerLabel.includes(kw) || lowerAnswer.includes(kw))) return true;
+
+    const plainLabel = /^q?\s*\d+[a-z]?$/i.test(label.replace(/\s+/g, ''));
+    const romanLabel = /^q?\s*(?:i|ii|iii|iv|v|vi|vii|viii|ix|x)$/i.test(label.replace(/\s+/g, ''));
+
+    // Pure numeric/mark annotations
+    if (/^[→+\-*/\s\d().]+$/.test(answerText) && !/[a-z]/i.test(answerText)) return true;
+    if (/^\d{4,}$/i.test(answerText.replace(/\s+/g, ''))) return true;
+    if (/\b\d{1,2}[\/\-.]\d{1,2}[\/\-.]\d{2,4}\b/.test(answerText) && !/[a-z]{3,}/i.test(answerText)) return true;
+
+    const condensed = answerText.replace(/[\s→+\-()\/\.]/g, '');
+    const hasLetters = /[a-z]/i.test(condensed);
+    const words = answerText.split(/\s+/).filter(Boolean);
+    const wordCount = words.length;
+    const allTitleCase = words.length > 0 && words.every((w) => /^[A-Z][a-z]+$/.test(w));
+
+    if (!hasLetters && (plainLabel || romanLabel)) return true;
+
+    if (isEdge) {
+      if ((plainLabel || romanLabel) && !meta.hasAlphaSuffix) {
+        if (wordCount <= 3 && !/[.!?]/.test(answerText)) {
+          if (allTitleCase) return true;
+          if (wordCount === 1 && /^[A-Za-z]{1,4}$/.test(answerText)) return true;
+          if (/^[A-Z0-9+]+$/i.test(condensed) && condensed.length <= 6) return true;
+        }
+      }
+    }
+
+    if (romanLabel && wordCount <= 3 && !meta.hasAlphaSuffix) return true;
+
+    return false;
+  };
+
+  const trimmed = [...merged];
+  while (trimmed.length && looksLikeMetadataAnswer(trimmed[0], true)) trimmed.shift();
+  while (trimmed.length && looksLikeMetadataAnswer(trimmed[trimmed.length - 1], true)) trimmed.pop();
+
+  const filtered = trimmed.filter((ans) => {
+    const label = String(ans.label || '').toLowerCase();
+    if (metadataKeywords.some((kw) => label.includes(kw))) return false;
+    return true;
+  });
+
+  const usable = filtered.length ? filtered : trimmed.length ? trimmed : merged;
+
   // Backfill missing numbers sequentially while keeping labels for UI reference
   let seq = 1;
-  return merged.map((ans) => {
+  return usable.map((ans) => {
     const number = ans.number || String(seq++);
     return {
       number,
