@@ -1,0 +1,78 @@
+{
+  "studentId": "6944ee6adb3ebab8ad83f5e5",
+  "recordId": "6944ee6bdb3ebab8ad83f65a",
+  "totalScore": 0,
+  "details": [
+    {
+      "number": "3i",
+      "questionId": null,
+      "path": [
+        "3",
+        "i"
+      ],
+      "normalizedPath": "3>i",
+      "label": "Q3(i)",
+      "question": "",
+      "maxMarks": 0,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "N/A",
+      "missingPoints": "N/A",
+      "reason": "As per the provided answer key, Q3(i) has a maximum of 0 marks. No student answer was explicitly identified as belonging to Q3(i).",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": ""
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q3i": {
+        "question": "",
+        "expectedAnswer": "",
+        "studentAnswer": "",
+        "maxMarks": 0,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "N/A",
+        "missingPoints": "N/A",
+        "reason": "As per the provided answer key, Q3(i) has a maximum of 0 marks. No student answer was explicitly identified as belonging to Q3(i).",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": null
+      }
+    },
+    "totalScore": 0,
+    "overallFeedback": "Only Q3(i) could be evaluated as per the provided answer key. All other questions answered by the student (e.g., Q1, Q2, Q3(r)(d), Q3(b), Q5, Q60, Q70, Q4a) were not present in the answer key, and therefore could not be scored.",
+    "weakAreas": [
+      "Q3i"
+    ],
+    "overallConfidence": 1,
+    "mappingDetails": [
+      {
+        "sourceNumber": "Q3(i)",
+        "matchedQuestionId": null,
+        "matchedQuestionNumber": "3i",
+        "matchedQuestionLabel": "Q3(i)",
+        "normalizedPath": "3>i",
+        "confidence": 1,
+        "note": "Mapped"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Q3i"
+  ],
+  "overallConfidence": 1,
+  "mappingDetails": [
+    {
+      "sourceNumber": "Q3(i)",
+      "matchedQuestionId": null,
+      "matchedQuestionNumber": "3i",
+      "matchedQuestionLabel": "Q3(i)",
+      "normalizedPath": "3>i",
+      "confidence": 1,
+      "note": "Mapped"
+    }
+  ]
+}

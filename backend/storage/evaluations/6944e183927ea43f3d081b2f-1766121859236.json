@@ -1,0 +1,17 @@
+{
+  "studentId": "6944e183927ea43f3d081b2f",
+  "recordId": "6944e183927ea43f3d081b32",
+  "totalScore": 15,
+  "details": [],
+  "examinerJson": {
+    "evaluation": {},
+    "totalScore": 15,
+    "overallFeedback": "The student demonstrates a foundational understanding of some data structures and algorithms, particularly in time complexity analysis and basic stack operations. However, there are significant gaps in implementing algorithms (linked list merge, binary search insertion), understanding specific algorithm mechanics (Selection Sort), and applying advanced data structures (stack for next greater element, circular queue operations). Attention to detail in pointer manipulation and correctly stating overall time complexities is also needed.",
+    "weakAreas": [],
+    "overallConfidence": 0,
+    "mappingDetails": []
+  },
+  "weakAreas": [],
+  "overallConfidence": 0,
+  "mappingDetails": []
+}

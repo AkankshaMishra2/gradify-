@@ -43,25 +43,13 @@ export function UploadBox({
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const isTypeAllowed = (file: File) => {
+  const isTypeAllowed = useCallback((file: File) => {
     if (!acceptedTypes.length) return true;
     const fileType = file.type || '';
     return acceptedTypes.some((type) => type === fileType);
-  };
+  }, [acceptedTypes]);
 
-  const validateFile = (file: File): boolean => {
-    if (!isTypeAllowed(file)) {
-      setError('Invalid file type. Allowed: PDF, DOC, DOCX, JPG, PNG.');
-      return false;
-    }
-    if (file.size > maxSizeMB * 1024 * 1024) {
-      setError(`File size exceeds ${maxSizeMB}MB limit.`);
-      return false;
-    }
-    return true;
-  };
-
-  const handleValidFiles = (files: File[]) => {
+  const handleValidFiles = useCallback((files: File[]) => {
     if (!files.length) return;
     setError(null);
     if (multiple) {
@@ -69,19 +57,28 @@ export function UploadBox({
     } else if (files[0] && onFileSelect) {
       onFileSelect(files[0]);
     }
-  };
+  }, [multiple, onFileSelect, onFilesSelect]);
 
-  const handleCollection = (fileList: FileList | File[]) => {
+  const handleCollection = useCallback((fileList: FileList | File[]) => {
     const incoming = Array.from(fileList);
     const valid: File[] = [];
     for (const file of incoming) {
-      if (validateFile(file)) {
-        valid.push(file);
+      const exceedsSize = file.size > maxSizeMB * 1024 * 1024;
+      if (!isTypeAllowed(file)) {
+        setError('Invalid file type. Allowed: PDF, DOC, DOCX, JPG, PNG.');
+        continue;
       }
-      if (maxFiles && selectedFiles.length + valid.length >= maxFiles) break;
+      if (exceedsSize) {
+        setError(`File size exceeds ${maxSizeMB}MB limit.`);
+        continue;
+      }
+      valid.push(file);
+      if (maxFiles && selectedFiles.length + valid.length >= maxFiles) {
+        break;
+      }
     }
     handleValidFiles(valid);
-  };
+  }, [handleValidFiles, isTypeAllowed, maxFiles, maxSizeMB, selectedFiles.length]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -89,7 +86,7 @@ export function UploadBox({
     if (e.dataTransfer.files.length > 0) {
       handleCollection(e.dataTransfer.files);
     }
-  }, [selectedFiles.length]);
+  }, [handleCollection]);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();

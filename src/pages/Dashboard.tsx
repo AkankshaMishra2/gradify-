@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { DashboardTable } from '@/components/DashboardTable';
 import { Card, CardContent } from '@/components/ui/card';
@@ -20,7 +20,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       const data = await getDashboardData();
       setStudents(data);
@@ -29,7 +29,7 @@ export default function Dashboard() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [setStudents]);
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -38,7 +38,7 @@ export default function Dashboard() {
     }
 
     fetchData();
-  }, [isAuthenticated, navigate, setStudents]);
+  }, [fetchData, isAuthenticated, navigate]);
 
   const handleDeleteStudent = async (id: string) => {
     try {

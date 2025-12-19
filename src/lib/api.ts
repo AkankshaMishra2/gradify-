@@ -88,11 +88,49 @@ export interface EvaluationResult {
   details: EvaluationDetail[];
   studentId: string;
   recordId: string;
-  examinerJson?: any;
+  examinerJson?: unknown;
   weakAreas?: string[];
   overallConfidence?: number;
   mappingDetails?: MappingDetail[];
   pages?: OCRPageSummary[];
+}
+
+export interface BatchStudentInput {
+  name: string;
+  rollNumber: string;
+  files: File[];
+}
+
+export type BatchEvaluationResultItem =
+  | ({
+    index: number;
+    status: 'success';
+    studentId: string;
+    recordId: string;
+    studentName: string;
+    rollNumber: string;
+    totalScore: number;
+    details: EvaluationDetail[];
+    examinerJson?: unknown;
+    weakAreas?: string[];
+    overallConfidence?: number;
+    mappingDetails?: MappingDetail[];
+    ocrConfidence?: number;
+    rawText?: string;
+    pages?: OCRPageSummary[];
+  })
+  | ({
+    index: number;
+    status: 'error';
+    studentName: string;
+    rollNumber: string;
+    error: string;
+    details?: unknown;
+  });
+
+export interface BatchEvaluationResponse {
+  results: BatchEvaluationResultItem[];
+  summary: { successCount: number; failureCount: number };
 }
 
 export interface StudentRecord {
@@ -144,6 +182,44 @@ export async function uploadAndEvaluate(files: File | File[], studentName: strin
   return httpForm('/api/upload-and-evaluate', form);
 }
 
+export async function batchUploadAndEvaluate(students: BatchStudentInput[], keyId: string): Promise<BatchEvaluationResponse> {
+  if (!students.length) {
+    throw new Error('At least one student is required');
+  }
+
+  const form = new FormData();
+  form.append('keyId', keyId);
+
+  let fileCursor = 0;
+
+  const manifest = students.map((student, index) => {
+    if (!student.name.trim() || !student.rollNumber.trim()) {
+      throw new Error('Student name and roll number are required');
+    }
+    if (!student.files.length) {
+      throw new Error(`No files provided for ${student.name}`);
+    }
+
+    const fileIndices = student.files.map((file) => {
+      const idx = fileCursor;
+      fileCursor += 1;
+      form.append('files', file);
+      return idx;
+    });
+
+    return {
+      index,
+      name: student.name,
+      rollNumber: student.rollNumber,
+      fileIndices,
+    };
+  });
+
+  form.append('students', JSON.stringify(manifest));
+
+  return httpForm('/api/upload-and-evaluate-batch', form);
+}
+
 // Evaluate Answers API -> /api/evaluate
 export async function evaluateAnswers(params: { studentName: string; rollNo: string; keyId: string; answers: { number: string; answer: string }[] }): Promise<EvaluationResult> {
   const body = {
@@ -180,10 +256,14 @@ export async function deleteStudent(id: string): Promise<void> {
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
 }
 
-export async function getLatestEvaluationByStudent(id: string) {
+export interface LatestEvaluationResponse {
+  record: EvaluationResult;
+}
+
+export async function getLatestEvaluationByStudent(id: string): Promise<LatestEvaluationResponse> {
   const res = await fetch(`${BASE_URL}/api/evaluations/${id}`, { headers: { ...authHeaders() } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return res.json();
+  return res.json() as Promise<LatestEvaluationResponse>;
 }
 
 // CSV Export -> /api/export-csv

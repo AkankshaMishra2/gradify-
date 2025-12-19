@@ -54,9 +54,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
     if (userRaw) {
       try {
-        const user = JSON.parse(userRaw);
+        const user = JSON.parse(userRaw) as User;
         setState(prev => ({ ...prev, user, isAuthenticated: !!token }));
-      } catch {}
+      } catch (error) {
+        console.warn('Failed to hydrate stored user', error);
+        localStorage.removeItem('gradify_user');
+      }
     }
   }, []);
 

@@ -1,0 +1,17 @@
+{
+  "studentId": "6944dff9305aa5055e8b0cab",
+  "recordId": "6944dff9305aa5055e8b0cd8",
+  "totalScore": 12,
+  "details": [],
+  "examinerJson": {
+    "evaluation": {},
+    "totalScore": 12,
+    "overallFeedback": "The student demonstrates a good understanding of time complexity analysis for basic nested loops. However, there are significant gaps in understanding and application for more complex algorithms and data structure operations. The algorithm for 'days until next greater rainfall' is incorrect. The postfix expression evaluation process is flawed despite a correct final answer. The queue operations cannot be evaluated due to missing context. The linked list merging logic is fundamentally incorrect. The binary search for insertion is partially correct but misses the overall time complexity. Selection sort steps and stability explanation are incorrect. The linked list manipulation statements are out of context.",
+    "weakAreas": [],
+    "overallConfidence": 0,
+    "mappingDetails": []
+  },
+  "weakAreas": [],
+  "overallConfidence": 0,
+  "mappingDetails": []
+}

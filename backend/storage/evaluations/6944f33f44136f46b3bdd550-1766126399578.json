@@ -1,0 +1,377 @@
+{
+  "studentId": "6944f33f44136f46b3bdd550",
+  "recordId": "6944f33f44136f46b3bdd560",
+  "totalScore": 21,
+  "details": [
+    {
+      "number": "1a",
+      "questionId": "6944f2ac44136f46b3bdd53e",
+      "question": "",
+      "maxMarks": 6,
+      "score": 4,
+      "percentage": 66.67,
+      "conceptMatch": "Time complexity analysis, Big O notation.",
+      "missingPoints": "Time complexity analysis for func1.",
+      "reason": "The student correctly identified the time complexities for func2 (O(n^4)) and func3 (O(n^3)), earning full marks for these two parts. However, func1 was not attempted, resulting in 0 marks for that subpart.",
+      "mappingConfidence": 0.95,
+      "confidence": 0.9,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": "func1(int n) | Marks: 2 Model Answer: The outer loop runs from 1 to n, contributing O(n). The middle loop also runs from 1 to n, contributing O(n). The inner loop runs from 1 to 10, which is constant, so O(1). Overall time complexity: T(n) = O(n) × O(n) × O(1) = O(n²). func2(int n) | Marks: 2 Model Answer: The outer loop runs from 0 to 2n, giving O(n). The middle loop runs up to i/3, which in the worst case is O(n). The inner loop runs up to j², which becomes O(n²) in the worst case. Overall time complexity: T(n) = O(n) × O(n) × O(n²) = O(n⁴). func3(int n) | Marks: 2 Model Answer: All three nested loops run up to n. Overall time complexity: T(n) = O(n) × O(n) × O(n) = O(n³)."
+    },
+    {
+      "number": "1b",
+      "questionId": "6944f2ac44136f46b3bdd53f",
+      "question": "",
+      "maxMarks": 9,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "None.",
+      "missingPoints": "Stack-based approach, O(n) time complexity, O(n) space complexity, correct algorithm logic (traversing right to left, popping from stack, calculating differences).",
+      "reason": "The student provided an algorithm that does not match the stack-based approach described in the model answer for finding days with greater rainfall. The student's algorithm appears to be tracking a 'Min' value and a 'count' based on updates, which is not the expected solution for the problem implied by the model answer.",
+      "mappingConfidence": 0.95,
+      "confidence": 0.95,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": "Model Answer: This problem is solved using a stack-based approach in O(n) time. The algorithm traverses the rainfall array from right to left while maintaining a stack that stores indices of days with greater rainfall. For each day: • Pop elements from the stack while the current rainfall is greater or equal. • If the stack is not empty, the difference between indices gives the number of days. • Otherwise, the answer is 0. This ensures each element is pushed and popped at most once. Time Complexity: O(n) Space Complexity: O(n) QUESTION 2"
+    },
+    {
+      "number": "2a",
+      "questionId": "6944f2ac44136f46b3bdd540",
+      "question": "",
+      "maxMarks": 5,
+      "score": 5,
+      "percentage": 100,
+      "conceptMatch": "Stack-based postfix expression evaluation.",
+      "missingPoints": "Explicit description of scanning tokens from left to right, pushing operands, and popping two elements for operators (though implied by the trace).",
+      "reason": "The student correctly provided the final evaluated result (95) and demonstrated a stack-based evaluation process through a trace, aligning with the core concept of postfix expression evaluation.",
+      "mappingConfidence": 0.9,
+      "confidence": 0.9,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": "Model Answer: The postfix expression is evaluated using a stack by scanning tokens from left to right. Operands are pushed onto the stack. When an operator is encountered, the top two elements are popped, the operation is applied, and the result is pushed back. Final evaluated result: 95"
+    },
+    {
+      "number": "2b",
+      "questionId": "6944f2ac44136f46b3bdd541",
+      "question": "",
+      "maxMarks": 10,
+      "score": 2,
+      "percentage": 20,
+      "conceptMatch": "Queue operations (Part 1 partially).",
+      "missingPoints": "Part 1: Explicit demonstration of push at rear, correct pointer updates (front/rear), explanation of circular queue behavior. Part 2: Clear demonstration of push at front and pop from rear, correct pointer updates, circular queue behavior.",
+      "reason": "For Part 1 (Push at rear, Pop from front), the student's trace shows the correct effect of elements being removed from the front of the queue. However, it lacks explicit details on insertion at the rear, correct pointer updates (Rear1, Event1 are unclear), and the concept of circular queue behavior. For Part 2 (Push at front, Pop from rear), the trace is ambiguous and the pointer values are incorrect, making it difficult to confirm the expected behavior.",
+      "mappingConfidence": 0.8,
+      "confidence": 0.7,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": "Part 1: Push at rear, Pop from front | Marks: 5 Model Answer: Elements are inserted at the rear of Queue Q1 and removed from the front. After each iteration, the front and rear pointers are updated correctly. The intermediate states of Q1 and Q2 follow circular queue behavior. Part 2: Push at front, Pop from rear | Marks: 5 Model Answer: Elements are inserted at the front and removed from the rear of the queue. The circular nature of the queue is preserved, and pointer updates ensure correct order after each iteration. QUESTION 3"
+    },
+    {
+      "number": "3a",
+      "questionId": "6944f2ac44136f46b3bdd542",
+      "question": "",
+      "maxMarks": 6,
+      "score": 2,
+      "percentage": 33.33,
+      "conceptMatch": "Merging sorted linked lists (high-level steps).",
+      "missingPoints": "Correct implementation of node linking and pointer advancement, use of a dummy node, clear explanation of maintaining sorted order through correct linking.",
+      "reason": "The student correctly identified the main steps for merging two sorted linked lists: comparing node values, inserting into a new list, and appending remaining nodes. However, the provided code snippet for linking nodes is syntactically and conceptually flawed, failing to correctly implement the merging logic and pointer management. The use of a dummy node was also not mentioned.",
+      "mappingConfidence": 0.8,
+      "confidence": 0.75,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": "Model Answer: The two linked lists are merged by comparing node values one by one. A dummy node is used to simplify pointer handling. At each step, the smaller node is linked to the result list, and the pointer is advanced. After one list is exhausted, the remaining nodes of the other list are appended. This approach maintains sorted order efficiently."
+    },
+    {
+      "number": "3b",
+      "questionId": "6944f2ac44136f46b3bdd543",
+      "question": "",
+      "maxMarks": 9,
+      "score": 7,
+      "percentage": 77.78,
+      "conceptMatch": "Binary search for insertion, array element shifting.",
+      "missingPoints": "Correct overall time complexity (O(n) due to shifting).",
+      "reason": "The student correctly identified the use of binary search to find the insertion position and the need to shift elements to make space for the new element. The mechanism for shifting and insertion was also correctly described. However, the overall time complexity was incorrectly stated as O(log n) (for binary search only), missing the dominant O(n) complexity due to shifting. The binary search code snippet also had minor flaws.",
+      "mappingConfidence": 0.9,
+      "confidence": 0.85,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": "Model Answer: Binary Search is used to find the correct insertion position in O(log n) time. Once the position is found, elements are shifted to the right, and the new element is inserted. Final array after insertion: {10, 20, 25, 30, 40, 50} Overall Time Complexity: O(n) (due to shifting). QUESTION 4"
+    },
+    {
+      "number": "4a",
+      "questionId": "6944f2ac44136f46b3bdd544",
+      "question": "",
+      "maxMarks": 5,
+      "score": 1,
+      "percentage": 20,
+      "conceptMatch": "Final sorted array for Selection Sort.",
+      "missingPoints": "Correct description of Selection Sort algorithm (finding minimum, swapping), clear explanation of Selection Sort's instability with reasoning.",
+      "reason": "The student provided the correct final sorted array. However, their description of Selection Sort was incorrect (stated finding max instead of min) and vague. The explanation for stability was also general and did not specifically address why Selection Sort is unstable.",
+      "mappingConfidence": 0.9,
+      "confidence": 0.9,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": "Model Answer: Selection Sort repeatedly selects the minimum element from the unsorted portion and swaps it with the first unsorted element. After successive iterations, the array becomes sorted in ascending order. Final sorted array: [10, 12, 36, 45, 78] Selection Sort is not stable because swapping can change the relative order of equal elements."
+    },
+    {
+      "number": "4b",
+      "questionId": "6944f2ac44136f46b3bdd545",
+      "question": "",
+      "maxMarks": 10,
+      "score": 0,
+      "percentage": 0,
+      "conceptMatch": "None.",
+      "missingPoints": "All aspects of identifying and repositioning min/max nodes in a circular linked list, including pointer comparisons, node traversal, reassignment logic, and handling circularity.",
+      "reason": "The student did not provide any answer for this question.",
+      "mappingConfidence": 1,
+      "confidence": 1,
+      "mappedStudentAnswerLabel": null,
+      "mappedStudentAnswerText": "",
+      "correctAnswer": "Model Answer: Correct pointer comparisons, node traversal, and reassignment logic are required to correctly identify and reposition minimum and maximum nodes in a circular linked list. Conditions involving curr, prev, maxNode, and minNode must ensure traversal does not break circularity and updates are performed safely."
+    }
+  ],
+  "examinerJson": {
+    "evaluation": {
+      "Q1a": {
+        "question": "",
+        "expectedAnswer": "func1(int n) | Marks: 2 Model Answer: The outer loop runs from 1 to n, contributing O(n). The middle loop also runs from 1 to n, contributing O(n). The inner loop runs from 1 to 10, which is constant, so O(1). Overall time complexity: T(n) = O(n) × O(n) × O(1) = O(n²). func2(int n) | Marks: 2 Model Answer: The outer loop runs from 0 to 2n, giving O(n). The middle loop runs up to i/3, which in the worst case is O(n). The inner loop runs up to j², which becomes O(n²) in the worst case. Overall time complexity: T(n) = O(n) × O(n) × O(n²) = O(n⁴). func3(int n) | Marks: 2 Model Answer: All three nested loops run up to n. Overall time complexity: T(n) = O(n) × O(n) × O(n) = O(n³).",
+        "studentAnswer": "",
+        "maxMarks": 6,
+        "scoreAwarded": 4,
+        "percentage": 66.67,
+        "conceptMatch": "Time complexity analysis, Big O notation.",
+        "missingPoints": "Time complexity analysis for func1.",
+        "reason": "The student correctly identified the time complexities for func2 (O(n^4)) and func3 (O(n^3)), earning full marks for these two parts. However, func1 was not attempted, resulting in 0 marks for that subpart.",
+        "mappingConfidence": 0.95,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q1b": {
+        "question": "",
+        "expectedAnswer": "Model Answer: This problem is solved using a stack-based approach in O(n) time. The algorithm traverses the rainfall array from right to left while maintaining a stack that stores indices of days with greater rainfall. For each day: • Pop elements from the stack while the current rainfall is greater or equal. • If the stack is not empty, the difference between indices gives the number of days. • Otherwise, the answer is 0. This ensures each element is pushed and popped at most once. Time Complexity: O(n) Space Complexity: O(n) QUESTION 2",
+        "studentAnswer": "",
+        "maxMarks": 9,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "None.",
+        "missingPoints": "Stack-based approach, O(n) time complexity, O(n) space complexity, correct algorithm logic (traversing right to left, popping from stack, calculating differences).",
+        "reason": "The student provided an algorithm that does not match the stack-based approach described in the model answer for finding days with greater rainfall. The student's algorithm appears to be tracking a 'Min' value and a 'count' based on updates, which is not the expected solution for the problem implied by the model answer.",
+        "mappingConfidence": 0.95,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q2a": {
+        "question": "",
+        "expectedAnswer": "Model Answer: The postfix expression is evaluated using a stack by scanning tokens from left to right. Operands are pushed onto the stack. When an operator is encountered, the top two elements are popped, the operation is applied, and the result is pushed back. Final evaluated result: 95",
+        "studentAnswer": "",
+        "maxMarks": 5,
+        "scoreAwarded": 5,
+        "percentage": 100,
+        "conceptMatch": "Stack-based postfix expression evaluation.",
+        "missingPoints": "Explicit description of scanning tokens from left to right, pushing operands, and popping two elements for operators (though implied by the trace).",
+        "reason": "The student correctly provided the final evaluated result (95) and demonstrated a stack-based evaluation process through a trace, aligning with the core concept of postfix expression evaluation.",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q2b": {
+        "question": "",
+        "expectedAnswer": "Part 1: Push at rear, Pop from front | Marks: 5 Model Answer: Elements are inserted at the rear of Queue Q1 and removed from the front. After each iteration, the front and rear pointers are updated correctly. The intermediate states of Q1 and Q2 follow circular queue behavior. Part 2: Push at front, Pop from rear | Marks: 5 Model Answer: Elements are inserted at the front and removed from the rear of the queue. The circular nature of the queue is preserved, and pointer updates ensure correct order after each iteration. QUESTION 3",
+        "studentAnswer": "",
+        "maxMarks": 10,
+        "scoreAwarded": 2,
+        "percentage": 20,
+        "conceptMatch": "Queue operations (Part 1 partially).",
+        "missingPoints": "Part 1: Explicit demonstration of push at rear, correct pointer updates (front/rear), explanation of circular queue behavior. Part 2: Clear demonstration of push at front and pop from rear, correct pointer updates, circular queue behavior.",
+        "reason": "For Part 1 (Push at rear, Pop from front), the student's trace shows the correct effect of elements being removed from the front of the queue. However, it lacks explicit details on insertion at the rear, correct pointer updates (Rear1, Event1 are unclear), and the concept of circular queue behavior. For Part 2 (Push at front, Pop from rear), the trace is ambiguous and the pointer values are incorrect, making it difficult to confirm the expected behavior.",
+        "mappingConfidence": 0.8,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q3a": {
+        "question": "",
+        "expectedAnswer": "Model Answer: The two linked lists are merged by comparing node values one by one. A dummy node is used to simplify pointer handling. At each step, the smaller node is linked to the result list, and the pointer is advanced. After one list is exhausted, the remaining nodes of the other list are appended. This approach maintains sorted order efficiently.",
+        "studentAnswer": "",
+        "maxMarks": 6,
+        "scoreAwarded": 2,
+        "percentage": 33.33,
+        "conceptMatch": "Merging sorted linked lists (high-level steps).",
+        "missingPoints": "Correct implementation of node linking and pointer advancement, use of a dummy node, clear explanation of maintaining sorted order through correct linking.",
+        "reason": "The student correctly identified the main steps for merging two sorted linked lists: comparing node values, inserting into a new list, and appending remaining nodes. However, the provided code snippet for linking nodes is syntactically and conceptually flawed, failing to correctly implement the merging logic and pointer management. The use of a dummy node was also not mentioned.",
+        "mappingConfidence": 0.8,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q3b": {
+        "question": "",
+        "expectedAnswer": "Model Answer: Binary Search is used to find the correct insertion position in O(log n) time. Once the position is found, elements are shifted to the right, and the new element is inserted. Final array after insertion: {10, 20, 25, 30, 40, 50} Overall Time Complexity: O(n) (due to shifting). QUESTION 4",
+        "studentAnswer": "",
+        "maxMarks": 9,
+        "scoreAwarded": 7,
+        "percentage": 77.78,
+        "conceptMatch": "Binary search for insertion, array element shifting.",
+        "missingPoints": "Correct overall time complexity (O(n) due to shifting).",
+        "reason": "The student correctly identified the use of binary search to find the insertion position and the need to shift elements to make space for the new element. The mechanism for shifting and insertion was also correctly described. However, the overall time complexity was incorrectly stated as O(log n) (for binary search only), missing the dominant O(n) complexity due to shifting. The binary search code snippet also had minor flaws.",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q4a": {
+        "question": "",
+        "expectedAnswer": "Model Answer: Selection Sort repeatedly selects the minimum element from the unsorted portion and swaps it with the first unsorted element. After successive iterations, the array becomes sorted in ascending order. Final sorted array: [10, 12, 36, 45, 78] Selection Sort is not stable because swapping can change the relative order of equal elements.",
+        "studentAnswer": "",
+        "maxMarks": 5,
+        "scoreAwarded": 1,
+        "percentage": 20,
+        "conceptMatch": "Final sorted array for Selection Sort.",
+        "missingPoints": "Correct description of Selection Sort algorithm (finding minimum, swapping), clear explanation of Selection Sort's instability with reasoning.",
+        "reason": "The student provided the correct final sorted array. However, their description of Selection Sort was incorrect (stated finding max instead of min) and vague. The explanation for stability was also general and did not specifically address why Selection Sort is unstable.",
+        "mappingConfidence": 0.9,
+        "mappedStudentAnswerLabel": null
+      },
+      "Q4b": {
+        "question": "",
+        "expectedAnswer": "Model Answer: Correct pointer comparisons, node traversal, and reassignment logic are required to correctly identify and reposition minimum and maximum nodes in a circular linked list. Conditions involving curr, prev, maxNode, and minNode must ensure traversal does not break circularity and updates are performed safely.",
+        "studentAnswer": "",
+        "maxMarks": 10,
+        "scoreAwarded": 0,
+        "percentage": 0,
+        "conceptMatch": "None.",
+        "missingPoints": "All aspects of identifying and repositioning min/max nodes in a circular linked list, including pointer comparisons, node traversal, reassignment logic, and handling circularity.",
+        "reason": "The student did not provide any answer for this question.",
+        "mappingConfidence": 1,
+        "mappedStudentAnswerLabel": null
+      }
+    },
+    "totalScore": 21,
+    "overallFeedback": "The student demonstrates a foundational understanding of some data structures and algorithms, particularly in time complexity analysis and basic queue operations. They were able to correctly identify the final result for postfix evaluation and the final sorted array for Selection Sort. However, there are significant gaps in understanding algorithm mechanisms, especially for linked list manipulations (Q3a), queue pointer management (Q2b), and the detailed logic for problems like Q1b. The student also struggled with providing accurate descriptions of algorithms (Q4a) and correctly identifying overall time complexities (Q3b). A major area for improvement is providing detailed, accurate explanations and implementations rather than just high-level concepts or partial traces.",
+    "weakAreas": [
+      "Detailed algorithm implementation and pointer management (Linked Lists, Queues)",
+      "Comprehensive understanding of algorithm mechanisms (e.g., Selection Sort description, Q1b algorithm)",
+      "Correctly identifying overall time complexities, especially when multiple steps contribute",
+      "Explaining algorithm properties (e.g., stability)",
+      "Providing complete answers for all questions"
+    ],
+    "overallConfidence": 0.88,
+    "mappingDetails": [
+      {
+        "sourceNumber": "Q1a",
+        "matchedQuestionId": "6944f2ac44136f46b3bdd53e",
+        "matchedQuestionNumber": "1a",
+        "confidence": 0.95,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q1b",
+        "matchedQuestionId": "6944f2ac44136f46b3bdd53f",
+        "matchedQuestionNumber": "1b",
+        "confidence": 0.95,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2a",
+        "matchedQuestionId": "6944f2ac44136f46b3bdd540",
+        "matchedQuestionNumber": "2a",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q2b",
+        "matchedQuestionId": "6944f2ac44136f46b3bdd541",
+        "matchedQuestionNumber": "2b",
+        "confidence": 0.8,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q3a",
+        "matchedQuestionId": "6944f2ac44136f46b3bdd542",
+        "matchedQuestionNumber": "3a",
+        "confidence": 0.8,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q3b",
+        "matchedQuestionId": "6944f2ac44136f46b3bdd543",
+        "matchedQuestionNumber": "3b",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q4a",
+        "matchedQuestionId": "6944f2ac44136f46b3bdd544",
+        "matchedQuestionNumber": "4a",
+        "confidence": 0.9,
+        "note": "Mapped"
+      },
+      {
+        "sourceNumber": "Q4b",
+        "matchedQuestionId": "6944f2ac44136f46b3bdd545",
+        "matchedQuestionNumber": "4b",
+        "confidence": 1,
+        "note": "Mapped"
+      }
+    ]
+  },
+  "weakAreas": [
+    "Detailed algorithm implementation and pointer management (Linked Lists, Queues)",
+    "Comprehensive understanding of algorithm mechanisms (e.g., Selection Sort description, Q1b algorithm)",
+    "Correctly identifying overall time complexities, especially when multiple steps contribute",
+    "Explaining algorithm properties (e.g., stability)",
+    "Providing complete answers for all questions"
+  ],
+  "overallConfidence": 0.88,
+  "mappingDetails": [
+    {
+      "sourceNumber": "Q1a",
+      "matchedQuestionId": "6944f2ac44136f46b3bdd53e",
+      "matchedQuestionNumber": "1a",
+      "confidence": 0.95,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q1b",
+      "matchedQuestionId": "6944f2ac44136f46b3bdd53f",
+      "matchedQuestionNumber": "1b",
+      "confidence": 0.95,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2a",
+      "matchedQuestionId": "6944f2ac44136f46b3bdd540",
+      "matchedQuestionNumber": "2a",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q2b",
+      "matchedQuestionId": "6944f2ac44136f46b3bdd541",
+      "matchedQuestionNumber": "2b",
+      "confidence": 0.8,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q3a",
+      "matchedQuestionId": "6944f2ac44136f46b3bdd542",
+      "matchedQuestionNumber": "3a",
+      "confidence": 0.8,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q3b",
+      "matchedQuestionId": "6944f2ac44136f46b3bdd543",
+      "matchedQuestionNumber": "3b",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q4a",
+      "matchedQuestionId": "6944f2ac44136f46b3bdd544",
+      "matchedQuestionNumber": "4a",
+      "confidence": 0.9,
+      "note": "Mapped"
+    },
+    {
+      "sourceNumber": "Q4b",
+      "matchedQuestionId": "6944f2ac44136f46b3bdd545",
+      "matchedQuestionNumber": "4b",
+      "confidence": 1,
+      "note": "Mapped"
+    }
+  ]
+}

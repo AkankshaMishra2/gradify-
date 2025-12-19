@@ -92,7 +92,8 @@ export function OCRResultCard({ ocrData, onUpdate }: OCRResultCardProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           {data.answers.map((answer, idx) => {
-            const qnum = String((answer as any).number ?? (answer as any).questionNo ?? idx + 1);
+            const extended = answer as { number?: string | number; questionNo?: string | number; answer: string };
+            const qnum = String(extended.number ?? extended.questionNo ?? idx + 1);
             const keyId = `${qnum}-${idx}`;
             const inputId = `q${qnum}-${idx}`;
             return (

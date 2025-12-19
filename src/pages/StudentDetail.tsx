@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Navbar } from '@/components/Navbar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { getStudentById, StudentRecord, getLatestEvaluationByStudent } from '@/lib/api';
+import { getStudentById, StudentRecord, getLatestEvaluationByStudent, type EvaluationResult, type EvaluationDetail } from '@/lib/api';
 import { Button } from '@/components/ui/button';
 import { Loader2, ArrowLeft } from 'lucide-react';
 
@@ -10,7 +10,7 @@ export default function StudentDetail() {
   const { id } = useParams<{ id: string }>();
   const [student, setStudent] = useState<StudentRecord | null>(null);
   const [loading, setLoading] = useState(true);
-  const [record, setRecord] = useState<any>(null);
+  const [record, setRecord] = useState<EvaluationResult | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -57,17 +57,19 @@ export default function StudentDetail() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-2 text-sm">
-                  {(record?.details ?? []).map((m: any, idx: number) => {
-                    const listKey = `${m.number ?? m.question ?? 'item'}-${idx}`;
+                  {(record?.details ?? []).map((detail: EvaluationDetail, idx: number) => {
+                    const listKey = `${detail.number ?? `item-${idx}`}`;
                     return (
                       <li key={listKey} className="p-3 border rounded">
-                        <div className="font-medium">Q{m.number ?? m.question}</div>
-                        <div>Awarded: {m.score} / {m.maxMarks} ({typeof m.percentage === 'number' ? `${m.percentage}%` : ''})</div>
-                        {m.studentAnswer && <div>Student: {m.studentAnswer}</div>}
-                        {m.correctAnswer && <div>Correct: {m.correctAnswer}</div>}
-                        {m.conceptMatch && <div>Concept Match: {m.conceptMatch}</div>}
-                        {m.missingPoints && <div>Missing Points: {m.missingPoints}</div>}
-                        {m.reason && <div className="text-muted-foreground">Reason: {m.reason}</div>}
+                        <div className="font-medium">Q{detail.number}</div>
+                        <div>
+                          Awarded: {detail.score} / {detail.maxMarks} {typeof detail.percentage === 'number' ? `(${detail.percentage}%)` : ''}
+                        </div>
+                        {detail.studentAnswer && <div>Student: {detail.studentAnswer}</div>}
+                        {detail.correctAnswer && <div>Correct: {detail.correctAnswer}</div>}
+                        {detail.conceptMatch && <div>Concept Match: {detail.conceptMatch}</div>}
+                        {detail.missingPoints && <div>Missing Points: {detail.missingPoints}</div>}
+                        {detail.reason && <div className="text-muted-foreground">Reason: {detail.reason}</div>}
                       </li>
                     );
                   })}
