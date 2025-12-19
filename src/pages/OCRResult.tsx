@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navbar } from '@/components/Navbar';
-import { OCRResultCard } from '@/components/OCRResultCard';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import { useApp } from '@/context/AppContext';
 import { evaluateAnswers, OCRResult } from '@/lib/api';
 import { toast } from '@/hooks/use-toast';
-import { ScanLine, Send, Loader2, ArrowLeft, AlertCircle } from 'lucide-react';
+import { Send, Loader2, ArrowLeft, AlertCircle } from 'lucide-react';
 
 export default function OCRResultPage() {
   const { currentOCRResult, setCurrentOCRResult, setCurrentEvaluation, answerKeyId } = useApp();
@@ -20,11 +20,6 @@ export default function OCRResultPage() {
       navigate('/upload-sheet');
     }
   }, [currentOCRResult, navigate]);
-
-  const handleOCRUpdate = (updatedData: OCRResult) => {
-    setOcrData(updatedData);
-    setCurrentOCRResult(updatedData);
-  };
 
   const handleEvaluate = async () => {
     if (!ocrData) return;
@@ -75,7 +70,7 @@ export default function OCRResultPage() {
       setCurrentEvaluation(result);
       toast({
         title: 'Evaluation Complete!',
-        description: 'AI has finished grading the answers.',
+        description: 'Evaluation finished successfully.',
       });
       navigate('/evaluation');
     } catch (error) {
@@ -110,10 +105,10 @@ export default function OCRResultPage() {
             </Button>
             <div>
               <h1 className="font-display text-3xl font-bold text-foreground">
-                OCR Results
+                Enter Student Details
               </h1>
               <p className="text-muted-foreground mt-1">
-                Review and edit the extracted content before evaluation
+                Confirm the student information before running evaluation
               </p>
             </div>
           </div>
@@ -123,12 +118,7 @@ export default function OCRResultPage() {
             <CardContent className="flex items-start gap-3 p-4">
               <AlertCircle className={`h-5 w-5 ${lowConfidence ? 'text-destructive' : 'text-primary'} mt-0.5 shrink-0`} />
               <div className="text-sm">
-                <p className="font-medium text-foreground">{lowConfidence ? 'Low-confidence OCR — please correct before evaluating' : 'Review the extracted content'}</p>
-                <p className="text-muted-foreground">
-                  {lowConfidence
-                    ? 'The extracted text looks noisy. Please fix the answers below for best grading accuracy.'
-                    : 'Please verify and correct any OCR errors before sending for AI evaluation.'}
-                </p>
+                <p className="font-medium text-foreground">Review student details before continuing</p>
                 {typeof ocrData.confidence === 'number' && (
                   <p className="text-xs text-muted-foreground mt-1">OCR confidence: {(ocrData.confidence * 100).toFixed(0)}%</p>
                 )}
@@ -136,57 +126,69 @@ export default function OCRResultPage() {
             </CardContent>
           </Card>
 
-          {/* OCR Results */}
-          <OCRResultCard ocrData={ocrData} onUpdate={handleOCRUpdate} />
+          <Card className="border-0 shadow-lg">
+            <CardContent className="space-y-6 p-6">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground" htmlFor="student-name">Student Name</label>
+                  <Input
+                    id="student-name"
+                    placeholder="Enter student name"
+                    value={ocrData.studentName}
+                    onChange={(event) => {
+                      const next = { ...ocrData, studentName: event.target.value };
+                      setOcrData(next);
+                      setCurrentOCRResult(next);
+                    }}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground" htmlFor="student-roll">Roll Number</label>
+                  <Input
+                    id="student-roll"
+                    placeholder="Enter roll number"
+                    value={ocrData.rollNo}
+                    onChange={(event) => {
+                      const next = { ...ocrData, rollNo: event.target.value };
+                      setOcrData(next);
+                      setCurrentOCRResult(next);
+                    }}
+                  />
+                </div>
+              </div>
 
-          {/* Raw OCR Text Preview */}
-          {ocrData.rawText && (
-            <Card className="mt-6 border-0 shadow-lg">
-              <CardHeader>
-                <CardTitle>Raw OCR Text</CardTitle>
-                <CardDescription>
-                  Direct text extracted from the uploaded sheet (may include OCR noise)
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <pre className="whitespace-pre-wrap break-words text-sm bg-muted/50 p-4 rounded-md">
-                  {ocrData.rawText}
-                </pre>
-              </CardContent>
-            </Card>
-          )}
-
-          {/* Action Buttons */}
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex-1"
-              onClick={() => navigate('/upload-sheet')}
-            >
-              <ArrowLeft className="h-5 w-5" />
-              Upload Different Sheet
-            </Button>
-            <Button
-              variant="gradient"
-              size="lg"
-              className="flex-1"
-              onClick={handleEvaluate}
-              disabled={isEvaluating}
-            >
-              {isEvaluating ? (
-                <>
-                  <Loader2 className="h-5 w-5 animate-spin" />
-                  Evaluating...
-                </>
-              ) : (
-                <>
-                  <Send className="h-5 w-5" />
-                  Send for AI Evaluation
-                </>
-              )}
-            </Button>
-          </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="flex-1"
+                  onClick={() => navigate('/upload-sheet')}
+                >
+                  <ArrowLeft className="h-5 w-5" />
+                  Upload Different Sheet
+                </Button>
+                <Button
+                  variant="gradient"
+                  size="lg"
+                  className="flex-1"
+                  onClick={handleEvaluate}
+                  disabled={isEvaluating}
+                >
+                  {isEvaluating ? (
+                    <>
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                      Evaluating...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-5 w-5" />
+                      Send for Evaluation
+                    </>
+                  )}
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
     </div>
