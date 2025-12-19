@@ -167,6 +167,14 @@ export default function UploadSheet() {
     }));
   };
 
+  const handleBatchCameraCapture = (id: string, file: File) => {
+    handleBatchFilesSelect(id, [file]);
+    toast({
+      title: 'Photo added',
+      description: 'Camera capture attached to this student.',
+    });
+  };
+
   const handleAddBatchEntry = () => {
     if (batchEntries.length >= MAX_BATCH_STUDENTS) {
       toast({
@@ -433,21 +441,38 @@ export default function UploadSheet() {
                       </div>
                     </div>
 
-                    <UploadBox
-                      multiple
-                      onFilesSelect={(selected) => handleBatchFilesSelect(entry.id, selected)}
-                      selectedFiles={entry.files}
-                      onRemoveFile={(fileIndex) => handleBatchRemoveFile(entry.id, fileIndex)}
-                      onClearFile={() => handleBatchClearFiles(entry.id)}
-                      maxFiles={MAX_FILES_PER_STUDENT}
-                      acceptedTypes={[
-                        'application/pdf',
-                        'image/jpeg',
-                        'image/png',
-                        'application/msword',
-                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                      ]}
-                    />
+                    <Tabs defaultValue="upload" className="space-y-4">
+                      <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="upload" className="gap-2">
+                          <Upload className="h-4 w-4" />
+                          Files
+                        </TabsTrigger>
+                        <TabsTrigger value="camera" className="gap-2">
+                          <Camera className="h-4 w-4" />
+                          Camera
+                        </TabsTrigger>
+                      </TabsList>
+                      <TabsContent value="upload">
+                        <UploadBox
+                          multiple
+                          onFilesSelect={(selected) => handleBatchFilesSelect(entry.id, selected)}
+                          selectedFiles={entry.files}
+                          onRemoveFile={(fileIndex) => handleBatchRemoveFile(entry.id, fileIndex)}
+                          onClearFile={() => handleBatchClearFiles(entry.id)}
+                          maxFiles={MAX_FILES_PER_STUDENT}
+                          acceptedTypes={[
+                            'application/pdf',
+                            'image/jpeg',
+                            'image/png',
+                            'application/msword',
+                            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                          ]}
+                        />
+                      </TabsContent>
+                      <TabsContent value="camera">
+                        <CameraCapture onCapture={(file) => handleBatchCameraCapture(entry.id, file)} />
+                      </TabsContent>
+                    </Tabs>
                   </div>
                 ))}
               </div>
