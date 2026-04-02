@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# Gradify
 
-## Project info
+**AI-Powered Automated Answer Sheet Evaluation**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Gradify is an advanced, automated grading system designed to streamline the evaluation of student answer sheets. Leveraging Artificial Intelligence and Optical Character Recognition (OCR), Gradify can digest scanned documents or images, extract the text, and evaluate the answers against a provided rubric using Google's Gemini AI.
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- **Automated Grading:** Uses AI to evaluate answers effectively.
+- **OCR Integration:** Automatically extracts text from uploaded images/documents using Tesseract.
+- **Multiple File Formats:** Supports various formats such as PDFs and images.
+- **Modern User Interface:** Built with a beautiful and responsive UI.
 
-**Use Lovable**
+## 💻 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Frontend
+- **React 18** with **Vite**
+- **TypeScript**
+- **Tailwind CSS** & **shadcn/ui** for modern, accessible components
+- **Recharts** for data visualization
+- **React Router** for navigation
+- **React Hook Form** + **Zod** for form validation
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
+- **Node.js** & **Express**
+- **MongoDB** with **Mongoose**
+- **@google/generative-ai** (Gemini 2.5) for AI evaluation
+- **tesseract.js** for optical character recognition (OCR)
+- **multer** for file uploads
+- **JSON Web Tokens (JWT)** & **bcrypt** for authentication
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Local Setup Instructions
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Follow these steps to set up the project locally.
 
-Follow these steps:
+### Prerequisites
+- [Node.js](https://nodejs.org/en) (v18+ recommended)
+- [MongoDB](https://www.mongodb.com/) (running locally or a MongoDB Atlas URI)
+- A Google Gemini API Key
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 1. Clone the repository
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone <repository-url>
+cd gradify-
 ```
 
-**Edit a file directly in GitHub**
+### 2. Backend Setup
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up environment variables:
+   - Copy the sample env file:
+     ```bash
+     cp .env.example .env
+     ```
+   - Open `.env` and fill in your details, notably:
+     - `MONGO_URI`
+     - `JWT_SECRET`
+     - `GEMINI_API_KEY`
+4. Start the backend development server:
+   ```bash
+   npm run dev
+   ```
+   *The backend should now be running on `http://localhost:5000`.*
 
-**Use GitHub Codespaces**
+### 3. Frontend Setup
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Open a new terminal and stay in the root directory (`gradify-`).
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the Vite development server:
+   ```bash
+   npm run dev
+   ```
+   *The frontend should now be running securely (usually on `http://localhost:5173`).*
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🤝 Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Contributions are welcome! Feel free to open issues or submit pull requests for features, bug fixes, or enhancements.
